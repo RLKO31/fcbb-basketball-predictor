@@ -1,6 +1,6 @@
 {
     "_description": "Verified registry of actual completed matches for FC Bayern Basketball 2026/2027 season.",
-    "last_sync": "2026-10-02T17:29:50.597397",
+    "last_sync": "2026-10-04T19:50:16.231678",
     "results": {
         "bbl_2627_md1": {
             "match_id": "bbl_2627_md1",
@@ -45,6 +45,28 @@
             "away_score": 76,
             "played": true,
             "source": "euroleague_api"
+        },
+        "el_2627_rd3": {
+            "match_id": "el_2627_rd3",
+            "competition": "EuroLeague",
+            "date": "2026-10-02",
+            "home_team": "FC Bayern M\u00fcnchen",
+            "away_team": "Partizan Mozzart Bet Belgrade",
+            "home_score": 84,
+            "away_score": 86,
+            "played": true,
+            "source": "euroleague_api"
+        },
+        "bbl_2627_md4": {
+            "match_id": "bbl_2627_md4",
+            "competition": "BBL",
+            "date": "2026-10-04",
+            "home_team": "FC Bayern M\u00fcnchen",
+            "away_team": "EWE Baskets Oldenburg",
+            "home_score": 113,
+            "away_score": 60,
+            "played": true,
+            "source": "official_bbl"
         }
     }
 }

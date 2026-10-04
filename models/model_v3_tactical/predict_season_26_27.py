@@ -5,10 +5,24 @@ import json
 import os
 from datetime import datetime
 
+def get_resolved_path(rel_path):
+    base = os.path.dirname(os.path.abspath(__file__))
+    repo_root = os.path.abspath(os.path.join(base, "..", ".."))
+    candidates = [
+        os.path.join(repo_root, rel_path),
+        os.path.join(repo_root, "basketball_prediction", rel_path),
+        os.path.join(os.getcwd(), rel_path),
+        os.path.join(os.getcwd(), "basketball_prediction", rel_path)
+    ]
+    for c in candidates:
+        if os.path.exists(c):
+            return os.path.abspath(c)
+    return os.path.abspath(candidates[0])
+
 def predict_official_season_26_27():
     print("=== Predicting Official 2026/2027 Multi-Competition Season (Model v3) ===")
     
-    artifacts_dir = "basketball_prediction/models/model_v3_tactical"
+    artifacts_dir = os.path.dirname(os.path.abspath(__file__))
     config_path = os.path.join(artifacts_dir, "model_v3_config.json")
     
     with open(config_path, "r", encoding="utf-8") as f:
@@ -33,13 +47,14 @@ def predict_official_season_26_27():
     base_mean_a = float(disp_config["baseline_mean_away"])
     
     # Load official 2026/2027 schedule
-    sched_path = "basketball_prediction/data/processed/schedule_2026_2027_official.csv"
+    sched_path = get_resolved_path("data/processed/schedule_2026_2027_official.csv")
     df_sched = pd.read_csv(sched_path)
     df_sched['date_dt'] = pd.to_datetime(df_sched['date'])
     df_sched = df_sched.sort_values('date_dt').reset_index(drop=True)
     
     # Load historical processed data to initialize team tactical baseline profiles
-    df_hist = pd.read_csv("basketball_prediction/data/processed/fcbb_multicomp_v3_tactical.csv")
+    hist_path = get_resolved_path("data/processed/fcbb_multicomp_v3_tactical.csv")
+    df_hist = pd.read_csv(hist_path)
     df_hist['date_dt'] = pd.to_datetime(df_hist['date'])
     
     team_histories = {}
@@ -333,10 +348,17 @@ def predict_official_season_26_27():
         mean_err_margin = 0.0
         mean_err_total = 0.0
         
+    try:
+        from zoneinfo import ZoneInfo
+        now_de = datetime.now(ZoneInfo("Europe/Berlin"))
+        sync_ts_str = now_de.strftime("%Y-%m-%d %H:%M CEST")
+    except Exception:
+        sync_ts_str = datetime.now().strftime("%Y-%m-%d %H:%M CEST")
+
     summary = {
         "season": "2026-2027",
         "generated_date": datetime.now().strftime("%Y-%m-%d"),
-        "last_sync_timestamp": datetime.now().strftime("%Y-%m-%d %H:%M CEST"),
+        "last_sync_timestamp": sync_ts_str,
         "total_matches": tot_games,
         "performance_tracking": {
             "played_matches": num_played,
@@ -386,9 +408,16 @@ def predict_official_season_26_27():
         "fixtures": predictions_26_27
     }
     
-    out_json = "basketball_prediction/dashboard/predictions_26_27.json"
+    repo_root = os.path.abspath(os.path.join(artifacts_dir, "..", ".."))
+    out_json = os.path.join(repo_root, "dashboard", "predictions_26_27.json")
+    os.makedirs(os.path.dirname(out_json), exist_ok=True)
     with open(out_json, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=4)
+        
+    alt_out_json = os.path.join(repo_root, "basketball_prediction", "dashboard", "predictions_26_27.json")
+    if os.path.exists(os.path.dirname(alt_out_json)):
+        with open(alt_out_json, "w", encoding="utf-8") as f:
+            json.dump(summary, f, indent=4)
         
     print(f"\nSUCCESS: Saved official 2026/2027 season forecast ({tot_games} matches) to {out_json}")
     print(f"Performance Tracking ({num_played} games played):")

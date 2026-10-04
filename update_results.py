@@ -5,9 +5,14 @@ from datetime import datetime
 import pandas as pd
 
 # Add project root to sys.path
-sys.path.insert(0, os.path.abspath(os.path.dirname(__file__) + "/.."))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
+PARENT_DIR = os.path.abspath(os.path.join(BASE_DIR, ".."))
+if PARENT_DIR not in sys.path:
+    sys.path.insert(0, PARENT_DIR)
 
-if sys.stdout.encoding.lower() != 'utf-8':
+if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
     try:
         sys.stdout.reconfigure(encoding='utf-8')
     except Exception:
@@ -15,11 +20,32 @@ if sys.stdout.encoding.lower() != 'utf-8':
 
 from euroleague_api.schedule import Schedule
 from euroleague_api.game_stats import GameStats
-from basketball_prediction.models.model_v3_tactical.predict_season_26_27 import predict_official_season_26_27
-from basketball_prediction.dashboard.compile_dashboard import compile_dashboard
 
-REGISTRY_PATH = "basketball_prediction/data/actual_results_registry.json"
-SCHEDULE_PATH = "basketball_prediction/data/processed/schedule_2026_2027_official.csv"
+try:
+    from models.model_v3_tactical.predict_season_26_27 import predict_official_season_26_27
+except ImportError:
+    from basketball_prediction.models.model_v3_tactical.predict_season_26_27 import predict_official_season_26_27
+
+try:
+    from dashboard.compile_dashboard import compile_dashboard
+except ImportError:
+    from basketball_prediction.dashboard.compile_dashboard import compile_dashboard
+
+def get_resolved_path(rel_path):
+    candidates = [
+        os.path.join(BASE_DIR, rel_path),
+        os.path.join(BASE_DIR, "basketball_prediction", rel_path),
+        os.path.join(PARENT_DIR, rel_path),
+        os.path.join(PARENT_DIR, "basketball_prediction", rel_path),
+        os.path.join(os.getcwd(), rel_path)
+    ]
+    for c in candidates:
+        if os.path.exists(c):
+            return os.path.abspath(c)
+    return os.path.abspath(candidates[0])
+
+REGISTRY_PATH = get_resolved_path("data/actual_results_registry.json")
+SCHEDULE_PATH = get_resolved_path("data/processed/schedule_2026_2027_official.csv")
 
 def load_registry():
     if os.path.exists(REGISTRY_PATH):
@@ -31,6 +57,10 @@ def save_registry(registry):
     registry["last_sync"] = datetime.now().isoformat()
     with open(REGISTRY_PATH, "w", encoding="utf-8") as f:
         json.dump(registry, f, indent=4)
+    alt = os.path.join(BASE_DIR, "basketball_prediction", "data", "actual_results_registry.json")
+    if os.path.exists(os.path.dirname(alt)):
+        with open(alt, "w", encoding="utf-8") as f:
+            json.dump(registry, f, indent=4)
 
 def sync_euroleague_results(registry):
     print(">>> [1/4] Checking official EuroLeague API for completed 2026/27 games...")
@@ -100,6 +130,9 @@ def sync_schedule_csv(registry):
             updated_rows += 1
             
     df_sched.to_csv(SCHEDULE_PATH, index=False)
+    alt_sched = os.path.join(BASE_DIR, "basketball_prediction", "data", "processed", "schedule_2026_2027_official.csv")
+    if os.path.exists(os.path.dirname(alt_sched)):
+        df_sched.to_csv(alt_sched, index=False)
     print(f"  Schedule CSV updated: {updated_rows} match(es) marked as FINAL with ground truth.")
 
 def update_daily():
@@ -150,7 +183,7 @@ def update_daily():
         delta_str = f"H:{comp['diff_home']:+d} A:{comp['diff_away']:+d} (Spr:{comp['diff_margin']:+d})"
         print(f"{m['date']:<11} | {match_str:<42} | {act_str:<9} | {pred_str:<10} | {hit_str:<8} | {delta_str}")
     print("=" * 80)
-    print(f" Interactive Dashboard Updated: basketball_prediction/dashboard/index.html")
+    print(f" Interactive Dashboard Updated: index.html & dashboard/index.html")
     print("================================================================================\n")
 
 if __name__ == '__main__':

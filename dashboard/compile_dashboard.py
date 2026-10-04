@@ -2,11 +2,25 @@ import json
 import os
 import pandas as pd
 
+def get_resolved_path(rel_path):
+    base = os.path.dirname(os.path.abspath(__file__))
+    repo_root = os.path.abspath(os.path.join(base, ".."))
+    candidates = [
+        os.path.join(repo_root, rel_path),
+        os.path.join(repo_root, "basketball_prediction", rel_path),
+        os.path.join(os.getcwd(), rel_path),
+        os.path.join(os.getcwd(), "basketball_prediction", rel_path)
+    ]
+    for c in candidates:
+        if os.path.exists(c):
+            return os.path.abspath(c)
+    return os.path.abspath(candidates[0])
+
 def compile_dashboard():
     print("=== Compiling FC Bayern Basketball 2026/2027 Season Dashboard ===")
     
-    preds_path = "basketball_prediction/dashboard/predictions_26_27.json"
-    config_path = "basketball_prediction/models/model_v3_tactical/model_v3_config.json"
+    preds_path = get_resolved_path("dashboard/predictions_26_27.json")
+    config_path = get_resolved_path("models/model_v3_tactical/model_v3_config.json")
     
     if not os.path.exists(preds_path):
         raise FileNotFoundError(f"Predictions not found at {preds_path}. Run predict_season_26_27.py first.")
@@ -802,11 +816,28 @@ def compile_dashboard():
 </html>
 """
     
-    out_html = "basketball_prediction/dashboard/index.html"
-    with open(out_html, "w", encoding="utf-8") as f:
+    base = os.path.dirname(os.path.abspath(__file__))
+    repo_root = os.path.abspath(os.path.join(base, ".."))
+    
+    # 1. Output to root index.html (Primary entrypoint for GitHub Pages)
+    root_html = os.path.join(repo_root, "index.html")
+    with open(root_html, "w", encoding="utf-8") as f:
+        f.write(html_template)
+    print(f"Generated root GitHub Pages entrypoint: {root_html} ({len(html_template)} bytes)")
+        
+    # 2. Output to dashboard/index.html
+    dash_html = os.path.join(repo_root, "dashboard", "index.html")
+    os.makedirs(os.path.dirname(dash_html), exist_ok=True)
+    with open(dash_html, "w", encoding="utf-8") as f:
         f.write(html_template)
         
-    print(f"Generated standalone 2026/2027 dashboard: {out_html} ({len(html_template)} bytes)")
+    # 3. Output to basketball_prediction/dashboard/index.html if parent folder exists
+    alt_html = os.path.join(repo_root, "basketball_prediction", "dashboard", "index.html")
+    if os.path.exists(os.path.dirname(alt_html)):
+        with open(alt_html, "w", encoding="utf-8") as f:
+            f.write(html_template)
+        
+    print(f"Compiled standalone 2026/2027 dashboard successfully.")
 
 if __name__ == '__main__':
     compile_dashboard()
