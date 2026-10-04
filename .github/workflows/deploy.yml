@@ -39,7 +39,11 @@ jobs:
 
       - name: Run Daily Results Sync & Dashboard Compilation
         run: |
-          python update_results.py
+          python -u update_results.py 2>&1 | tee update_run.log
+          echo "### Daily Sync Log" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          cat update_run.log >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
 
       - name: Commit and Push Updated Results
         run: |
