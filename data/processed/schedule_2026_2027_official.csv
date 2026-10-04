@@ -1,0 +1,77 @@
+match_id,competition,season,round,date,home_team,away_team,venue,played,actual_home_score,actual_away_score,home_rest,away_rest,rest_diff
+bbl_2627_md1,BBL,2026-2027,BBL Matchday 1,2026-09-20,FC Bayern München,Bamberg Baskets,"BMW Park, Munich",True,108.0,72.0,7,7,0
+el_2627_rd1,EuroLeague,2026-2027,EuroLeague Round 1,2026-09-24,Hapoel Tel Aviv,FC Bayern München,Arena 8888 Sofia,True,84.0,86.0,7,4,3
+bbl_2627_md23,BBL,2026-2027,BBL Matchday 23 (Early Rivalry),2026-09-26,FC Bayern München,ALBA Berlin,"BMW Park, Munich",True,95.0,61.0,2,7,-5
+el_2627_rd2,EuroLeague,2026-2027,EuroLeague Round 2,2026-09-29,Fenerbahce Beko Istanbul,FC Bayern München,Ulker Sports And Event Hall,True,100.0,76.0,7,3,4
+el_2627_rd3,EuroLeague,2026-2027,EuroLeague Round 3,2026-10-02,FC Bayern München,Partizan Mozzart Bet Belgrade,Sap Garden,False,,,3,7,-4
+bbl_2627_md4,BBL,2026-2027,BBL Matchday 4,2026-10-04,FC Bayern München,EWE Baskets Oldenburg,"BMW Park, Munich",False,,,2,7,-5
+el_2627_rd4,EuroLeague,2026-2027,EuroLeague Round 4,2026-10-08,FC Bayern München,Virtus Segafredo Bologna,Sap Garden,False,,,4,7,-3
+bbl_2627_md5,BBL,2026-2027,BBL Matchday 5,2026-10-10,NINERS Chemnitz,FC Bayern München,Messe Chemnitz,False,,,7,2,5
+el_2627_rd5,EuroLeague,2026-2027,EuroLeague Round 5,2026-10-14,Anadolu Efes Istanbul,FC Bayern München,Turkcell Basketball Development Center,False,,,7,4,3
+el_2627_rd6,EuroLeague,2026-2027,EuroLeague Round 6,2026-10-16,Besiktas Istanbul,FC Bayern München,Turkcell Basketball Development Center,False,,,7,2,5
+pokal_2627_r16,BBL-Pokal,2026-2027,BBL-Pokal Round of 16,2026-10-18,Telekom Baskets Bonn,FC Bayern München,"Telekom Dome, Bonn",False,,,7,2,5
+el_2627_rd7,EuroLeague,2026-2027,EuroLeague Round 7,2026-10-22,FC Bayern München,Dubai Basketball,Sap Garden,False,,,4,7,-3
+bbl_2627_md6,BBL,2026-2027,BBL Matchday 6,2026-10-25,FC Bayern München,Hamburg Towers,"BMW Park, Munich",False,,,3,7,-4
+el_2627_rd8,EuroLeague,2026-2027,EuroLeague Round 8,2026-10-27,FC Bayern München,FC Barcelona,Sap Garden,False,,,2,7,-5
+el_2627_rd9,EuroLeague,2026-2027,EuroLeague Round 9,2026-10-29,Crvena Zvezda Meridianbet Belgrade,FC Bayern München,Belgrade Arena,False,,,7,2,5
+bbl_2627_md3,BBL,2026-2027,BBL Matchday 3,2026-11-01,ROSTOCK SEAWOLVES,FC Bayern München,StadtHalle Rostock,False,,,7,3,4
+bbl_2627_md7,BBL,2026-2027,BBL Matchday 7,2026-11-03,FC Bayern München,Basketball Löwen Braunschweig,"BMW Park, Munich",False,,,2,7,-5
+el_2627_rd10,EuroLeague,2026-2027,EuroLeague Round 10,2026-11-05,LDLC ASVEL Villeurbanne,FC Bayern München,Ldlc Arena,False,,,7,2,5
+bbl_2627_md8,BBL,2026-2027,BBL Matchday 8,2026-11-08,Telekom Baskets Bonn,FC Bayern München,"Telekom Dome, Bonn",False,,,14,3,11
+el_2627_rd11,EuroLeague,2026-2027,EuroLeague Round 11,2026-11-12,Valencia Basket,FC Bayern München,Roig Arena,False,,,7,4,3
+bbl_2627_md9,BBL,2026-2027,BBL Matchday 9,2026-11-15,FC Bayern München,ratiopharm ulm,"SAP Garden, Munich",False,,,3,7,-4
+el_2627_rd12,EuroLeague,2026-2027,EuroLeague Round 12,2026-11-17,Zalgiris Kaunas,FC Bayern München,Zalgirio Arena,False,,,7,2,5
+el_2627_rd13,EuroLeague,2026-2027,EuroLeague Round 13,2026-11-19,FC Bayern München,Baskonia Vitoria-Gasteiz,Sap Garden,False,,,2,7,-5
+bbl_2627_md10,BBL,2026-2027,BBL Matchday 10,2026-11-22,Würzburg Baskets,FC Bayern München,"tectake ARENA, Würzburg",False,,,7,3,4
+el_2627_rd14,EuroLeague,2026-2027,EuroLeague Round 14,2026-11-24,FC Bayern München,Maccabi Playtika Tel Aviv,Sap Garden,False,,,2,7,-5
+bbl_2627_md11,BBL,2026-2027,BBL Matchday 11,2026-11-29,FC Bayern München,MHP RIESEN Ludwigsburg,"BMW Park, Munich",False,,,5,7,-2
+el_2627_rd15,EuroLeague,2026-2027,EuroLeague Round 15,2026-12-03,FC Bayern München,Paris Basketball,Sap Garden,False,,,4,7,-3
+bbl_2627_md12,BBL,2026-2027,BBL Matchday 12,2026-12-06,MLP Academics Heidelberg,FC Bayern München,"SNP dome, Heidelberg",False,,,7,3,4
+el_2627_rd16,EuroLeague,2026-2027,EuroLeague Round 16,2026-12-10,EA7 Emporio Armani Milan,FC Bayern München,Unipol Forum,False,,,7,4,3
+bbl_2627_md13,BBL,2026-2027,BBL Matchday 13,2026-12-13,FC Bayern München,SYNTAINICS MBC,"BMW Park, Munich",False,,,3,7,-4
+el_2627_rd17,EuroLeague,2026-2027,EuroLeague Round 17,2026-12-15,Real Madrid,FC Bayern München,Movistar Arena,False,,,7,2,5
+pokal_2627_qf,BBL-Pokal,2026-2027,BBL-Pokal Quarterfinal,2026-12-16,FC Bayern München,ratiopharm ulm,"BMW Park, Munich",False,,,1,14,-13
+el_2627_rd18,EuroLeague,2026-2027,EuroLeague Round 18,2026-12-18,FC Bayern München,Panathinaikos AKTOR Athens,Sap Garden,False,,,2,7,-5
+bbl_2627_md14,BBL,2026-2027,BBL Matchday 14,2026-12-20,SKYLINERS Frankfurt,FC Bayern München,"Süwag Energie ARENA, Frankfurt",False,,,7,2,5
+el_2627_rd19,EuroLeague,2026-2027,EuroLeague Round 19,2026-12-22,FC Bayern München,Olympiacos Piraeus,Sap Garden,False,,,2,7,-5
+bbl_2627_md15,BBL,2026-2027,BBL Matchday 15,2026-12-26,FC Bayern München,RASTA Vechta,"SAP Garden, Munich",False,,,4,7,-3
+el_2627_rd20,EuroLeague,2026-2027,EuroLeague Round 20,2026-12-30,FC Bayern München,Besiktas Istanbul,Sap Garden,False,,,4,14,-10
+bbl_2627_md16,BBL,2026-2027,BBL Matchday 16,2027-01-03,BG Göttingen,FC Bayern München,"Sparkassen-Arena, Göttingen",False,,,7,4,3
+el_2627_rd21,EuroLeague,2026-2027,EuroLeague Round 21,2027-01-08,Dubai Basketball,FC Bayern München,Coca-Cola Arena,False,,,14,5,9
+bbl_2627_md17,BBL,2026-2027,BBL Matchday 17,2027-01-10,FC Bayern München,HAKRO Merlins Crailsheim,"BMW Park, Munich",False,,,2,7,-5
+el_2627_rd22,EuroLeague,2026-2027,EuroLeague Round 22,2027-01-12,Maccabi Playtika Tel Aviv,FC Bayern München,Aleksandar Nikolic Hall,False,,,14,2,12
+el_2627_rd23,EuroLeague,2026-2027,EuroLeague Round 23,2027-01-14,Panathinaikos AKTOR Athens,FC Bayern München,Telekom Center Athens,False,,,14,2,12
+bbl_2627_md18,BBL,2026-2027,BBL Matchday 18,2027-01-17,Bamberg Baskets,FC Bayern München,"Brose Arena, Bamberg",False,,,14,3,11
+el_2627_rd24,EuroLeague,2026-2027,EuroLeague Round 24,2027-01-21,FC Bayern München,EA7 Emporio Armani Milan,Sap Garden,False,,,4,14,-10
+bbl_2627_md19,BBL,2026-2027,BBL Matchday 19,2027-01-24,FC Bayern München,Telekom Baskets Bonn,"BMW Park, Munich",False,,,3,14,-11
+el_2627_rd25,EuroLeague,2026-2027,EuroLeague Round 25,2027-01-28,FC Bayern München,Valencia Basket,Sap Garden,False,,,4,14,-10
+bbl_2627_md20,BBL,2026-2027,BBL Matchday 20,2027-01-31,ratiopharm ulm,FC Bayern München,"ratiopharm arena, Neu-Ulm",False,,,14,3,11
+el_2627_rd26,EuroLeague,2026-2027,EuroLeague Round 26,2027-02-03,FC Bayern München,Crvena Zvezda Meridianbet Belgrade,Sap Garden,False,,,3,14,-11
+el_2627_rd27,EuroLeague,2026-2027,EuroLeague Round 27,2027-02-05,Olympiacos Piraeus,FC Bayern München,Peace And Friendship Stadium,False,,,14,2,12
+bbl_2627_md21,BBL,2026-2027,BBL Matchday 21,2027-02-07,FC Bayern München,NINERS Chemnitz,"BMW Park, Munich",False,,,2,14,-12
+el_2627_rd28,EuroLeague,2026-2027,EuroLeague Round 28,2027-02-11,Virtus Segafredo Bologna,FC Bayern München,Virtus Arena,False,,,14,4,10
+bbl_2627_md22,BBL,2026-2027,BBL Matchday 22,2027-02-14,EWE Baskets Oldenburg,FC Bayern München,"EWE Arena, Oldenburg",False,,,14,3,11
+pokal_2627_sf,BBL-Pokal,2026-2027,BBL-Pokal TOP FOUR Semifinal,2027-02-20,FC Bayern München,ALBA Berlin,"BMW Park, Munich (Host)",False,,,6,14,-8
+pokal_2627_final,BBL-Pokal,2026-2027,BBL-Pokal TOP FOUR Final,2027-02-21,FC Bayern München,Würzburg Baskets,"BMW Park, Munich (Host)",False,,,1,14,-13
+bbl_2627_md24,BBL,2026-2027,BBL Matchday 24,2027-02-28,ALBA Berlin,FC Bayern München,"Uber Arena, Berlin",False,,,8,7,1
+el_2627_rd29,EuroLeague,2026-2027,EuroLeague Round 29,2027-03-05,FC Bayern München,LDLC ASVEL Villeurbanne,Sap Garden,False,,,5,14,-9
+bbl_2627_md25,BBL,2026-2027,BBL Matchday 25,2027-03-07,FC Bayern München,Würzburg Baskets,"BMW Park, Munich",False,,,2,14,-12
+el_2627_rd30,EuroLeague,2026-2027,EuroLeague Round 30,2027-03-09,FC Bayern München,Anadolu Efes Istanbul,Sap Garden,False,,,2,14,-12
+el_2627_rd31,EuroLeague,2026-2027,EuroLeague Round 31,2027-03-11,FC Bayern München,Hapoel Tel Aviv,Sap Garden,False,,,2,14,-12
+bbl_2627_md26,BBL,2026-2027,BBL Matchday 26,2027-03-14,MHP RIESEN Ludwigsburg,FC Bayern München,"MHPArena, Ludwigsburg",False,,,14,3,11
+el_2627_rd32,EuroLeague,2026-2027,EuroLeague Round 32,2027-03-18,Partizan Mozzart Bet Belgrade,FC Bayern München,Belgrade Arena,False,,,14,4,10
+bbl_2627_md27,BBL,2026-2027,BBL Matchday 27,2027-03-21,FC Bayern München,ROSTOCK SEAWOLVES,"BMW Park, Munich",False,,,3,14,-11
+el_2627_rd33,EuroLeague,2026-2027,EuroLeague Round 33,2027-03-24,FC Bayern München,Real Madrid,Sap Garden,False,,,3,14,-11
+el_2627_rd34,EuroLeague,2026-2027,EuroLeague Round 34,2027-03-26,FC Bayern München,Zalgiris Kaunas,Sap Garden,False,,,2,14,-12
+bbl_2627_md28,BBL,2026-2027,BBL Matchday 28,2027-03-28,Hamburg Towers,FC Bayern München,"Inselpark Arena, Hamburg",False,,,14,2,12
+el_2627_rd35,EuroLeague,2026-2027,EuroLeague Round 35,2027-04-02,Baskonia Vitoria-Gasteiz,FC Bayern München,Buesa Arena,False,,,14,5,9
+bbl_2627_md29,BBL,2026-2027,BBL Matchday 29,2027-04-04,Basketball Löwen Braunschweig,FC Bayern München,"Volkswagen Halle, Braunschweig",False,,,14,2,12
+el_2627_rd36,EuroLeague,2026-2027,EuroLeague Round 36,2027-04-06,FC Barcelona,FC Bayern München,Palau Blaugrana,False,,,14,2,12
+el_2627_rd37,EuroLeague,2026-2027,EuroLeague Round 37,2027-04-08,FC Bayern München,Fenerbahce Beko Istanbul,Sap Garden,False,,,2,14,-12
+bbl_2627_md30,BBL,2026-2027,BBL Matchday 30,2027-04-11,FC Bayern München,MLP Academics Heidelberg,"BMW Park, Munich",False,,,3,14,-11
+el_2627_rd38,EuroLeague,2026-2027,EuroLeague Round 38,2027-04-15,Paris Basketball,FC Bayern München,Adidas Arena,False,,,14,4,10
+bbl_2627_md31,BBL,2026-2027,BBL Matchday 31,2027-04-18,SYNTAINICS MBC,FC Bayern München,Stadthalle Weißenfels,False,,,14,3,11
+bbl_2627_md32,BBL,2026-2027,BBL Matchday 32,2027-04-25,FC Bayern München,SKYLINERS Frankfurt,"BMW Park, Munich",False,,,7,14,-7
+bbl_2627_md33,BBL,2026-2027,BBL Matchday 33,2027-05-02,RASTA Vechta,FC Bayern München,"RASTA Dome, Vechta",False,,,14,7,7
+bbl_2627_md34,BBL,2026-2027,BBL Matchday 34,2027-05-09,FC Bayern München,BG Göttingen,"BMW Park, Munich",False,,,7,14,-7
+bbl_2627_md2,BBL,2026-2027,BBL Matchday 2,2027-05-12,HAKRO Merlins Crailsheim,FC Bayern München,"Arena Hohenlohe, Ilshofen",False,,,14,3,11

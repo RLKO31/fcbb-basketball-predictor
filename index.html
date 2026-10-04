@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Bayern Basketball // Season 2026/2027 Model Forecast & Live Tracker</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        bayern: {
+                            red: '#dc2626',
+                            crimson: '#991b1b',
+                            gold: '#f59e0b',
+                            night: '#080c14',
+                            card: 'rgba(15, 23, 42, 0.78)',
+                            border: 'rgba(255, 255, 255, 0.08)'
+                        }
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        space: ['Space Grotesk', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #060911;
+            background-image: 
+                radial-gradient(circle at 12% 15%, rgba(220, 38, 38, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 88% 85%, rgba(245, 158, 11, 0.10) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(30, 41, 59, 0.25) 0%, transparent 70%);
+            color: #f1f5f9;
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.78);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card:hover {
+            border-color: rgba(220, 38, 38, 0.4);
+        }
+        .glow-red {
+            box-shadow: 0 0 25px -5px rgba(220, 38, 38, 0.35);
+        }
+        .glow-emerald {
+            box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.30);
+        }
+        .badge-el {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.2));
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.4);
+        }
+        .badge-bbl {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.2), rgba(185, 28, 28, 0.2));
+            color: #f87171;
+            border: 1px solid rgba(220, 38, 38, 0.4);
+        }
+        .badge-pokal {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2));
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Top Navigation Header -->
+    <header class="max-w-7xl mx-auto mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+        <div class="flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-600 via-red-700 to-amber-600 flex items-center justify-center font-black text-2xl shadow-lg glow-red">
+                🏀
+            </div>
+            <div>
+                <div class="flex items-center gap-3">
+                    <h1 class="text-2xl md:text-3xl font-black tracking-tight text-white font-space">FC BAYERN BASKETBALL</h1>
+                    <span class="px-3 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-red-950/80 text-red-400 border border-red-800/60 shadow">Season 2026/2027</span>
+                </div>
+                <p class="text-sm text-slate-400">Model v3 Full-Season Forecast & Daily Actual Score Comparison: BBL · EuroLeague · Pokal</p>
+            </div>
+        </div>
+        
+        <div class="flex flex-wrap items-center gap-3">
+            <div class="glass-card px-3.5 py-1.5 rounded-xl flex items-center gap-2 border-emerald-500/30">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-xs font-mono text-emerald-400 font-bold">Daily Sync Active</span>
+                <span class="text-[11px] text-slate-400 font-mono">(2026-10-02 17:29 CEST)</span>
+            </div>
+            <div class="glass-card px-3.5 py-1.5 rounded-xl flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                <span class="text-xs font-mono text-slate-300">Model Acc: 77.94%</span>
+            </div>
+            <button onclick="openLegalModal()" class="glass-card px-3.5 py-1.5 rounded-xl flex items-center gap-2 hover:border-red-500/50 transition cursor-pointer text-xs font-mono text-slate-300">
+                <i data-lucide="scale" class="w-4 h-4 text-amber-400"></i>
+                <span>Impressum &amp; Legal</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto space-y-6">
+
+        <!-- LIVE MODEL PERFORMANCE & REALITY SCORECARD (NEW) -->
+        <section class="glass-card rounded-2xl p-5 border border-emerald-500/30 glow-emerald">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-3 border-b border-slate-800/80">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg border border-emerald-500/40">
+                        🎯
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h2 class="text-base font-bold font-space text-white">Model v3 vs. Actual Reality (Live 2026/27 Evaluation)</h2>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase bg-emerald-950 text-emerald-300 border border-emerald-800">
+                                4 Matches Played
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-400">Continuous daily tracking of model predictions against official ground-truth results.</p>
+                    </div>
+                </div>
+                <div class="text-right font-mono text-xs text-slate-400">
+                    Next Sync: Daily Scheduled &bull; Source: <span class="text-slate-200">EuroLeague API + BBL</span>
+                </div>
+            </div>
+
+            <!-- Scorecard KPI Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <div class="bg-slate-900/90 rounded-xl p-3 border border-slate-800">
+                    <div class="text-[11px] uppercase tracking-wider text-slate-400 font-mono">Winner Accuracy</div>
+                    <div class="text-2xl font-black font-space text-emerald-400 mt-0.5">100.0%</div>
+                    <div class="text-[10px] text-slate-400 font-mono">4 / 4 Correct Tips</div>
+                </div>
+
+                <div class="bg-slate-900/90 rounded-xl p-3 border border-slate-800">
+                    <div class="text-[11px] uppercase tracking-wider text-slate-400 font-mono">Home Point Error</div>
+                    <div class="text-2xl font-black font-space text-white mt-0.5">&plusmn;12.0 <span class="text-xs font-normal text-slate-400">pts</span></div>
+                    <div class="text-[10px] text-slate-400 font-mono">Mean Absolute Error</div>
+                </div>
+
+                <div class="bg-slate-900/90 rounded-xl p-3 border border-slate-800">
+                    <div class="text-[11px] uppercase tracking-wider text-slate-400 font-mono">Away Point Error</div>
+                    <div class="text-2xl font-black font-space text-white mt-0.5">&plusmn;7.8 <span class="text-xs font-normal text-slate-400">pts</span></div>
+                    <div class="text-[10px] text-slate-400 font-mono">Mean Absolute Error</div>
+                </div>
+
+                <div class="bg-slate-900/90 rounded-xl p-3 border border-slate-800">
+                    <div class="text-[11px] uppercase tracking-wider text-slate-400 font-mono">Spread Margin MAE</div>
+                    <div class="text-2xl font-black font-space text-amber-400 mt-0.5">&plusmn;15.2 <span class="text-xs font-normal text-slate-400">pts</span></div>
+                    <div class="text-[10px] text-slate-400 font-mono">Total pts MAE: &plusmn;19.2 pts</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2026/2027 Season Projection Summary Cards -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Overall Record -->
+            <div class="glass-card p-5 rounded-2xl relative overflow-hidden border-t-2 border-t-red-500">
+                <div class="text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Overall 2026/27 Record</div>
+                <div class="text-3xl font-black font-space text-white">52W - 24L</div>
+                <div class="text-xs text-emerald-400 font-bold mt-1">68.4% Win Rate (76 Games)</div>
+                <div class="text-[11px] text-slate-500 mt-2 font-mono">Avg: 84.2 pts for / 77.8 against</div>
+            </div>
+
+            <!-- BBL Projection -->
+            <div class="glass-card p-5 rounded-2xl relative overflow-hidden border-t-2 border-t-red-600">
+                <div class="flex items-center justify-between mb-1">
+                    <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">easyCredit BBL</span>
+                    <span class="badge-bbl text-[10px] px-2 py-0.2 rounded font-mono">34 Games</span>
+                </div>
+                <div class="text-3xl font-black font-space text-red-400">31W - 3L</div>
+                <div class="text-xs text-slate-300 font-bold mt-1">1st Seed (Championship Favorite)</div>
+                <div class="text-[11px] text-slate-500 mt-2 font-mono">Win Rate: 91.2% &bull; Avg: 90.0 pts</div>
+            </div>
+
+            <!-- EuroLeague Projection -->
+            <div class="glass-card p-5 rounded-2xl relative overflow-hidden border-t-2 border-t-amber-500">
+                <div class="flex items-center justify-between mb-1">
+                    <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">EuroLeague</span>
+                    <span class="badge-el text-[10px] px-2 py-0.2 rounded font-mono">38 Games</span>
+                </div>
+                <div class="text-3xl font-black font-space text-amber-400">18W - 20L</div>
+                <div class="text-xs text-slate-300 font-bold mt-1">Play-In / Top 8 Contender</div>
+                <div class="text-[11px] text-slate-500 mt-2 font-mono">Win Rate: 47.4% &bull; Avg: 78.7 pts</div>
+            </div>
+
+            <!-- BBL-Pokal Projection -->
+            <div class="glass-card p-5 rounded-2xl relative overflow-hidden border-t-2 border-t-emerald-500">
+                <div class="flex items-center justify-between mb-1">
+                    <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">BBL-Pokal</span>
+                    <span class="badge-pokal text-[10px] px-2 py-0.2 rounded font-mono">4 Games</span>
+                </div>
+                <div class="text-3xl font-black font-space text-emerald-400">3W - 1L</div>
+                <div class="text-xs text-slate-300 font-bold mt-1">TOP FOUR Champion</div>
+                <div class="text-[11px] text-slate-500 mt-2 font-mono">Win Rate: 75.0% &bull; Avg: 88.0 pts</div>
+            </div>
+        </section>
+
+        <!-- Marquee Spotlight Match -->
+        <section id="marquee-section" class="glass-card rounded-3xl p-6 md:p-8 border border-red-500/20 glow-red">
+            <!-- Dynamically populated via JS -->
+        </section>
+
+        <!-- Filter Controls & Search -->
+        <section class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex flex-wrap items-center gap-2 bg-slate-900/90 p-1.5 rounded-2xl border border-slate-800">
+                <button onclick="setCompFilter('ALL')" id="tab-ALL" class="tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase transition bg-red-600 text-white shadow-md">All (76)</button>
+                <button onclick="setCompFilter('PLAYED')" id="tab-PLAYED" class="tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase transition text-emerald-400 hover:text-white border border-emerald-500/30">Played &amp; Compared (4)</button>
+                <button onclick="setCompFilter('UPCOMING')" id="tab-UPCOMING" class="tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase transition text-slate-400 hover:text-white">Upcoming (72)</button>
+                <button onclick="setCompFilter('BBL')" id="tab-BBL" class="tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase transition text-slate-400 hover:text-white">easyCredit BBL (34)</button>
+                <button onclick="setCompFilter('EuroLeague')" id="tab-EuroLeague" class="tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase transition text-slate-400 hover:text-white">EuroLeague (38)</button>
+                <button onclick="setCompFilter('BBL-Pokal')" id="tab-BBL-Pokal" class="tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase transition text-slate-400 hover:text-white">BBL-Pokal (4)</button>
+            </div>
+            
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="relative flex-1 md:w-64">
+                    <i data-lucide="search" class="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2"></i>
+                    <input type="text" id="search-input" onkeyup="applySearch(this.value)" placeholder="Search opponent..." class="w-full bg-slate-900 border border-slate-800 rounded-xl pl-9 pr-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-red-500">
+                </div>
+                <div class="text-xs text-slate-400 font-mono whitespace-nowrap">
+                    Showing <span id="match-count" class="text-white font-bold">76</span> matches
+                </div>
+            </div>
+        </section>
+
+        <!-- Fixture Cards Grid (All 76 matches of 2026/27) -->
+        <section id="fixtures-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Dynamically rendered via JS -->
+        </section>
+
+        <!-- Tactical Insights & Diagnostics -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Feature Importance -->
+            <div class="glass-card rounded-3xl p-6 lg:col-span-2">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-bold font-space text-white flex items-center gap-2">
+                        <i data-lucide="bar-chart-3" class="w-5 h-5 text-red-400"></i>
+                        Model v3 Tactical Feature Weights
+                    </h3>
+                    <span class="text-xs text-slate-400 font-mono">Window W* = 8</span>
+                </div>
+                <p class="text-xs text-slate-400 mb-6">
+                    Feature importances driving win probability and stacked score regressions for 2026/2027 fixtures.
+                </p>
+                <div class="space-y-3" id="feature-importance-list">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+
+            <!-- Model Specifications -->
+            <div class="glass-card rounded-3xl p-6">
+                <h3 class="text-lg font-bold font-space text-white mb-4 flex items-center gap-2">
+                    <i data-lucide="cpu" class="w-5 h-5 text-amber-400"></i>
+                    Model v3 Specs
+                </h3>
+                <div class="space-y-3 text-xs font-mono">
+                    <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <div class="text-slate-400 mb-1">Architecture</div>
+                        <div class="text-white font-bold">Random Forest + HistGB Blend</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <div class="text-slate-400 mb-1">Score Prediction</div>
+                        <div class="text-white font-bold">Stacked Dual Point Regressors</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <div class="text-slate-400 mb-1">Holdout Test Accuracy</div>
+                        <div class="text-emerald-400 font-bold">77.94% (Log Loss: 0.4943)</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <div class="text-slate-400 mb-1">Spread Implied Accuracy</div>
+                        <div class="text-amber-400 font-bold">77.94%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Impressum, Legal & Data Sources Section -->
+        <section id="legal-section" class="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4">
+            
+            <!-- Card 1: Impressum & Rechtliche Hinweise -->
+            <div class="glass-card rounded-3xl p-6 border border-slate-800/80">
+                <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-800">
+                    <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold border border-amber-500/30">
+                        ⚖️
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold font-space text-white">Impressum &amp; Rechtliche Hinweise</h3>
+                        <p class="text-xs text-slate-400">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4 text-xs leading-relaxed text-slate-300">
+                    <div>
+                        <span class="font-bold text-white block mb-0.5">Betreiber / Entwickler</span>
+                        <p class="text-slate-400">
+                            <strong>Ralf Oppel</strong><br>
+                            Akademisches Forschungsprojekt: Technische Hochschule Würzburg-Schweinfurt (THWS)<br>
+                            Kontakt / E-Mail: <a href="mailto:ralf.oppel@study.thws.de" class="text-red-400 hover:underline">ralf.oppel@study.thws.de</a><br>
+                            Standort: Deutschland
+                        </p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold text-white block mb-0.5">Verantwortlich für Inhalte (§ 18 Abs. 2 MStV)</span>
+                        <p class="text-slate-400">Ralf Oppel (Anschrift auf Anfrage via E-Mail)</p>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-red-950/40 border border-red-800/60">
+                        <span class="font-bold text-red-400 flex items-center gap-1.5 mb-1 text-xs">
+                            <i data-lucide="shield-alert" class="w-4 h-4"></i> Wichtiger Haftungsausschluss: Keine Wettberatung
+                        </span>
+                        <p class="text-[11px] text-red-300/90 leading-normal">
+                            Dieses Projekt ist ein rein wissenschaftliches KI-Forschungs- und Demonstrationsprojekt im Rahmen eines universitären Studien-Portfolios. 
+                            Sämtliche Vorhersagen, Gewinnwahrscheinlichkeiten und Punkt-Prognosen basieren auf statistischen Machine-Learning-Algorithmen (Stacked Dual Point Regressors, Random Forest, Time-Decay) 
+                            und stellen <strong>keine Anlageberatung, Spielprognose oder Wettempfehlung</strong> dar. Es wird keinerlei Gewähr für Richtigkeit oder finanzielle Ergebnisse übernommen.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold text-white block mb-0.5">Marken- &amp; Namenshinweis (Trademarks)</span>
+                        <p class="text-[11px] text-slate-400">
+                            „FC Bayern München Basketball“, „easyCredit BBL“, „Turkish Airlines EuroLeague“ und sämtliche Vereins- und Wettbewerbsbezeichnungen sind geschützte Marken der jeweiligen Rechteinhaber (FC Bayern München Basketball GmbH, Basketball Bundesliga GmbH, Euroleague Basketball). 
+                            Die Nennung erfolgt rein redaktionell und nominativ zur visuellen und sachlichen Zuordnung der Begegnungen im Rahmen eines nicht-kommerziellen Portfolioprojekts gem. § 23 MarkenG. Es besteht keinerlei offizielle Partnerschaft oder Lizenzierung.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Datenquellen & Methodik -->
+            <div class="glass-card rounded-3xl p-6 border border-slate-800/80">
+                <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-800">
+                    <div class="w-8 h-8 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center font-bold border border-red-500/30">
+                        📊
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold font-space text-white">Datenquellen, APIs &amp; Methodik</h3>
+                        <p class="text-xs text-slate-400">Verwendete Schnittstellen &amp; TDM-Rechtsgrundlage</p>
+                    </div>
+                </div>
+
+                <div class="space-y-3.5 text-xs text-slate-300">
+                    <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-white">EuroLeague Live &amp; Stats API</span>
+                            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Offizielle Spielberichte</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400 mb-1">
+                            Abruf von offiziellen EuroLeague-Spielterminen, Box-Scores und Ergebnissen über die EuroLeague REST-Schnittstelle (<code class="text-slate-300 font-mono">euroleague-api</code>).
+                        </p>
+                        <span class="text-[10px] text-amber-400/80 font-mono">Attribution: Public game reports provided by Euroleague Basketball.</span>
+                    </div>
+
+                    <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-white">easyCredit BBL &amp; BBL-Pokal</span>
+                            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-red-500/20 text-red-300 border border-red-500/30">Nationale Wettbewerbe</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400 mb-1">
+                            Historische Saisondaten (2019–2025) und 2026/27 Spielpläne für Basketball-Bundesliga und Pokal. Faktualergebnis-Daten unterliegen keinem urheberrechtlichen Schutz.
+                        </p>
+                    </div>
+
+                    <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-white">Text- &amp; Data-Mining (UrhG § 44b / § 60d)</span>
+                            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Gesetzliche Erlaubnis</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400">
+                            Die Aggregation historischer Boxscores zur Berechnung von rollierenden Time-Decay-Metriken (Pace, ORtg, DRtg, Net-Rating) und Modellschulung erfolgt im Einklang mit den Schrankenbestimmungen für Text- und Data-Mining zur nicht-kommerziellen Forschung und Portfolio-Demonstration.
+                        </p>
+                    </div>
+
+                    <div class="text-[11px] text-slate-500 font-mono pt-1">
+                        Open-Source Software: Python 3.12 &bull; Scikit-Learn &bull; Tailwind CSS &bull; Lucide Icons &bull; Kaggle Notebooks
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Embedded JSON Data Payload -->
+    <script>
+        const DATA = {"season": "2026-2027", "generated_date": "2026-10-02", "last_sync_timestamp": "2026-10-02 17:29 CEST", "total_matches": 76, "performance_tracking": {"played_matches": 4, "winner_hits": 4, "winner_accuracy": 100.0, "mean_home_error": 12.0, "mean_away_error": 7.8, "mean_spread_error": 15.2, "mean_total_error": 19.2}, "overall": {"wins": 52, "losses": 24, "win_rate": 68.4, "avg_points_scored": 84.2, "avg_points_conceded": 77.8}, "competitions": {"BBL": {"games": 34, "wins": 31, "losses": 3, "win_rate": 91.2, "avg_points": 90.0, "avg_conceded": 74.6, "projected_finish": "1st Seed (Championship Favorite)"}, "EuroLeague": {"games": 38, "wins": 18, "losses": 20, "win_rate": 47.4, "avg_points": 78.7, "avg_conceded": 80.7, "projected_finish": "Play-In / Top 8 Contender"}, "BBL-Pokal": {"games": 4, "wins": 3, "losses": 1, "win_rate": 75.0, "avg_points": 88.0, "avg_conceded": 77.5, "projected_finish": "TOP FOUR Champion"}}, "fixtures": [{"match_id": "bbl_2627_md1", "competition": "BBL", "round": "BBL Matchday 1", "date": "2026-09-20", "month": "2026-09", "venue": "BMW Park, Munich", "status": "FINAL (PLAYED)", "is_played": true, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Bamberg Baskets", "opponent": "Bamberg Baskets", "is_bayern_home": true, "probabilities": {"home_win": 90.6, "away_win": 9.4, "bayern_win": 90.6, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 88, "away": 67, "bayern": 88, "opponent": 67, "formatted": "88 : 67", "bayern_formatted": "FC Bayern 88 : 67 Bamberg Baskets", "margin": 21, "total_points": 155, "over_under_line": 154.5}, "actual_score": {"home": 108, "away": 72, "bayern": 108, "opponent": 72, "formatted": "108 : 72", "bayern_formatted": "FC Bayern 108 : 72 Bamberg Baskets", "margin": 36, "total_points": 180}, "comparison": {"winner_hit": true, "actual_winner": "FC Bayern M\u00fcnchen", "predicted_winner": "FC Bayern M\u00fcnchen", "diff_home": 20, "diff_away": 5, "abs_diff_home": 20, "abs_diff_away": 5, "diff_margin": 15, "abs_diff_margin": 15, "diff_total": 25}, "tactical_factors": {"projected_pace": 73.4, "rest_days": {"home": 7, "away": 7, "bayern": 7, "opponent": 7, "advantage": "Bamberg Baskets"}, "net_rating_diff": 22.9, "home_off_rating": 116.7, "away_off_rating": 106.6, "home_def_rating": 114.3, "away_def_rating": 127.0}}, {"match_id": "el_2627_rd1", "competition": "EuroLeague", "round": "EuroLeague Round 1", "date": "2026-09-24", "month": "2026-09", "venue": "Arena 8888 Sofia", "status": "FINAL (PLAYED)", "is_played": true, "home_team": "Hapoel Tel Aviv", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Hapoel Tel Aviv", "is_bayern_home": false, "probabilities": {"home_win": 42.9, "away_win": 57.1, "bayern_win": 57.1, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 72, "away": 84, "bayern": 84, "opponent": 72, "formatted": "72 : 84", "bayern_formatted": "FC Bayern 84 : 72 Hapoel Tel Aviv", "margin": -12, "total_points": 156, "over_under_line": 155.5}, "actual_score": {"home": 84, "away": 86, "bayern": 86, "opponent": 84, "formatted": "84 : 86", "bayern_formatted": "FC Bayern 86 : 84 Hapoel Tel Aviv", "margin": -2, "total_points": 170}, "comparison": {"winner_hit": true, "actual_winner": "FC Bayern M\u00fcnchen", "predicted_winner": "FC Bayern M\u00fcnchen", "diff_home": 12, "diff_away": 2, "abs_diff_home": 12, "abs_diff_away": 2, "diff_margin": 10, "abs_diff_margin": 10, "diff_total": 14}, "tactical_factors": {"projected_pace": 72.7, "rest_days": {"home": 7, "away": 4, "bayern": 4, "opponent": 7, "advantage": "Hapoel Tel Aviv"}, "net_rating_diff": -48.9, "home_off_rating": 108.0, "away_off_rating": 147.0, "home_def_rating": 108.0, "away_def_rating": 98.1}}, {"match_id": "bbl_2627_md23", "competition": "BBL", "round": "BBL Matchday 23 (Early Rivalry)", "date": "2026-09-26", "month": "2026-09", "venue": "BMW Park, Munich", "status": "FINAL (PLAYED)", "is_played": true, "home_team": "FC Bayern M\u00fcnchen", "away_team": "ALBA Berlin", "opponent": "ALBA Berlin", "is_bayern_home": true, "probabilities": {"home_win": 79.8, "away_win": 20.2, "bayern_win": 79.8, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 94, "away": 83, "bayern": 94, "opponent": 83, "formatted": "94 : 83", "bayern_formatted": "FC Bayern 94 : 83 ALBA Berlin", "margin": 11, "total_points": 177, "over_under_line": 176.5}, "actual_score": {"home": 95, "away": 61, "bayern": 95, "opponent": 61, "formatted": "95 : 61", "bayern_formatted": "FC Bayern 95 : 61 ALBA Berlin", "margin": 34, "total_points": 156}, "comparison": {"winner_hit": true, "actual_winner": "FC Bayern M\u00fcnchen", "predicted_winner": "FC Bayern M\u00fcnchen", "diff_home": 1, "diff_away": -22, "abs_diff_home": 1, "abs_diff_away": 22, "diff_margin": 23, "abs_diff_margin": 23, "diff_total": -21}, "tactical_factors": {"projected_pace": 73.1, "rest_days": {"home": 2, "away": 7, "bayern": 2, "opponent": 7, "advantage": "ALBA Berlin"}, "net_rating_diff": 29.8, "home_off_rating": 129.5, "away_off_rating": 108.1, "home_def_rating": 108.7, "away_def_rating": 117.1}}, {"match_id": "el_2627_rd2", "competition": "EuroLeague", "round": "EuroLeague Round 2", "date": "2026-09-29", "month": "2026-09", "venue": "Ulker Sports And Event Hall", "status": "FINAL (PLAYED)", "is_played": true, "home_team": "Fenerbahce Beko Istanbul", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Fenerbahce Beko Istanbul", "is_bayern_home": false, "probabilities": {"home_win": 76.2, "away_win": 23.8, "bayern_win": 23.8, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 85, "away": 74, "bayern": 74, "opponent": 85, "formatted": "85 : 74", "bayern_formatted": "FC Bayern 74 : 85 Fenerbahce Beko Istanbul", "margin": 11, "total_points": 159, "over_under_line": 158.5}, "actual_score": {"home": 100, "away": 76, "bayern": 76, "opponent": 100, "formatted": "100 : 76", "bayern_formatted": "FC Bayern 76 : 100 Fenerbahce Beko Istanbul", "margin": 24, "total_points": 176}, "comparison": {"winner_hit": true, "actual_winner": "Fenerbahce Beko Istanbul", "predicted_winner": "Fenerbahce Beko Istanbul", "diff_home": 15, "diff_away": 2, "abs_diff_home": 15, "abs_diff_away": 2, "diff_margin": 13, "abs_diff_margin": 13, "diff_total": 17}, "tactical_factors": {"projected_pace": 72.3, "rest_days": {"home": 7, "away": 3, "bayern": 3, "opponent": 7, "advantage": "Fenerbahce Beko Istanbul"}, "net_rating_diff": -13.7, "home_off_rating": 124.3, "away_off_rating": 129.7, "home_def_rating": 107.6, "away_def_rating": 99.3}}, {"match_id": "el_2627_rd3", "competition": "EuroLeague", "round": "EuroLeague Round 3", "date": "2026-10-02", "month": "2026-10", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Partizan Mozzart Bet Belgrade", "opponent": "Partizan Mozzart Bet Belgrade", "is_bayern_home": true, "probabilities": {"home_win": 88.9, "away_win": 11.1, "bayern_win": 88.9, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 88, "away": 69, "bayern": 88, "opponent": 69, "formatted": "88 : 69", "bayern_formatted": "FC Bayern 88 : 69 Partizan Mozzart Bet Belgrade", "margin": 19, "total_points": 157, "over_under_line": 156.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 3, "away": 7, "bayern": 3, "opponent": 7, "advantage": "Partizan Mozzart Bet Belgrade"}, "net_rating_diff": 26.0, "home_off_rating": 120.8, "away_off_rating": 104.7, "home_def_rating": 113.5, "away_def_rating": 123.4}}, {"match_id": "bbl_2627_md4", "competition": "BBL", "round": "BBL Matchday 4", "date": "2026-10-04", "month": "2026-10", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "EWE Baskets Oldenburg", "opponent": "EWE Baskets Oldenburg", "is_bayern_home": true, "probabilities": {"home_win": 89.9, "away_win": 10.1, "bayern_win": 89.9, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 92, "away": 78, "bayern": 92, "opponent": 78, "formatted": "92 : 78", "bayern_formatted": "FC Bayern 92 : 78 EWE Baskets Oldenburg", "margin": 14, "total_points": 170, "over_under_line": 169.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.8, "rest_days": {"home": 2, "away": 7, "bayern": 2, "opponent": 7, "advantage": "EWE Baskets Oldenburg"}, "net_rating_diff": 24.2, "home_off_rating": 121.2, "away_off_rating": 106.8, "home_def_rating": 108.0, "away_def_rating": 117.8}}, {"match_id": "el_2627_rd4", "competition": "EuroLeague", "round": "EuroLeague Round 4", "date": "2026-10-08", "month": "2026-10", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Virtus Segafredo Bologna", "opponent": "Virtus Segafredo Bologna", "is_bayern_home": true, "probabilities": {"home_win": 79.0, "away_win": 21.0, "bayern_win": 79.0, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 79, "away": 75, "bayern": 79, "opponent": 75, "formatted": "79 : 75", "bayern_formatted": "FC Bayern 79 : 75 Virtus Segafredo Bologna", "margin": 4, "total_points": 154, "over_under_line": 153.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 4, "away": 7, "bayern": 4, "opponent": 7, "advantage": "Virtus Segafredo Bologna"}, "net_rating_diff": 4.4, "home_off_rating": 122.4, "away_off_rating": 115.3, "home_def_rating": 107.8, "away_def_rating": 105.0}}, {"match_id": "bbl_2627_md5", "competition": "BBL", "round": "BBL Matchday 5", "date": "2026-10-10", "month": "2026-10", "venue": "Messe Chemnitz", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "NINERS Chemnitz", "away_team": "FC Bayern M\u00fcnchen", "opponent": "NINERS Chemnitz", "is_bayern_home": false, "probabilities": {"home_win": 37.0, "away_win": 63.0, "bayern_win": 63.0, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 74, "away": 87, "bayern": 87, "opponent": 74, "formatted": "74 : 87", "bayern_formatted": "FC Bayern 87 : 74 NINERS Chemnitz", "margin": -13, "total_points": 161, "over_under_line": 160.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.3, "rest_days": {"home": 7, "away": 2, "bayern": 2, "opponent": 7, "advantage": "NINERS Chemnitz"}, "net_rating_diff": -31.6, "home_off_rating": 85.9, "away_off_rating": 119.0, "home_def_rating": 105.3, "away_def_rating": 106.8}}, {"match_id": "el_2627_rd5", "competition": "EuroLeague", "round": "EuroLeague Round 5", "date": "2026-10-14", "month": "2026-10", "venue": "Turkcell Basketball Development Center", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Anadolu Efes Istanbul", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Anadolu Efes Istanbul", "is_bayern_home": false, "probabilities": {"home_win": 79.5, "away_win": 20.5, "bayern_win": 20.5, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 87, "away": 74, "bayern": 74, "opponent": 87, "formatted": "87 : 74", "bayern_formatted": "FC Bayern 74 : 87 Anadolu Efes Istanbul", "margin": 13, "total_points": 161, "over_under_line": 160.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.9, "rest_days": {"home": 7, "away": 4, "bayern": 4, "opponent": 7, "advantage": "Anadolu Efes Istanbul"}, "net_rating_diff": -5.1, "home_off_rating": 136.6, "away_off_rating": 119.6, "home_def_rating": 128.2, "away_def_rating": 106.2}}, {"match_id": "el_2627_rd6", "competition": "EuroLeague", "round": "EuroLeague Round 6", "date": "2026-10-16", "month": "2026-10", "venue": "Turkcell Basketball Development Center", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Besiktas Istanbul", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Besiktas Istanbul", "is_bayern_home": false, "probabilities": {"home_win": 68.4, "away_win": 31.6, "bayern_win": 31.6, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 80, "away": 66, "bayern": 66, "opponent": 80, "formatted": "80 : 66", "bayern_formatted": "FC Bayern 66 : 80 Besiktas Istanbul", "margin": 14, "total_points": 146, "over_under_line": 145.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 7, "away": 2, "bayern": 2, "opponent": 7, "advantage": "Besiktas Istanbul"}, "net_rating_diff": -4.2, "home_off_rating": 108.0, "away_off_rating": 114.4, "home_def_rating": 108.0, "away_def_rating": 110.2}}, {"match_id": "pokal_2627_r16", "competition": "BBL-Pokal", "round": "BBL-Pokal Round of 16", "date": "2026-10-18", "month": "2026-10", "venue": "Telekom Dome, Bonn", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Telekom Baskets Bonn", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Telekom Baskets Bonn", "is_bayern_home": false, "probabilities": {"home_win": 53.9, "away_win": 46.1, "bayern_win": 46.1, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 82, "away": 81, "bayern": 81, "opponent": 82, "formatted": "82 : 81", "bayern_formatted": "FC Bayern 81 : 82 Telekom Baskets Bonn", "margin": 1, "total_points": 163, "over_under_line": 162.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.9, "rest_days": {"home": 7, "away": 2, "bayern": 2, "opponent": 7, "advantage": "Telekom Baskets Bonn"}, "net_rating_diff": -8.6, "home_off_rating": 109.2, "away_off_rating": 108.6, "home_def_rating": 119.4, "away_def_rating": 110.1}}, {"match_id": "el_2627_rd7", "competition": "EuroLeague", "round": "EuroLeague Round 7", "date": "2026-10-22", "month": "2026-10", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Dubai Basketball", "opponent": "Dubai Basketball", "is_bayern_home": true, "probabilities": {"home_win": 64.5, "away_win": 35.5, "bayern_win": 64.5, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 79, "away": 75, "bayern": 79, "opponent": 75, "formatted": "79 : 75", "bayern_formatted": "FC Bayern 79 : 75 Dubai Basketball", "margin": 4, "total_points": 154, "over_under_line": 153.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 4, "away": 7, "bayern": 4, "opponent": 7, "advantage": "Dubai Basketball"}, "net_rating_diff": -3.4, "home_off_rating": 108.3, "away_off_rating": 108.0, "home_def_rating": 111.7, "away_def_rating": 108.0}}, {"match_id": "bbl_2627_md6", "competition": "BBL", "round": "BBL Matchday 6", "date": "2026-10-25", "month": "2026-10", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Hamburg Towers", "opponent": "Hamburg Towers", "is_bayern_home": true, "probabilities": {"home_win": 86.4, "away_win": 13.6, "bayern_win": 86.4, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 83, "away": 63, "bayern": 83, "opponent": 63, "formatted": "83 : 63", "bayern_formatted": "FC Bayern 83 : 63 Hamburg Towers", "margin": 20, "total_points": 146, "over_under_line": 145.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 73.0, "rest_days": {"home": 3, "away": 7, "bayern": 3, "opponent": 7, "advantage": "Hamburg Towers"}, "net_rating_diff": 21.9, "home_off_rating": 108.8, "away_off_rating": 101.6, "home_def_rating": 108.5, "away_def_rating": 123.2}}, {"match_id": "el_2627_rd8", "competition": "EuroLeague", "round": "EuroLeague Round 8", "date": "2026-10-27", "month": "2026-10", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "FC Barcelona", "opponent": "FC Barcelona", "is_bayern_home": true, "probabilities": {"home_win": 28.6, "away_win": 71.4, "bayern_win": 28.6, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 63, "away": 81, "bayern": 63, "opponent": 81, "formatted": "63 : 81", "bayern_formatted": "FC Bayern 63 : 81 FC Barcelona", "margin": -18, "total_points": 144, "over_under_line": 143.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.9, "rest_days": {"home": 2, "away": 7, "bayern": 2, "opponent": 7, "advantage": "FC Barcelona"}, "net_rating_diff": 9.3, "home_off_rating": 109.1, "away_off_rating": 137.4, "home_def_rating": 104.6, "away_def_rating": 142.3}}, {"match_id": "el_2627_rd9", "competition": "EuroLeague", "round": "EuroLeague Round 9", "date": "2026-10-29", "month": "2026-10", "venue": "Belgrade Arena", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Crvena Zvezda Meridianbet Belgrade", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Crvena Zvezda Meridianbet Belgrade", "is_bayern_home": false, "probabilities": {"home_win": 72.2, "away_win": 27.8, "bayern_win": 27.8, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 89, "away": 79, "bayern": 79, "opponent": 89, "formatted": "89 : 79", "bayern_formatted": "FC Bayern 79 : 89 Crvena Zvezda Meridianbet Belgrade", "margin": 10, "total_points": 168, "over_under_line": 167.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.9, "rest_days": {"home": 7, "away": 2, "bayern": 2, "opponent": 7, "advantage": "Crvena Zvezda Meridianbet Belgrade"}, "net_rating_diff": -5.8, "home_off_rating": 126.1, "away_off_rating": 103.2, "home_def_rating": 135.3, "away_def_rating": 106.5}}, {"match_id": "bbl_2627_md3", "competition": "BBL", "round": "BBL Matchday 3", "date": "2026-11-01", "month": "2026-11", "venue": "StadtHalle Rostock", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "ROSTOCK SEAWOLVES", "away_team": "FC Bayern M\u00fcnchen", "opponent": "ROSTOCK SEAWOLVES", "is_bayern_home": false, "probabilities": {"home_win": 19.4, "away_win": 80.6, "bayern_win": 80.6, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 69, "away": 96, "bayern": 96, "opponent": 69, "formatted": "69 : 96", "bayern_formatted": "FC Bayern 96 : 69 ROSTOCK SEAWOLVES", "margin": -27, "total_points": 165, "over_under_line": 164.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 73.4, "rest_days": {"home": 7, "away": 3, "bayern": 3, "opponent": 7, "advantage": "ROSTOCK SEAWOLVES"}, "net_rating_diff": -7.1, "home_off_rating": 109.6, "away_off_rating": 104.5, "home_def_rating": 122.9, "away_def_rating": 110.8}}, {"match_id": "bbl_2627_md7", "competition": "BBL", "round": "BBL Matchday 7", "date": "2026-11-03", "month": "2026-11", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Basketball L\u00f6wen Braunschweig", "opponent": "Basketball L\u00f6wen Braunschweig", "is_bayern_home": true, "probabilities": {"home_win": 83.9, "away_win": 16.1, "bayern_win": 83.9, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 83, "away": 68, "bayern": 83, "opponent": 68, "formatted": "83 : 68", "bayern_formatted": "FC Bayern 83 : 68 Basketball L\u00f6wen Braunschweig", "margin": 15, "total_points": 151, "over_under_line": 150.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.3, "rest_days": {"home": 2, "away": 7, "bayern": 2, "opponent": 7, "advantage": "Basketball L\u00f6wen Braunschweig"}, "net_rating_diff": 26.2, "home_off_rating": 109.0, "away_off_rating": 97.4, "home_def_rating": 107.7, "away_def_rating": 122.3}}, {"match_id": "el_2627_rd10", "competition": "EuroLeague", "round": "EuroLeague Round 10", "date": "2026-11-05", "month": "2026-11", "venue": "Ldlc Arena", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "LDLC ASVEL Villeurbanne", "away_team": "FC Bayern M\u00fcnchen", "opponent": "LDLC ASVEL Villeurbanne", "is_bayern_home": false, "probabilities": {"home_win": 63.0, "away_win": 37.0, "bayern_win": 37.0, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 82, "away": 74, "bayern": 74, "opponent": 82, "formatted": "82 : 74", "bayern_formatted": "FC Bayern 74 : 82 LDLC ASVEL Villeurbanne", "margin": 8, "total_points": 156, "over_under_line": 155.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.0, "rest_days": {"home": 7, "away": 2, "bayern": 2, "opponent": 7, "advantage": "LDLC ASVEL Villeurbanne"}, "net_rating_diff": -19.7, "home_off_rating": 94.7, "away_off_rating": 110.5, "home_def_rating": 108.1, "away_def_rating": 104.2}}, {"match_id": "bbl_2627_md8", "competition": "BBL", "round": "BBL Matchday 8", "date": "2026-11-08", "month": "2026-11", "venue": "Telekom Dome, Bonn", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Telekom Baskets Bonn", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Telekom Baskets Bonn", "is_bayern_home": false, "probabilities": {"home_win": 63.0, "away_win": 37.0, "bayern_win": 37.0, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 85, "away": 83, "bayern": 83, "opponent": 85, "formatted": "85 : 83", "bayern_formatted": "FC Bayern 83 : 85 Telekom Baskets Bonn", "margin": 2, "total_points": 168, "over_under_line": 167.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.6, "rest_days": {"home": 14, "away": 3, "bayern": 3, "opponent": 14, "advantage": "Telekom Baskets Bonn"}, "net_rating_diff": -1.9, "home_off_rating": 112.5, "away_off_rating": 109.6, "home_def_rating": 111.1, "away_def_rating": 106.3}}, {"match_id": "el_2627_rd11", "competition": "EuroLeague", "round": "EuroLeague Round 11", "date": "2026-11-12", "month": "2026-11", "venue": "Roig Arena", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Valencia Basket", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Valencia Basket", "is_bayern_home": false, "probabilities": {"home_win": 69.4, "away_win": 30.6, "bayern_win": 30.6, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 77, "away": 70, "bayern": 70, "opponent": 77, "formatted": "77 : 70", "bayern_formatted": "FC Bayern 70 : 77 Valencia Basket", "margin": 7, "total_points": 147, "over_under_line": 146.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.9, "rest_days": {"home": 7, "away": 4, "bayern": 4, "opponent": 7, "advantage": "Valencia Basket"}, "net_rating_diff": -0.2, "home_off_rating": 101.8, "away_off_rating": 110.5, "home_def_rating": 99.8, "away_def_rating": 108.2}}, {"match_id": "bbl_2627_md9", "competition": "BBL", "round": "BBL Matchday 9", "date": "2026-11-15", "month": "2026-11", "venue": "SAP Garden, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "ratiopharm ulm", "opponent": "ratiopharm ulm", "is_bayern_home": true, "probabilities": {"home_win": 76.7, "away_win": 23.3, "bayern_win": 76.7, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 89, "away": 71, "bayern": 89, "opponent": 71, "formatted": "89 : 71", "bayern_formatted": "FC Bayern 89 : 71 ratiopharm ulm", "margin": 18, "total_points": 160, "over_under_line": 159.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.9, "rest_days": {"home": 3, "away": 7, "bayern": 3, "opponent": 7, "advantage": "ratiopharm ulm"}, "net_rating_diff": 7.2, "home_off_rating": 107.2, "away_off_rating": 109.7, "home_def_rating": 108.2, "away_def_rating": 117.8}}, {"match_id": "el_2627_rd12", "competition": "EuroLeague", "round": "EuroLeague Round 12", "date": "2026-11-17", "month": "2026-11", "venue": "Zalgirio Arena", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Zalgiris Kaunas", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Zalgiris Kaunas", "is_bayern_home": false, "probabilities": {"home_win": 61.9, "away_win": 38.1, "bayern_win": 38.1, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 85, "away": 77, "bayern": 77, "opponent": 85, "formatted": "85 : 77", "bayern_formatted": "FC Bayern 77 : 85 Zalgiris Kaunas", "margin": 8, "total_points": 162, "over_under_line": 161.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.9, "rest_days": {"home": 7, "away": 2, "bayern": 2, "opponent": 7, "advantage": "Zalgiris Kaunas"}, "net_rating_diff": -20.9, "home_off_rating": 112.4, "away_off_rating": 110.0, "home_def_rating": 130.0, "away_def_rating": 106.8}}, {"match_id": "el_2627_rd13", "competition": "EuroLeague", "round": "EuroLeague Round 13", "date": "2026-11-19", "month": "2026-11", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Baskonia Vitoria-Gasteiz", "opponent": "Baskonia Vitoria-Gasteiz", "is_bayern_home": true, "probabilities": {"home_win": 34.1, "away_win": 65.9, "bayern_win": 34.1, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 68, "away": 81, "bayern": 68, "opponent": 81, "formatted": "68 : 81", "bayern_formatted": "FC Bayern 68 : 81 Baskonia Vitoria-Gasteiz", "margin": -13, "total_points": 149, "over_under_line": 148.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.9, "rest_days": {"home": 2, "away": 7, "bayern": 2, "opponent": 7, "advantage": "Baskonia Vitoria-Gasteiz"}, "net_rating_diff": -23.3, "home_off_rating": 110.4, "away_off_rating": 149.9, "home_def_rating": 109.4, "away_def_rating": 125.6}}, {"match_id": "bbl_2627_md10", "competition": "BBL", "round": "BBL Matchday 10", "date": "2026-11-22", "month": "2026-11", "venue": "tectake ARENA, W\u00fcrzburg", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "W\u00fcrzburg Baskets", "away_team": "FC Bayern M\u00fcnchen", "opponent": "W\u00fcrzburg Baskets", "is_bayern_home": false, "probabilities": {"home_win": 52.7, "away_win": 47.3, "bayern_win": 47.3, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 87, "away": 86, "bayern": 86, "opponent": 87, "formatted": "87 : 86", "bayern_formatted": "FC Bayern 86 : 87 W\u00fcrzburg Baskets", "margin": 1, "total_points": 173, "over_under_line": 172.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.5, "rest_days": {"home": 7, "away": 3, "bayern": 3, "opponent": 7, "advantage": "W\u00fcrzburg Baskets"}, "net_rating_diff": -7.6, "home_off_rating": 101.1, "away_off_rating": 106.6, "home_def_rating": 111.7, "away_def_rating": 109.5}}, {"match_id": "el_2627_rd14", "competition": "EuroLeague", "round": "EuroLeague Round 14", "date": "2026-11-24", "month": "2026-11", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Maccabi Playtika Tel Aviv", "opponent": "Maccabi Playtika Tel Aviv", "is_bayern_home": true, "probabilities": {"home_win": 50.9, "away_win": 49.1, "bayern_win": 50.9, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 83, "away": 82, "bayern": 83, "opponent": 82, "formatted": "83 : 82", "bayern_formatted": "FC Bayern 83 : 82 Maccabi Playtika Tel Aviv", "margin": 1, "total_points": 165, "over_under_line": 164.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.8, "rest_days": {"home": 2, "away": 7, "bayern": 2, "opponent": 7, "advantage": "Maccabi Playtika Tel Aviv"}, "net_rating_diff": -7.0, "home_off_rating": 108.4, "away_off_rating": 130.1, "home_def_rating": 112.6, "away_def_rating": 127.4}}, {"match_id": "bbl_2627_md11", "competition": "BBL", "round": "BBL Matchday 11", "date": "2026-11-29", "month": "2026-11", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "MHP RIESEN Ludwigsburg", "opponent": "MHP RIESEN Ludwigsburg", "is_bayern_home": true, "probabilities": {"home_win": 80.1, "away_win": 19.9, "bayern_win": 80.1, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 83, "away": 69, "bayern": 83, "opponent": 69, "formatted": "83 : 69", "bayern_formatted": "FC Bayern 83 : 69 MHP RIESEN Ludwigsburg", "margin": 14, "total_points": 152, "over_under_line": 151.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.0, "rest_days": {"home": 5, "away": 7, "bayern": 5, "opponent": 7, "advantage": "MHP RIESEN Ludwigsburg"}, "net_rating_diff": 10.9, "home_off_rating": 109.9, "away_off_rating": 102.1, "home_def_rating": 113.7, "away_def_rating": 116.9}}, {"match_id": "el_2627_rd15", "competition": "EuroLeague", "round": "EuroLeague Round 15", "date": "2026-12-03", "month": "2026-12", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Paris Basketball", "opponent": "Paris Basketball", "is_bayern_home": true, "probabilities": {"home_win": 51.8, "away_win": 48.2, "bayern_win": 51.8, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 81, "away": 80, "bayern": 81, "opponent": 80, "formatted": "81 : 80", "bayern_formatted": "FC Bayern 81 : 80 Paris Basketball", "margin": 1, "total_points": 161, "over_under_line": 160.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.7, "rest_days": {"home": 4, "away": 7, "bayern": 4, "opponent": 7, "advantage": "Paris Basketball"}, "net_rating_diff": -4.6, "home_off_rating": 111.4, "away_off_rating": 132.1, "home_def_rating": 110.0, "away_def_rating": 126.1}}, {"match_id": "bbl_2627_md12", "competition": "BBL", "round": "BBL Matchday 12", "date": "2026-12-06", "month": "2026-12", "venue": "SNP dome, Heidelberg", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "MLP Academics Heidelberg", "away_team": "FC Bayern M\u00fcnchen", "opponent": "MLP Academics Heidelberg", "is_bayern_home": false, "probabilities": {"home_win": 63.3, "away_win": 36.7, "bayern_win": 36.7, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 84, "away": 77, "bayern": 77, "opponent": 84, "formatted": "84 : 77", "bayern_formatted": "FC Bayern 77 : 84 MLP Academics Heidelberg", "margin": 7, "total_points": 161, "over_under_line": 160.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.4, "rest_days": {"home": 7, "away": 3, "bayern": 3, "opponent": 7, "advantage": "MLP Academics Heidelberg"}, "net_rating_diff": -14.1, "home_off_rating": 104.7, "away_off_rating": 111.7, "home_def_rating": 117.2, "away_def_rating": 110.1}}, {"match_id": "el_2627_rd16", "competition": "EuroLeague", "round": "EuroLeague Round 16", "date": "2026-12-10", "month": "2026-12", "venue": "Unipol Forum", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "EA7 Emporio Armani Milan", "away_team": "FC Bayern M\u00fcnchen", "opponent": "EA7 Emporio Armani Milan", "is_bayern_home": false, "probabilities": {"home_win": 71.9, "away_win": 28.1, "bayern_win": 28.1, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 87, "away": 72, "bayern": 72, "opponent": 87, "formatted": "87 : 72", "bayern_formatted": "FC Bayern 72 : 87 EA7 Emporio Armani Milan", "margin": 15, "total_points": 159, "over_under_line": 158.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.7, "rest_days": {"home": 7, "away": 4, "bayern": 4, "opponent": 7, "advantage": "EA7 Emporio Armani Milan"}, "net_rating_diff": -16.8, "home_off_rating": 101.3, "away_off_rating": 111.3, "home_def_rating": 118.3, "away_def_rating": 111.5}}, {"match_id": "bbl_2627_md13", "competition": "BBL", "round": "BBL Matchday 13", "date": "2026-12-13", "month": "2026-12", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "SYNTAINICS MBC", "opponent": "SYNTAINICS MBC", "is_bayern_home": true, "probabilities": {"home_win": 79.6, "away_win": 20.4, "bayern_win": 79.6, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 85, "away": 72, "bayern": 85, "opponent": 72, "formatted": "85 : 72", "bayern_formatted": "FC Bayern 85 : 72 SYNTAINICS MBC", "margin": 13, "total_points": 157, "over_under_line": 156.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 73.0, "rest_days": {"home": 3, "away": 7, "bayern": 3, "opponent": 7, "advantage": "SYNTAINICS MBC"}, "net_rating_diff": 21.3, "home_off_rating": 108.1, "away_off_rating": 100.5, "home_def_rating": 114.6, "away_def_rating": 128.3}}, {"match_id": "el_2627_rd17", "competition": "EuroLeague", "round": "EuroLeague Round 17", "date": "2026-12-15", "month": "2026-12", "venue": "Movistar Arena", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Real Madrid", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Real Madrid", "is_bayern_home": false, "probabilities": {"home_win": 77.8, "away_win": 22.2, "bayern_win": 22.2, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 81, "away": 74, "bayern": 74, "opponent": 81, "formatted": "81 : 74", "bayern_formatted": "FC Bayern 74 : 81 Real Madrid", "margin": 7, "total_points": 155, "over_under_line": 154.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.8, "rest_days": {"home": 7, "away": 2, "bayern": 2, "opponent": 7, "advantage": "Real Madrid"}, "net_rating_diff": 28.6, "home_off_rating": 128.9, "away_off_rating": 109.9, "home_def_rating": 101.4, "away_def_rating": 111.0}}, {"match_id": "pokal_2627_qf", "competition": "BBL-Pokal", "round": "BBL-Pokal Quarterfinal", "date": "2026-12-16", "month": "2026-12", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "ratiopharm ulm", "opponent": "ratiopharm ulm", "is_bayern_home": true, "probabilities": {"home_win": 91.5, "away_win": 8.5, "bayern_win": 91.5, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 84, "away": 71, "bayern": 84, "opponent": 71, "formatted": "84 : 71", "bayern_formatted": "FC Bayern 84 : 71 ratiopharm ulm", "margin": 13, "total_points": 155, "over_under_line": 154.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.5, "rest_days": {"home": 1, "away": 14, "bayern": 1, "opponent": 14, "advantage": "ratiopharm ulm"}, "net_rating_diff": 22.2, "home_off_rating": 108.9, "away_off_rating": 97.4, "home_def_rating": 111.4, "away_def_rating": 122.1}}, {"match_id": "el_2627_rd18", "competition": "EuroLeague", "round": "EuroLeague Round 18", "date": "2026-12-18", "month": "2026-12", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Panathinaikos AKTOR Athens", "opponent": "Panathinaikos AKTOR Athens", "is_bayern_home": true, "probabilities": {"home_win": 53.7, "away_win": 46.3, "bayern_win": 53.7, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 81, "away": 80, "bayern": 81, "opponent": 80, "formatted": "81 : 80", "bayern_formatted": "FC Bayern 81 : 80 Panathinaikos AKTOR Athens", "margin": 1, "total_points": 161, "over_under_line": 160.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.8, "rest_days": {"home": 2, "away": 7, "bayern": 2, "opponent": 7, "advantage": "Panathinaikos AKTOR Athens"}, "net_rating_diff": -14.7, "home_off_rating": 109.9, "away_off_rating": 116.0, "home_def_rating": 108.1, "away_def_rating": 99.5}}, {"match_id": "bbl_2627_md14", "competition": "BBL", "round": "BBL Matchday 14", "date": "2026-12-20", "month": "2026-12", "venue": "S\u00fcwag Energie ARENA, Frankfurt", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "SKYLINERS Frankfurt", "away_team": "FC Bayern M\u00fcnchen", "opponent": "SKYLINERS Frankfurt", "is_bayern_home": false, "probabilities": {"home_win": 33.2, "away_win": 66.8, "bayern_win": 66.8, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 77, "away": 87, "bayern": 87, "opponent": 77, "formatted": "77 : 87", "bayern_formatted": "FC Bayern 87 : 77 SKYLINERS Frankfurt", "margin": -10, "total_points": 164, "over_under_line": 163.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.3, "rest_days": {"home": 7, "away": 2, "bayern": 2, "opponent": 7, "advantage": "SKYLINERS Frankfurt"}, "net_rating_diff": -22.9, "home_off_rating": 96.5, "away_off_rating": 110.4, "home_def_rating": 117.7, "away_def_rating": 108.7}}, {"match_id": "el_2627_rd19", "competition": "EuroLeague", "round": "EuroLeague Round 19", "date": "2026-12-22", "month": "2026-12", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Olympiacos Piraeus", "opponent": "Olympiacos Piraeus", "is_bayern_home": true, "probabilities": {"home_win": 29.6, "away_win": 70.4, "bayern_win": 29.6, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 69, "away": 82, "bayern": 69, "opponent": 82, "formatted": "69 : 82", "bayern_formatted": "FC Bayern 69 : 82 Olympiacos Piraeus", "margin": -13, "total_points": 151, "over_under_line": 150.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.7, "rest_days": {"home": 2, "away": 7, "bayern": 2, "opponent": 7, "advantage": "Olympiacos Piraeus"}, "net_rating_diff": -42.6, "home_off_rating": 112.5, "away_off_rating": 147.0, "home_def_rating": 109.0, "away_def_rating": 100.9}}, {"match_id": "bbl_2627_md15", "competition": "BBL", "round": "BBL Matchday 15", "date": "2026-12-26", "month": "2026-12", "venue": "SAP Garden, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "RASTA Vechta", "opponent": "RASTA Vechta", "is_bayern_home": true, "probabilities": {"home_win": 78.0, "away_win": 22.0, "bayern_win": 78.0, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 83, "away": 67, "bayern": 83, "opponent": 67, "formatted": "83 : 67", "bayern_formatted": "FC Bayern 83 : 67 RASTA Vechta", "margin": 16, "total_points": 150, "over_under_line": 149.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.4, "rest_days": {"home": 4, "away": 7, "bayern": 4, "opponent": 7, "advantage": "RASTA Vechta"}, "net_rating_diff": 10.2, "home_off_rating": 108.5, "away_off_rating": 104.2, "home_def_rating": 110.2, "away_def_rating": 116.2}}, {"match_id": "el_2627_rd20", "competition": "EuroLeague", "round": "EuroLeague Round 20", "date": "2026-12-30", "month": "2026-12", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Besiktas Istanbul", "opponent": "Besiktas Istanbul", "is_bayern_home": true, "probabilities": {"home_win": 73.7, "away_win": 26.3, "bayern_win": 73.7, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 90, "away": 68, "bayern": 90, "opponent": 68, "formatted": "90 : 68", "bayern_formatted": "FC Bayern 90 : 68 Besiktas Istanbul", "margin": 22, "total_points": 158, "over_under_line": 157.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.0, "rest_days": {"home": 4, "away": 14, "bayern": 4, "opponent": 14, "advantage": "Besiktas Istanbul"}, "net_rating_diff": -16.0, "home_off_rating": 109.8, "away_off_rating": 111.0, "home_def_rating": 106.4, "away_def_rating": 91.5}}, {"match_id": "bbl_2627_md16", "competition": "BBL", "round": "BBL Matchday 16", "date": "2027-01-03", "month": "2027-01", "venue": "Sparkassen-Arena, G\u00f6ttingen", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "BG G\u00f6ttingen", "away_team": "FC Bayern M\u00fcnchen", "opponent": "BG G\u00f6ttingen", "is_bayern_home": false, "probabilities": {"home_win": 37.0, "away_win": 63.0, "bayern_win": 63.0, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 81, "away": 92, "bayern": 92, "opponent": 81, "formatted": "81 : 92", "bayern_formatted": "FC Bayern 92 : 81 BG G\u00f6ttingen", "margin": -11, "total_points": 173, "over_under_line": 172.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 73.0, "rest_days": {"home": 7, "away": 4, "bayern": 4, "opponent": 7, "advantage": "BG G\u00f6ttingen"}, "net_rating_diff": -40.3, "home_off_rating": 96.1, "away_off_rating": 114.2, "home_def_rating": 124.8, "away_def_rating": 102.6}}, {"match_id": "el_2627_rd21", "competition": "EuroLeague", "round": "EuroLeague Round 21", "date": "2027-01-08", "month": "2027-01", "venue": "Coca-Cola Arena", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Dubai Basketball", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Dubai Basketball", "is_bayern_home": false, "probabilities": {"home_win": 65.5, "away_win": 34.5, "bayern_win": 34.5, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 78, "away": 73, "bayern": 73, "opponent": 78, "formatted": "78 : 73", "bayern_formatted": "FC Bayern 73 : 78 Dubai Basketball", "margin": 5, "total_points": 151, "over_under_line": 150.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 14, "away": 5, "bayern": 5, "opponent": 14, "advantage": "Dubai Basketball"}, "net_rating_diff": -17.6, "home_off_rating": 104.0, "away_off_rating": 116.6, "home_def_rating": 109.6, "away_def_rating": 104.5}}, {"match_id": "bbl_2627_md17", "competition": "BBL", "round": "BBL Matchday 17", "date": "2027-01-10", "month": "2027-01", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "HAKRO Merlins Crailsheim", "opponent": "HAKRO Merlins Crailsheim", "is_bayern_home": true, "probabilities": {"home_win": 88.1, "away_win": 11.9, "bayern_win": 88.1, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 89, "away": 68, "bayern": 89, "opponent": 68, "formatted": "89 : 68", "bayern_formatted": "FC Bayern 89 : 68 HAKRO Merlins Crailsheim", "margin": 21, "total_points": 157, "over_under_line": 156.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 73.3, "rest_days": {"home": 2, "away": 7, "bayern": 2, "opponent": 7, "advantage": "HAKRO Merlins Crailsheim"}, "net_rating_diff": 35.2, "home_off_rating": 113.2, "away_off_rating": 104.3, "home_def_rating": 105.1, "away_def_rating": 131.4}}, {"match_id": "el_2627_rd22", "competition": "EuroLeague", "round": "EuroLeague Round 22", "date": "2027-01-12", "month": "2027-01", "venue": "Aleksandar Nikolic Hall", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Maccabi Playtika Tel Aviv", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Maccabi Playtika Tel Aviv", "is_bayern_home": false, "probabilities": {"home_win": 75.5, "away_win": 24.5, "bayern_win": 24.5, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 78, "away": 76, "bayern": 76, "opponent": 78, "formatted": "78 : 76", "bayern_formatted": "FC Bayern 76 : 78 Maccabi Playtika Tel Aviv", "margin": 2, "total_points": 154, "over_under_line": 153.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 14, "away": 2, "bayern": 2, "opponent": 14, "advantage": "Maccabi Playtika Tel Aviv"}, "net_rating_diff": -13.4, "home_off_rating": 114.2, "away_off_rating": 114.8, "home_def_rating": 115.6, "away_def_rating": 102.8}}, {"match_id": "el_2627_rd23", "competition": "EuroLeague", "round": "EuroLeague Round 23", "date": "2027-01-14", "month": "2027-01", "venue": "Telekom Center Athens", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Panathinaikos AKTOR Athens", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Panathinaikos AKTOR Athens", "is_bayern_home": false, "probabilities": {"home_win": 66.9, "away_win": 33.1, "bayern_win": 33.1, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 75, "away": 72, "bayern": 72, "opponent": 75, "formatted": "75 : 72", "bayern_formatted": "FC Bayern 72 : 75 Panathinaikos AKTOR Athens", "margin": 3, "total_points": 147, "over_under_line": 146.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 14, "away": 2, "bayern": 2, "opponent": 14, "advantage": "Panathinaikos AKTOR Athens"}, "net_rating_diff": -10.2, "home_off_rating": 111.4, "away_off_rating": 112.5, "home_def_rating": 112.8, "away_def_rating": 103.7}}, {"match_id": "bbl_2627_md18", "competition": "BBL", "round": "BBL Matchday 18", "date": "2027-01-17", "month": "2027-01", "venue": "Brose Arena, Bamberg", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Bamberg Baskets", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Bamberg Baskets", "is_bayern_home": false, "probabilities": {"home_win": 38.0, "away_win": 62.0, "bayern_win": 62.0, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 77, "away": 92, "bayern": 92, "opponent": 77, "formatted": "77 : 92", "bayern_formatted": "FC Bayern 92 : 77 Bamberg Baskets", "margin": -15, "total_points": 169, "over_under_line": 168.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.9, "rest_days": {"home": 14, "away": 3, "bayern": 3, "opponent": 14, "advantage": "Bamberg Baskets"}, "net_rating_diff": -54.4, "home_off_rating": 98.1, "away_off_rating": 109.1, "home_def_rating": 147.1, "away_def_rating": 103.6}}, {"match_id": "el_2627_rd24", "competition": "EuroLeague", "round": "EuroLeague Round 24", "date": "2027-01-21", "month": "2027-01", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "EA7 Emporio Armani Milan", "opponent": "EA7 Emporio Armani Milan", "is_bayern_home": true, "probabilities": {"home_win": 63.4, "away_win": 36.6, "bayern_win": 63.4, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 81, "away": 79, "bayern": 81, "opponent": 79, "formatted": "81 : 79", "bayern_formatted": "FC Bayern 81 : 79 EA7 Emporio Armani Milan", "margin": 2, "total_points": 160, "over_under_line": 159.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 4, "away": 14, "bayern": 4, "opponent": 14, "advantage": "EA7 Emporio Armani Milan"}, "net_rating_diff": -11.3, "home_off_rating": 113.2, "away_off_rating": 121.3, "home_def_rating": 103.5, "away_def_rating": 100.4}}, {"match_id": "bbl_2627_md19", "competition": "BBL", "round": "BBL Matchday 19", "date": "2027-01-24", "month": "2027-01", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Telekom Baskets Bonn", "opponent": "Telekom Baskets Bonn", "is_bayern_home": true, "probabilities": {"home_win": 77.3, "away_win": 22.7, "bayern_win": 77.3, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 93, "away": 79, "bayern": 93, "opponent": 79, "formatted": "93 : 79", "bayern_formatted": "FC Bayern 93 : 79 Telekom Baskets Bonn", "margin": 14, "total_points": 172, "over_under_line": 171.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.5, "rest_days": {"home": 3, "away": 14, "bayern": 3, "opponent": 14, "advantage": "Telekom Baskets Bonn"}, "net_rating_diff": 5.2, "home_off_rating": 112.9, "away_off_rating": 115.3, "home_def_rating": 105.5, "away_def_rating": 113.0}}, {"match_id": "el_2627_rd25", "competition": "EuroLeague", "round": "EuroLeague Round 25", "date": "2027-01-28", "month": "2027-01", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Valencia Basket", "opponent": "Valencia Basket", "is_bayern_home": true, "probabilities": {"home_win": 80.2, "away_win": 19.8, "bayern_win": 80.2, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 89, "away": 71, "bayern": 89, "opponent": 71, "formatted": "89 : 71", "bayern_formatted": "FC Bayern 89 : 71 Valencia Basket", "margin": 18, "total_points": 160, "over_under_line": 159.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.2, "rest_days": {"home": 4, "away": 14, "bayern": 4, "opponent": 14, "advantage": "Valencia Basket"}, "net_rating_diff": -0.9, "home_off_rating": 115.5, "away_off_rating": 107.1, "home_def_rating": 106.7, "away_def_rating": 97.4}}, {"match_id": "bbl_2627_md20", "competition": "BBL", "round": "BBL Matchday 20", "date": "2027-01-31", "month": "2027-01", "venue": "ratiopharm arena, Neu-Ulm", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "ratiopharm ulm", "away_team": "FC Bayern M\u00fcnchen", "opponent": "ratiopharm ulm", "is_bayern_home": false, "probabilities": {"home_win": 40.0, "away_win": 60.0, "bayern_win": 60.0, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 81, "away": 95, "bayern": 95, "opponent": 81, "formatted": "81 : 95", "bayern_formatted": "FC Bayern 95 : 81 ratiopharm ulm", "margin": -14, "total_points": 176, "over_under_line": 175.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.5, "rest_days": {"home": 14, "away": 3, "bayern": 3, "opponent": 14, "advantage": "ratiopharm ulm"}, "net_rating_diff": -32.9, "home_off_rating": 97.7, "away_off_rating": 117.1, "home_def_rating": 118.0, "away_def_rating": 104.4}}, {"match_id": "el_2627_rd26", "competition": "EuroLeague", "round": "EuroLeague Round 26", "date": "2027-02-03", "month": "2027-02", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Crvena Zvezda Meridianbet Belgrade", "opponent": "Crvena Zvezda Meridianbet Belgrade", "is_bayern_home": true, "probabilities": {"home_win": 75.3, "away_win": 24.7, "bayern_win": 75.3, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 88, "away": 79, "bayern": 88, "opponent": 79, "formatted": "88 : 79", "bayern_formatted": "FC Bayern 88 : 79 Crvena Zvezda Meridianbet Belgrade", "margin": 9, "total_points": 167, "over_under_line": 166.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 3, "away": 14, "bayern": 3, "opponent": 14, "advantage": "Crvena Zvezda Meridianbet Belgrade"}, "net_rating_diff": 1.1, "home_off_rating": 120.8, "away_off_rating": 123.8, "home_def_rating": 105.8, "away_def_rating": 109.9}}, {"match_id": "el_2627_rd27", "competition": "EuroLeague", "round": "EuroLeague Round 27", "date": "2027-02-05", "month": "2027-02", "venue": "Peace And Friendship Stadium", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Olympiacos Piraeus", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Olympiacos Piraeus", "is_bayern_home": false, "probabilities": {"home_win": 76.6, "away_win": 23.4, "bayern_win": 23.4, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 84, "away": 74, "bayern": 74, "opponent": 84, "formatted": "84 : 74", "bayern_formatted": "FC Bayern 74 : 84 Olympiacos Piraeus", "margin": 10, "total_points": 158, "over_under_line": 157.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.0, "rest_days": {"home": 14, "away": 2, "bayern": 2, "opponent": 14, "advantage": "Olympiacos Piraeus"}, "net_rating_diff": 4.3, "home_off_rating": 114.4, "away_off_rating": 121.1, "home_def_rating": 96.2, "away_def_rating": 107.2}}, {"match_id": "bbl_2627_md21", "competition": "BBL", "round": "BBL Matchday 21", "date": "2027-02-07", "month": "2027-02", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "NINERS Chemnitz", "opponent": "NINERS Chemnitz", "is_bayern_home": true, "probabilities": {"home_win": 92.8, "away_win": 7.2, "bayern_win": 92.8, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 91, "away": 68, "bayern": 91, "opponent": 68, "formatted": "91 : 68", "bayern_formatted": "FC Bayern 91 : 68 NINERS Chemnitz", "margin": 23, "total_points": 159, "over_under_line": 158.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.8, "rest_days": {"home": 2, "away": 14, "bayern": 2, "opponent": 14, "advantage": "NINERS Chemnitz"}, "net_rating_diff": 26.0, "home_off_rating": 117.3, "away_off_rating": 103.8, "home_def_rating": 109.5, "away_def_rating": 122.0}}, {"match_id": "el_2627_rd28", "competition": "EuroLeague", "round": "EuroLeague Round 28", "date": "2027-02-11", "month": "2027-02", "venue": "Virtus Arena", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Virtus Segafredo Bologna", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Virtus Segafredo Bologna", "is_bayern_home": false, "probabilities": {"home_win": 64.6, "away_win": 35.4, "bayern_win": 35.4, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 82, "away": 79, "bayern": 79, "opponent": 82, "formatted": "82 : 79", "bayern_formatted": "FC Bayern 79 : 82 Virtus Segafredo Bologna", "margin": 3, "total_points": 161, "over_under_line": 160.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 14, "away": 4, "bayern": 4, "opponent": 14, "advantage": "Virtus Segafredo Bologna"}, "net_rating_diff": -18.9, "home_off_rating": 104.0, "away_off_rating": 120.1, "home_def_rating": 109.6, "away_def_rating": 106.8}}, {"match_id": "bbl_2627_md22", "competition": "BBL", "round": "BBL Matchday 22", "date": "2027-02-14", "month": "2027-02", "venue": "EWE Arena, Oldenburg", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "EWE Baskets Oldenburg", "away_team": "FC Bayern M\u00fcnchen", "opponent": "EWE Baskets Oldenburg", "is_bayern_home": false, "probabilities": {"home_win": 34.5, "away_win": 65.5, "bayern_win": 65.5, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 76, "away": 87, "bayern": 87, "opponent": 76, "formatted": "76 : 87", "bayern_formatted": "FC Bayern 87 : 76 EWE Baskets Oldenburg", "margin": -11, "total_points": 163, "over_under_line": 162.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.5, "rest_days": {"home": 14, "away": 3, "bayern": 3, "opponent": 14, "advantage": "EWE Baskets Oldenburg"}, "net_rating_diff": -28.0, "home_off_rating": 107.1, "away_off_rating": 117.2, "home_def_rating": 126.4, "away_def_rating": 108.6}}, {"match_id": "pokal_2627_sf", "competition": "BBL-Pokal", "round": "BBL-Pokal TOP FOUR Semifinal", "date": "2027-02-20", "month": "2027-02", "venue": "BMW Park, Munich (Host)", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "ALBA Berlin", "opponent": "ALBA Berlin", "is_bayern_home": true, "probabilities": {"home_win": 91.2, "away_win": 8.8, "bayern_win": 91.2, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 95, "away": 74, "bayern": 95, "opponent": 74, "formatted": "95 : 74", "bayern_formatted": "FC Bayern 95 : 74 ALBA Berlin", "margin": 21, "total_points": 169, "over_under_line": 168.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.6, "rest_days": {"home": 6, "away": 14, "bayern": 6, "opponent": 14, "advantage": "ALBA Berlin"}, "net_rating_diff": 56.9, "home_off_rating": 118.0, "away_off_rating": 83.4, "home_def_rating": 107.7, "away_def_rating": 130.0}}, {"match_id": "pokal_2627_final", "competition": "BBL-Pokal", "round": "BBL-Pokal TOP FOUR Final", "date": "2027-02-21", "month": "2027-02", "venue": "BMW Park, Munich (Host)", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "W\u00fcrzburg Baskets", "opponent": "W\u00fcrzburg Baskets", "is_bayern_home": true, "probabilities": {"home_win": 77.5, "away_win": 22.5, "bayern_win": 77.5, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 92, "away": 83, "bayern": 92, "opponent": 83, "formatted": "92 : 83", "bayern_formatted": "FC Bayern 92 : 83 W\u00fcrzburg Baskets", "margin": 9, "total_points": 175, "over_under_line": 174.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.9, "rest_days": {"home": 1, "away": 14, "bayern": 1, "opponent": 14, "advantage": "W\u00fcrzburg Baskets"}, "net_rating_diff": 12.8, "home_off_rating": 120.6, "away_off_rating": 121.7, "home_def_rating": 106.4, "away_def_rating": 120.3}}, {"match_id": "bbl_2627_md24", "competition": "BBL", "round": "BBL Matchday 24", "date": "2027-02-28", "month": "2027-02", "venue": "Uber Arena, Berlin", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "ALBA Berlin", "away_team": "FC Bayern M\u00fcnchen", "opponent": "ALBA Berlin", "is_bayern_home": false, "probabilities": {"home_win": 36.8, "away_win": 63.2, "bayern_win": 63.2, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 84, "away": 90, "bayern": 90, "opponent": 84, "formatted": "84 : 90", "bayern_formatted": "FC Bayern 90 : 84 ALBA Berlin", "margin": -6, "total_points": 174, "over_under_line": 173.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.4, "rest_days": {"home": 8, "away": 7, "bayern": 7, "opponent": 8, "advantage": "ALBA Berlin"}, "net_rating_diff": -43.7, "home_off_rating": 100.4, "away_off_rating": 122.1, "home_def_rating": 130.8, "away_def_rating": 108.8}}, {"match_id": "el_2627_rd29", "competition": "EuroLeague", "round": "EuroLeague Round 29", "date": "2027-03-05", "month": "2027-03", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "LDLC ASVEL Villeurbanne", "opponent": "LDLC ASVEL Villeurbanne", "is_bayern_home": true, "probabilities": {"home_win": 77.2, "away_win": 22.8, "bayern_win": 77.2, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 86, "away": 79, "bayern": 86, "opponent": 79, "formatted": "86 : 79", "bayern_formatted": "FC Bayern 86 : 79 LDLC ASVEL Villeurbanne", "margin": 7, "total_points": 165, "over_under_line": 164.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 5, "away": 14, "bayern": 5, "opponent": 14, "advantage": "LDLC ASVEL Villeurbanne"}, "net_rating_diff": 0.8, "home_off_rating": 122.2, "away_off_rating": 113.9, "home_def_rating": 110.3, "away_def_rating": 102.8}}, {"match_id": "bbl_2627_md25", "competition": "BBL", "round": "BBL Matchday 25", "date": "2027-03-07", "month": "2027-03", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "W\u00fcrzburg Baskets", "opponent": "W\u00fcrzburg Baskets", "is_bayern_home": true, "probabilities": {"home_win": 87.9, "away_win": 12.1, "bayern_win": 87.9, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 93, "away": 68, "bayern": 93, "opponent": 68, "formatted": "93 : 68", "bayern_formatted": "FC Bayern 93 : 68 W\u00fcrzburg Baskets", "margin": 25, "total_points": 161, "over_under_line": 160.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.0, "rest_days": {"home": 2, "away": 14, "bayern": 2, "opponent": 14, "advantage": "W\u00fcrzburg Baskets"}, "net_rating_diff": 21.5, "home_off_rating": 121.4, "away_off_rating": 116.5, "home_def_rating": 110.1, "away_def_rating": 126.7}}, {"match_id": "el_2627_rd30", "competition": "EuroLeague", "round": "EuroLeague Round 30", "date": "2027-03-09", "month": "2027-03", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Anadolu Efes Istanbul", "opponent": "Anadolu Efes Istanbul", "is_bayern_home": true, "probabilities": {"home_win": 65.3, "away_win": 34.7, "bayern_win": 65.3, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 81, "away": 79, "bayern": 81, "opponent": 79, "formatted": "81 : 79", "bayern_formatted": "FC Bayern 81 : 79 Anadolu Efes Istanbul", "margin": 2, "total_points": 160, "over_under_line": 159.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.0, "rest_days": {"home": 2, "away": 14, "bayern": 2, "opponent": 14, "advantage": "Anadolu Efes Istanbul"}, "net_rating_diff": -0.4, "home_off_rating": 124.0, "away_off_rating": 121.0, "home_def_rating": 106.3, "away_def_rating": 102.9}}, {"match_id": "el_2627_rd31", "competition": "EuroLeague", "round": "EuroLeague Round 31", "date": "2027-03-11", "month": "2027-03", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Hapoel Tel Aviv", "opponent": "Hapoel Tel Aviv", "is_bayern_home": true, "probabilities": {"home_win": 82.8, "away_win": 17.2, "bayern_win": 82.8, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 90, "away": 84, "bayern": 90, "opponent": 84, "formatted": "90 : 84", "bayern_formatted": "FC Bayern 90 : 84 Hapoel Tel Aviv", "margin": 6, "total_points": 174, "over_under_line": 173.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.4, "rest_days": {"home": 2, "away": 14, "bayern": 2, "opponent": 14, "advantage": "Hapoel Tel Aviv"}, "net_rating_diff": 16.1, "home_off_rating": 120.9, "away_off_rating": 115.5, "home_def_rating": 107.6, "away_def_rating": 118.3}}, {"match_id": "bbl_2627_md26", "competition": "BBL", "round": "BBL Matchday 26", "date": "2027-03-14", "month": "2027-03", "venue": "MHPArena, Ludwigsburg", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "MHP RIESEN Ludwigsburg", "away_team": "FC Bayern M\u00fcnchen", "opponent": "MHP RIESEN Ludwigsburg", "is_bayern_home": false, "probabilities": {"home_win": 32.4, "away_win": 67.6, "bayern_win": 67.6, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 76, "away": 91, "bayern": 91, "opponent": 76, "formatted": "76 : 91", "bayern_formatted": "FC Bayern 91 : 76 MHP RIESEN Ludwigsburg", "margin": -15, "total_points": 167, "over_under_line": 166.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 14, "away": 3, "bayern": 3, "opponent": 14, "advantage": "MHP RIESEN Ludwigsburg"}, "net_rating_diff": -32.3, "home_off_rating": 95.8, "away_off_rating": 122.3, "home_def_rating": 115.3, "away_def_rating": 109.5}}, {"match_id": "el_2627_rd32", "competition": "EuroLeague", "round": "EuroLeague Round 32", "date": "2027-03-18", "month": "2027-03", "venue": "Belgrade Arena", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Partizan Mozzart Bet Belgrade", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Partizan Mozzart Bet Belgrade", "is_bayern_home": false, "probabilities": {"home_win": 42.0, "away_win": 58.0, "bayern_win": 58.0, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 76, "away": 89, "bayern": 89, "opponent": 76, "formatted": "76 : 89", "bayern_formatted": "FC Bayern 89 : 76 Partizan Mozzart Bet Belgrade", "margin": -13, "total_points": 165, "over_under_line": 164.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 14, "away": 4, "bayern": 4, "opponent": 14, "advantage": "Partizan Mozzart Bet Belgrade"}, "net_rating_diff": -40.8, "home_off_rating": 95.7, "away_off_rating": 123.2, "home_def_rating": 122.1, "away_def_rating": 108.8}}, {"match_id": "bbl_2627_md27", "competition": "BBL", "round": "BBL Matchday 27", "date": "2027-03-21", "month": "2027-03", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "ROSTOCK SEAWOLVES", "opponent": "ROSTOCK SEAWOLVES", "is_bayern_home": true, "probabilities": {"home_win": 91.9, "away_win": 8.1, "bayern_win": 91.9, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 97, "away": 77, "bayern": 97, "opponent": 77, "formatted": "97 : 77", "bayern_formatted": "FC Bayern 97 : 77 ROSTOCK SEAWOLVES", "margin": 20, "total_points": 174, "over_under_line": 173.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.8, "rest_days": {"home": 3, "away": 14, "bayern": 3, "opponent": 14, "advantage": "ROSTOCK SEAWOLVES"}, "net_rating_diff": 51.5, "home_off_rating": 122.9, "away_off_rating": 94.0, "home_def_rating": 108.2, "away_def_rating": 130.8}}, {"match_id": "el_2627_rd33", "competition": "EuroLeague", "round": "EuroLeague Round 33", "date": "2027-03-24", "month": "2027-03", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Real Madrid", "opponent": "Real Madrid", "is_bayern_home": true, "probabilities": {"home_win": 69.8, "away_win": 30.2, "bayern_win": 69.8, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 84, "away": 78, "bayern": 84, "opponent": 78, "formatted": "84 : 78", "bayern_formatted": "FC Bayern 84 : 78 Real Madrid", "margin": 6, "total_points": 162, "over_under_line": 161.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.0, "rest_days": {"home": 3, "away": 14, "bayern": 3, "opponent": 14, "advantage": "Real Madrid"}, "net_rating_diff": 7.7, "home_off_rating": 124.9, "away_off_rating": 112.8, "home_def_rating": 107.4, "away_def_rating": 103.1}}, {"match_id": "el_2627_rd34", "competition": "EuroLeague", "round": "EuroLeague Round 34", "date": "2027-03-26", "month": "2027-03", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Zalgiris Kaunas", "opponent": "Zalgiris Kaunas", "is_bayern_home": true, "probabilities": {"home_win": 71.6, "away_win": 28.4, "bayern_win": 71.6, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 88, "away": 84, "bayern": 88, "opponent": 84, "formatted": "88 : 84", "bayern_formatted": "FC Bayern 88 : 84 Zalgiris Kaunas", "margin": 4, "total_points": 172, "over_under_line": 171.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 2, "away": 14, "bayern": 2, "opponent": 14, "advantage": "Zalgiris Kaunas"}, "net_rating_diff": 4.4, "home_off_rating": 122.8, "away_off_rating": 118.2, "home_def_rating": 107.3, "away_def_rating": 107.1}}, {"match_id": "bbl_2627_md28", "competition": "BBL", "round": "BBL Matchday 28", "date": "2027-03-28", "month": "2027-03", "venue": "Inselpark Arena, Hamburg", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Hamburg Towers", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Hamburg Towers", "is_bayern_home": false, "probabilities": {"home_win": 21.6, "away_win": 78.4, "bayern_win": 78.4, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 75, "away": 94, "bayern": 94, "opponent": 75, "formatted": "75 : 94", "bayern_formatted": "FC Bayern 94 : 75 Hamburg Towers", "margin": -19, "total_points": 169, "over_under_line": 168.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.6, "rest_days": {"home": 14, "away": 2, "bayern": 2, "opponent": 14, "advantage": "Hamburg Towers"}, "net_rating_diff": -40.8, "home_off_rating": 86.3, "away_off_rating": 122.8, "home_def_rating": 113.7, "away_def_rating": 109.5}}, {"match_id": "el_2627_rd35", "competition": "EuroLeague", "round": "EuroLeague Round 35", "date": "2027-04-02", "month": "2027-04", "venue": "Buesa Arena", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Baskonia Vitoria-Gasteiz", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Baskonia Vitoria-Gasteiz", "is_bayern_home": false, "probabilities": {"home_win": 62.3, "away_win": 37.7, "bayern_win": 37.7, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 79, "away": 76, "bayern": 76, "opponent": 79, "formatted": "79 : 76", "bayern_formatted": "FC Bayern 76 : 79 Baskonia Vitoria-Gasteiz", "margin": 3, "total_points": 155, "over_under_line": 154.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 14, "away": 5, "bayern": 5, "opponent": 14, "advantage": "Baskonia Vitoria-Gasteiz"}, "net_rating_diff": 3.0, "home_off_rating": 112.7, "away_off_rating": 123.9, "home_def_rating": 94.6, "away_def_rating": 108.8}}, {"match_id": "bbl_2627_md29", "competition": "BBL", "round": "BBL Matchday 29", "date": "2027-04-04", "month": "2027-04", "venue": "Volkswagen Halle, Braunschweig", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Basketball L\u00f6wen Braunschweig", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Basketball L\u00f6wen Braunschweig", "is_bayern_home": false, "probabilities": {"home_win": 33.1, "away_win": 66.9, "bayern_win": 66.9, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 76, "away": 89, "bayern": 89, "opponent": 76, "formatted": "76 : 89", "bayern_formatted": "FC Bayern 89 : 76 Basketball L\u00f6wen Braunschweig", "margin": -13, "total_points": 165, "over_under_line": 164.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.3, "rest_days": {"home": 14, "away": 2, "bayern": 2, "opponent": 14, "advantage": "Basketball L\u00f6wen Braunschweig"}, "net_rating_diff": -31.5, "home_off_rating": 94.1, "away_off_rating": 119.8, "home_def_rating": 114.8, "away_def_rating": 109.0}}, {"match_id": "el_2627_rd36", "competition": "EuroLeague", "round": "EuroLeague Round 36", "date": "2027-04-06", "month": "2027-04", "venue": "Palau Blaugrana", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Barcelona", "away_team": "FC Bayern M\u00fcnchen", "opponent": "FC Barcelona", "is_bayern_home": false, "probabilities": {"home_win": 72.5, "away_win": 27.5, "bayern_win": 27.5, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 85, "away": 76, "bayern": 76, "opponent": 85, "formatted": "85 : 76", "bayern_formatted": "FC Bayern 76 : 85 FC Barcelona", "margin": 9, "total_points": 161, "over_under_line": 160.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.1, "rest_days": {"home": 14, "away": 2, "bayern": 2, "opponent": 14, "advantage": "FC Barcelona"}, "net_rating_diff": 12.7, "home_off_rating": 112.7, "away_off_rating": 120.3, "home_def_rating": 87.6, "away_def_rating": 107.8}}, {"match_id": "el_2627_rd37", "competition": "EuroLeague", "round": "EuroLeague Round 37", "date": "2027-04-08", "month": "2027-04", "venue": "Sap Garden", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "Fenerbahce Beko Istanbul", "opponent": "Fenerbahce Beko Istanbul", "is_bayern_home": true, "probabilities": {"home_win": 53.5, "away_win": 46.5, "bayern_win": 53.5, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 89, "away": 88, "bayern": 89, "opponent": 88, "formatted": "89 : 88", "bayern_formatted": "FC Bayern 89 : 88 Fenerbahce Beko Istanbul", "margin": 1, "total_points": 177, "over_under_line": 176.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.3, "rest_days": {"home": 2, "away": 14, "bayern": 2, "opponent": 14, "advantage": "Fenerbahce Beko Istanbul"}, "net_rating_diff": -27.2, "home_off_rating": 116.4, "away_off_rating": 138.3, "home_def_rating": 110.4, "away_def_rating": 105.1}}, {"match_id": "bbl_2627_md30", "competition": "BBL", "round": "BBL Matchday 30", "date": "2027-04-11", "month": "2027-04", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "MLP Academics Heidelberg", "opponent": "MLP Academics Heidelberg", "is_bayern_home": true, "probabilities": {"home_win": 80.6, "away_win": 19.4, "bayern_win": 80.6, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 88, "away": 81, "bayern": 88, "opponent": 81, "formatted": "88 : 81", "bayern_formatted": "FC Bayern 88 : 81 MLP Academics Heidelberg", "margin": 7, "total_points": 169, "over_under_line": 168.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.3, "rest_days": {"home": 3, "away": 14, "bayern": 3, "opponent": 14, "advantage": "MLP Academics Heidelberg"}, "net_rating_diff": -5.3, "home_off_rating": 117.7, "away_off_rating": 116.0, "home_def_rating": 113.4, "away_def_rating": 106.4}}, {"match_id": "el_2627_rd38", "competition": "EuroLeague", "round": "EuroLeague Round 38", "date": "2027-04-15", "month": "2027-04", "venue": "Adidas Arena", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "Paris Basketball", "away_team": "FC Bayern M\u00fcnchen", "opponent": "Paris Basketball", "is_bayern_home": false, "probabilities": {"home_win": 70.3, "away_win": 29.7, "bayern_win": 29.7, "tip": "OPPONENT WIN", "confidence": "High"}, "predicted_score": {"home": 83, "away": 71, "bayern": 71, "opponent": 83, "formatted": "83 : 71", "bayern_formatted": "FC Bayern 71 : 83 Paris Basketball", "margin": 12, "total_points": 154, "over_under_line": 153.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.0, "rest_days": {"home": 14, "away": 4, "bayern": 4, "opponent": 14, "advantage": "Paris Basketball"}, "net_rating_diff": -5.8, "home_off_rating": 111.6, "away_off_rating": 117.8, "home_def_rating": 113.0, "away_def_rating": 113.4}}, {"match_id": "bbl_2627_md31", "competition": "BBL", "round": "BBL Matchday 31", "date": "2027-04-18", "month": "2027-04", "venue": "Stadthalle Wei\u00dfenfels", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "SYNTAINICS MBC", "away_team": "FC Bayern M\u00fcnchen", "opponent": "SYNTAINICS MBC", "is_bayern_home": false, "probabilities": {"home_win": 48.9, "away_win": 51.1, "bayern_win": 51.1, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 80, "away": 93, "bayern": 93, "opponent": 80, "formatted": "80 : 93", "bayern_formatted": "FC Bayern 93 : 80 SYNTAINICS MBC", "margin": -13, "total_points": 173, "over_under_line": 172.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.6, "rest_days": {"home": 14, "away": 3, "bayern": 3, "opponent": 14, "advantage": "SYNTAINICS MBC"}, "net_rating_diff": -16.8, "home_off_rating": 98.6, "away_off_rating": 113.1, "home_def_rating": 116.4, "away_def_rating": 114.1}}, {"match_id": "bbl_2627_md32", "competition": "BBL", "round": "BBL Matchday 32", "date": "2027-04-25", "month": "2027-04", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "SKYLINERS Frankfurt", "opponent": "SKYLINERS Frankfurt", "is_bayern_home": true, "probabilities": {"home_win": 90.0, "away_win": 10.0, "bayern_win": 90.0, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 86, "away": 67, "bayern": 86, "opponent": 67, "formatted": "86 : 67", "bayern_formatted": "FC Bayern 86 : 67 SKYLINERS Frankfurt", "margin": 19, "total_points": 153, "over_under_line": 152.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 71.8, "rest_days": {"home": 7, "away": 14, "bayern": 7, "opponent": 14, "advantage": "SKYLINERS Frankfurt"}, "net_rating_diff": 16.6, "home_off_rating": 115.8, "away_off_rating": 108.0, "home_def_rating": 113.2, "away_def_rating": 122.0}}, {"match_id": "bbl_2627_md33", "competition": "BBL", "round": "BBL Matchday 33", "date": "2027-05-02", "month": "2027-05", "venue": "RASTA Dome, Vechta", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "RASTA Vechta", "away_team": "FC Bayern M\u00fcnchen", "opponent": "RASTA Vechta", "is_bayern_home": false, "probabilities": {"home_win": 33.8, "away_win": 66.2, "bayern_win": 66.2, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 78, "away": 93, "bayern": 93, "opponent": 78, "formatted": "78 : 93", "bayern_formatted": "FC Bayern 93 : 78 RASTA Vechta", "margin": -15, "total_points": 171, "over_under_line": 170.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.3, "rest_days": {"home": 14, "away": 7, "bayern": 7, "opponent": 14, "advantage": "RASTA Vechta"}, "net_rating_diff": -29.0, "home_off_rating": 92.5, "away_off_rating": 116.1, "home_def_rating": 114.6, "away_def_rating": 109.2}}, {"match_id": "bbl_2627_md34", "competition": "BBL", "round": "BBL Matchday 34", "date": "2027-05-09", "month": "2027-05", "venue": "BMW Park, Munich", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "FC Bayern M\u00fcnchen", "away_team": "BG G\u00f6ttingen", "opponent": "BG G\u00f6ttingen", "is_bayern_home": true, "probabilities": {"home_win": 91.8, "away_win": 8.2, "bayern_win": 91.8, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 93, "away": 68, "bayern": 93, "opponent": 68, "formatted": "93 : 68", "bayern_formatted": "FC Bayern 93 : 68 BG G\u00f6ttingen", "margin": 25, "total_points": 161, "over_under_line": 160.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.6, "rest_days": {"home": 7, "away": 14, "bayern": 7, "opponent": 14, "advantage": "BG G\u00f6ttingen"}, "net_rating_diff": 25.7, "home_off_rating": 119.6, "away_off_rating": 111.0, "home_def_rating": 108.9, "away_def_rating": 126.0}}, {"match_id": "bbl_2627_md2", "competition": "BBL", "round": "BBL Matchday 2", "date": "2027-05-12", "month": "2027-05", "venue": "Arena Hohenlohe, Ilshofen", "status": "UPCOMING (FORECAST)", "is_played": false, "home_team": "HAKRO Merlins Crailsheim", "away_team": "FC Bayern M\u00fcnchen", "opponent": "HAKRO Merlins Crailsheim", "is_bayern_home": false, "probabilities": {"home_win": 23.5, "away_win": 76.5, "bayern_win": 76.5, "tip": "BAYERN WIN", "confidence": "High"}, "predicted_score": {"home": 81, "away": 97, "bayern": 97, "opponent": 81, "formatted": "81 : 97", "bayern_formatted": "FC Bayern 97 : 81 HAKRO Merlins Crailsheim", "margin": -16, "total_points": 178, "over_under_line": 177.5}, "actual_score": null, "comparison": null, "tactical_factors": {"projected_pace": 72.8, "rest_days": {"home": 14, "away": 3, "bayern": 3, "opponent": 14, "advantage": "HAKRO Merlins Crailsheim"}, "net_rating_diff": -44.8, "home_off_rating": 92.8, "away_off_rating": 121.5, "home_def_rating": 121.4, "away_def_rating": 105.3}}]};
+        const CONFIG = {"model_name": "Model v3 Basketball Tactical & Time-Decay (Multiplicative & Dispersed)", "best_window": 8, "window_results": {"1": {"val_accuracy": 72.84, "val_log_loss": 0.6116}, "2": {"val_accuracy": 67.9, "val_log_loss": 0.5768}, "3": {"val_accuracy": 66.67, "val_log_loss": 0.6182}, "4": {"val_accuracy": 66.67, "val_log_loss": 0.5973}, "5": {"val_accuracy": 66.67, "val_log_loss": 0.5768}, "6": {"val_accuracy": 71.6, "val_log_loss": 0.581}, "7": {"val_accuracy": 67.9, "val_log_loss": 0.5795}, "8": {"val_accuracy": 72.84, "val_log_loss": 0.5832}, "9": {"val_accuracy": 66.67, "val_log_loss": 0.5809}, "10": {"val_accuracy": 65.43, "val_log_loss": 0.5865}}, "classification": {"test_accuracy": 77.94, "test_log_loss": 0.4943}, "score_regression": {"mae_home": 9.95, "rmse_home": 12.94, "mae_away": 8.38, "rmse_away": 10.65, "mae_margin": 10.67, "implied_winner_accuracy": 77.94, "dispersion_scaling": {"scale_home": 1.25, "scale_away": 1.281, "baseline_mean_home": 80.6, "baseline_mean_away": 77.23}}, "optimal_features": ["home_pts_decay_8", "away_pts_decay_8", "home_pts_conceded_decay_8", "away_pts_conceded_decay_8", "home_pace_decay_8", "away_pace_decay_8", "home_ortg_decay_8", "away_ortg_decay_8", "home_drtg_decay_8", "away_drtg_decay_8", "home_net_rtg_decay_8", "away_net_rtg_decay_8", "home_win_rate_decay_8", "away_win_rate_decay_8", "net_rtg_diff_8", "pace_projected_8", "off_def_mismatch_home_8", "off_def_mismatch_away_8", "rest_diff", "b2b_diff", "comp_tier", "is_euroleague", "is_bbl"], "top_features": [{"feature": "home_net_rtg_decay_8", "importance": 9.16}, {"feature": "net_rtg_diff_8", "importance": 7.79}, {"feature": "home_pace_decay_8", "importance": 7.21}, {"feature": "home_ortg_decay_8", "importance": 6.05}, {"feature": "away_win_rate_decay_8", "importance": 5.88}, {"feature": "home_win_rate_decay_8", "importance": 5.29}, {"feature": "pace_projected_8", "importance": 4.93}, {"feature": "home_pts_decay_8", "importance": 4.81}, {"feature": "off_def_mismatch_away_8", "importance": 4.7}, {"feature": "rest_diff", "importance": 4.54}]};
+        const ALL_FIXTURES = DATA.fixtures;
+        
+        let currentFilter = 'ALL';
+        let searchQuery = '';
+
+        function setCompFilter(filterKey) {
+            currentFilter = filterKey;
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = 'tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase transition text-slate-400 hover:text-white';
+            });
+            const activeTab = document.getElementById('tab-' + filterKey);
+            if (activeTab) {
+                activeTab.className = 'tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase transition bg-red-600 text-white shadow-md';
+            }
+            renderFixtures();
+        }
+
+        function applySearch(query) {
+            searchQuery = query.toLowerCase().trim();
+            renderFixtures();
+        }
+
+        function getCompBadge(comp) {
+            if (comp === 'EuroLeague') return '<span class="badge-el px-2.5 py-0.5 rounded-lg text-xs font-bold uppercase">EuroLeague</span>';
+            if (comp === 'BBL') return '<span class="badge-bbl px-2.5 py-0.5 rounded-lg text-xs font-bold uppercase">easyCredit BBL</span>';
+            return '<span class="badge-pokal px-2.5 py-0.5 rounded-lg text-xs font-bold uppercase">BBL-Pokal</span>';
+        }
+
+        function renderMarquee() {
+            // Select the next upcoming match
+            const marquee = ALL_FIXTURES.find(m => !m.is_played) || ALL_FIXTURES[0];
+            if (!marquee) return;
+
+            const isBayernFav = marquee.probabilities.bayern_win >= 50;
+            const marqueeEl = document.getElementById('marquee-section');
+
+            marqueeEl.innerHTML = `
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+                    <div class="w-full lg:w-1/3 text-center lg:text-left">
+                        <div class="flex items-center justify-center lg:justify-start gap-2 mb-2">
+                            ${getCompBadge(marquee.competition)}
+                            <span class="text-xs text-slate-400 font-mono">${marquee.round}</span>
+                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-950 text-red-400 border border-red-800/60 animate-pulse">TONIGHT'S MATCH</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-black font-space text-white tracking-tight">${marquee.home_team} <span class="text-red-500">vs</span> ${marquee.away_team}</h2>
+                        <p class="text-xs text-slate-400 mt-2 flex items-center justify-center lg:justify-start gap-1">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-500"></i> ${marquee.venue} &bull; ${marquee.date} (20:00 CEST)
+                        </p>
+                        
+                        <div class="mt-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono">
+                            <i data-lucide="clock" class="w-3.5 h-3.5 text-amber-400"></i>
+                            <span>Rest: Bayern (${marquee.tactical_factors.rest_days.bayern}d) vs ${marquee.opponent} (${marquee.tactical_factors.rest_days.opponent}d)</span>
+                        </div>
+                    </div>
+
+                    <!-- Center Expected Score Dial -->
+                    <div class="w-full lg:w-1/3 flex flex-col items-center justify-center bg-slate-900/70 p-6 rounded-2xl border border-slate-800/90 shadow-inner">
+                        <div class="text-xs uppercase tracking-widest text-slate-400 font-medium mb-1">Model v3 Projected Score</div>
+                        <div class="text-5xl md:text-6xl font-black font-space tracking-tight text-white flex items-center gap-4">
+                            <span class="${marquee.home_team.includes('Bayern') ? 'text-red-500' : 'text-slate-200'}">${marquee.predicted_score.home}</span>
+                            <span class="text-slate-600">:</span>
+                            <span class="${marquee.away_team.includes('Bayern') ? 'text-red-500' : 'text-slate-200'}">${marquee.predicted_score.away}</span>
+                        </div>
+                        <div class="flex items-center gap-4 mt-3 text-xs font-mono text-slate-400">
+                            <span>Spread: <b class="text-white">${marquee.predicted_score.margin > 0 ? '+' : ''}${marquee.predicted_score.margin} pts</b></span>
+                            <span>&bull;</span>
+                            <span>Total O/U: <b class="text-white">${marquee.predicted_score.total_points}</b></span>
+                            <span>&bull;</span>
+                            <span>Pace: <b class="text-white">${marquee.tactical_factors.projected_pace}</b></span>
+                        </div>
+                    </div>
+
+                    <!-- Win Probability Dial -->
+                    <div class="w-full lg:w-1/3 bg-slate-900/70 p-6 rounded-2xl border border-slate-800/90">
+                        <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-2">
+                            <span>Bayern Win Proba</span>
+                            <span class="text-xl font-bold font-space ${isBayernFav ? 'text-emerald-400' : 'text-red-400'}">${marquee.probabilities.bayern_win}%</span>
+                        </div>
+                        <div class="w-full h-3.5 bg-slate-800 rounded-full overflow-hidden p-0.5 border border-slate-700/50">
+                            <div class="h-full rounded-full transition-all duration-1000 bg-gradient-to-r from-red-600 to-emerald-500" style="width: ${marquee.probabilities.bayern_win}%"></div>
+                        </div>
+                        <div class="flex items-center justify-between text-xs text-slate-500 mt-2 font-mono">
+                            <span>${marquee.home_team} (${marquee.probabilities.home_win}%)</span>
+                            <span>${marquee.away_team} (${marquee.probabilities.away_win}%)</span>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs">
+                            <span class="text-slate-400">Model Tip:</span>
+                            <span class="font-mono font-bold text-white uppercase px-2 py-0.5 rounded bg-slate-800">${marquee.probabilities.tip}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            lucide.createIcons();
+        }
+
+        function renderFixtures() {
+            const container = document.getElementById('fixtures-grid');
+            
+            const filtered = ALL_FIXTURES.filter(m => {
+                let matchesCategory = true;
+                if (currentFilter === 'ALL') matchesCategory = true;
+                else if (currentFilter === 'PLAYED') matchesCategory = m.is_played;
+                else if (currentFilter === 'UPCOMING') matchesCategory = !m.is_played;
+                else matchesCategory = (m.competition === currentFilter);
+                
+                const matchesSearch = !searchQuery || 
+                    m.home_team.toLowerCase().includes(searchQuery) || 
+                    m.away_team.toLowerCase().includes(searchQuery) ||
+                    m.round.toLowerCase().includes(searchQuery);
+                    
+                return matchesCategory && matchesSearch;
+            });
+            
+            document.getElementById('match-count').innerText = filtered.length;
+            container.innerHTML = '';
+
+            filtered.forEach(m => {
+                const isBayernFav = m.probabilities.bayern_win >= 50;
+                const card = document.createElement('div');
+                card.className = 'glass-card rounded-2xl p-5 flex flex-col justify-between transition-all hover:scale-[1.01] hover:border-slate-700';
+
+                if (m.is_played && m.actual_score && m.comparison) {
+                    // PLAYED MATCH WITH COMPARISON
+                    const comp = m.comparison;
+                    const winnerHit = comp.winner_hit;
+                    
+                    const hitBadge = winnerHit
+                        ? '<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-emerald-950 text-emerald-300 border border-emerald-700 flex items-center gap-1"><i data-lucide="check" class="w-3 h-3"></i> Winner Hit</span>'
+                        : '<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-red-950 text-red-300 border border-red-700 flex items-center gap-1"><i data-lucide="x" class="w-3 h-3"></i> Miss</span>';
+
+                    card.innerHTML = `
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <div class="flex items-center gap-2">
+                                    ${getCompBadge(m.competition)}
+                                    <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-emerald-950/90 text-emerald-400 border border-emerald-800/80">Final</span>
+                                    ${hitBadge}
+                                </div>
+                                <span class="text-xs text-slate-400 font-mono">${m.date}</span>
+                            </div>
+
+                            <div class="text-xs font-semibold text-slate-400 mb-1">${m.round}</div>
+                            <div class="text-base font-bold font-space text-white tracking-tight flex items-center justify-between">
+                                <span class="${m.home_team.includes('Bayern') ? 'text-red-400 font-extrabold' : ''}">${m.home_team}</span>
+                            </div>
+                            <div class="text-base font-bold font-space text-white tracking-tight flex items-center justify-between mb-4">
+                                <span class="${m.away_team.includes('Bayern') ? 'text-red-400 font-extrabold' : ''}">${m.away_team}</span>
+                            </div>
+
+                            <!-- Side-by-Side Actual vs Predicted Comparison Box -->
+                            <div class="bg-slate-900/95 rounded-xl p-3 mb-3 border border-slate-800 divide-y divide-slate-800">
+                                <div class="grid grid-cols-2 gap-2 pb-2.5">
+                                    <!-- Left: Actual Score -->
+                                    <div class="border-r border-slate-800 pr-2">
+                                        <div class="text-[10px] uppercase tracking-wider text-emerald-400 font-mono font-bold flex items-center gap-1">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Actual Result
+                                        </div>
+                                        <div class="text-2xl font-black font-space text-white mt-0.5">${m.actual_score.formatted}</div>
+                                        <div class="text-[10px] text-slate-400 font-mono truncate">Winner: ${comp.actual_winner}</div>
+                                    </div>
+
+                                    <!-- Right: Predicted Score -->
+                                    <div class="pl-2">
+                                        <div class="text-[10px] uppercase tracking-wider text-amber-400 font-mono font-bold flex items-center gap-1">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Model v3
+                                        </div>
+                                        <div class="text-2xl font-black font-space text-slate-300 mt-0.5">${m.predicted_score.formatted}</div>
+                                        <div class="text-[10px] text-slate-400 font-mono">Tip: ${m.probabilities.tip}</div>
+                                    </div>
+                                </div>
+
+                                <!-- Accuracy Delta Metrics -->
+                                <div class="pt-2 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                                    <span>Point Diff: <b class="text-slate-200">H:${comp.diff_home > 0 ? '+' : ''}${comp.diff_home} / A:${comp.diff_away > 0 ? '+' : ''}${comp.diff_away}</b></span>
+                                    <span>Spread Diff: <b class="${Math.abs(comp.diff_margin) <= 10 ? 'text-emerald-400' : 'text-amber-400'}">${comp.diff_margin > 0 ? '+' : ''}${comp.diff_margin} pts</b></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Footer -->
+                        <div class="pt-2.5 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <span>Total Pts: <b class="text-slate-200">${m.actual_score.total_points}</b> (Pred: ${m.predicted_score.total_points})</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-emerald-300 font-bold uppercase text-[10px]">Verified Result</span>
+                        </div>
+                    `;
+                } else {
+                    // UPCOMING MATCH (MODEL FORECAST)
+                    card.innerHTML = `
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <div class="flex items-center gap-2">
+                                    ${getCompBadge(m.competition)}
+                                    <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-slate-800/80 text-amber-400 border border-amber-900/30">Upcoming</span>
+                                </div>
+                                <span class="text-xs text-slate-400 font-mono">${m.date}</span>
+                            </div>
+
+                            <div class="text-xs font-semibold text-slate-400 mb-1">${m.round}</div>
+                            <div class="text-base font-bold font-space text-white tracking-tight flex items-center justify-between">
+                                <span class="${m.home_team.includes('Bayern') ? 'text-red-400 font-extrabold' : ''}">${m.home_team}</span>
+                            </div>
+                            <div class="text-base font-bold font-space text-white tracking-tight flex items-center justify-between mb-4">
+                                <span class="${m.away_team.includes('Bayern') ? 'text-red-400 font-extrabold' : ''}">${m.away_team}</span>
+                            </div>
+
+                            <!-- Expected Score Box -->
+                            <div class="bg-slate-900/90 rounded-xl p-3 mb-4 border border-slate-800 flex items-center justify-between">
+                                <div>
+                                    <div class="text-[10px] uppercase tracking-wider text-slate-500 font-mono">Model v3 Projected Score</div>
+                                    <div class="text-2xl font-black font-space text-white">${m.predicted_score.formatted}</div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-[10px] uppercase tracking-wider text-slate-500 font-mono">Total O/U</div>
+                                    <div class="text-sm font-bold font-space text-amber-400">${m.predicted_score.total_points} <span class="text-slate-500 text-xs font-normal">pts</span></div>
+                                </div>
+                            </div>
+
+                            <!-- Win Probability Bar -->
+                            <div class="mb-3">
+                                <div class="flex items-center justify-between text-xs font-mono mb-1">
+                                    <span class="text-slate-400">Bayern Win Proba</span>
+                                    <span class="font-bold ${isBayernFav ? 'text-emerald-400' : 'text-red-400'}">${m.probabilities.bayern_win}%</span>
+                                </div>
+                                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full rounded-full bg-gradient-to-r ${isBayernFav ? 'from-amber-500 to-emerald-500' : 'from-red-600 to-amber-500'}" style="width: ${m.probabilities.bayern_win}%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Footer: Tactical Metrics -->
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <span>Pace: <b class="text-slate-200">${m.tactical_factors.projected_pace}</b></span>
+                            <span>Rest: <b class="text-slate-200">${m.tactical_factors.rest_days.advantage.includes('Bayern') ? 'Bayern (+)' : 'Opp (+)'}</b></span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 font-bold uppercase text-[10px]">${m.probabilities.tip}</span>
+                        </div>
+                    `;
+                }
+
+                container.appendChild(card);
+            });
+            lucide.createIcons();
+        }
+
+        function renderFeatureImportance() {
+            const container = document.getElementById('feature-importance-list');
+            const topFeats = CONFIG.top_features || [];
+            
+            container.innerHTML = '';
+            topFeats.forEach(f => {
+                const row = document.createElement('div');
+                row.className = 'flex items-center gap-3 text-xs';
+                row.innerHTML = `
+                    <div class="w-44 truncate font-mono text-slate-300" title="${f.feature}">${f.feature}</div>
+                    <div class="flex-1 h-2 bg-slate-800 rounded-full overflow-hidden">
+                        <div class="h-full rounded-full bg-gradient-to-r from-red-500 to-amber-400" style="width: ${Math.min(f.importance * 8, 100)}%"></div>
+                    </div>
+                    <div class="w-12 text-right font-mono font-bold text-white">${f.importance}%</div>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+
+        function openLegalModal() {
+            const m = document.getElementById('legal-modal');
+            if (m) m.classList.remove('hidden');
+        }
+        function closeLegalModal() {
+            const m = document.getElementById('legal-modal');
+            if (m) m.classList.add('hidden');
+        }
+        // Close modal on click outside
+        window.addEventListener('click', (e) => {
+            const m = document.getElementById('legal-modal');
+            if (e.target === m) closeLegalModal();
+        });
+
+        // Initialize Dashboard
+        window.addEventListener('DOMContentLoaded', () => {
+            renderMarquee();
+            renderFixtures();
+            renderFeatureImportance();
+            lucide.createIcons();
+        });
+    </script>
+
+    <!-- Legal Modal (Backdrop overlay) -->
+    <div id="legal-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="glass-card max-w-2xl w-full rounded-3xl p-6 border border-slate-700 shadow-2xl max-h-[90vh] overflow-y-auto space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">⚖️</span>
+                    <h3 class="text-lg font-bold font-space text-white">Impressum &amp; Rechtliche Hinweise</h3>
+                </div>
+                <button onclick="closeLegalModal()" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition">
+                    &times;
+                </button>
+            </div>
+
+            <div class="text-xs space-y-3.5 text-slate-300">
+                <div>
+                    <strong class="text-white block mb-0.5 font-space text-sm">Angaben gemäß § 5 DDG (ehemals TMG)</strong>
+                    <p class="text-slate-400">
+                        <strong>Ralf Oppel</strong><br>
+                        Akademisches Portfolio-Projekt: Technische Hochschule Würzburg-Schweinfurt (THWS)<br>
+                        E-Mail: <a href="mailto:ralf.oppel@study.thws.de" class="text-amber-400 hover:underline">ralf.oppel@study.thws.de</a><br>
+                        Standort: Deutschland
+                    </p>
+                </div>
+
+                <div class="p-3 rounded-xl bg-red-950/50 border border-red-800/80">
+                    <strong class="text-red-400 block mb-1">Keine Wettberatung / Haftungsausschluss (GlüStV)</strong>
+                    <p class="text-[11px] text-red-200/90 leading-normal">
+                        Alle hier dargestellten Punkt- und Siegwahrscheinlichkeiten sind Ergebnisse eines maschinellen Lernmodells (Model v3 Tactical). Sie dienen rein wissenschaftlichen Demonstrations- und Bildungszwecken. Es handelt sich ausdrücklich um keine Sportwetten- oder Anlageberatung.
+                    </p>
+                </div>
+
+                <div>
+                    <strong class="text-white block mb-0.5">Urheberrecht &amp; Markenzeichen (§ 23 MarkenG)</strong>
+                    <p class="text-[11px] text-slate-400">
+                        Namen von Vereinen, Ligen und Wettbewerben sind geschützte Marken ihrer jeweiligen Eigentümer und werden rein nominativ und redaktionell verwendet. Es besteht keine geschäftliche Verbindung zu FC Bayern Basketball, der BBL oder der EuroLeague.
+                    </p>
+                </div>
+
+                <div>
+                    <strong class="text-white block mb-0.5">Datenquellen</strong>
+                    <p class="text-[11px] text-slate-400">
+                        Offizielle Spielberichte via <span class="text-slate-200">EuroLeague REST API</span> &amp; BBL Liga-Archive. Verarbeitet unter den gesetzlichen TDM-Schranken (§ 44b / § 60d UrhG).
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-3 border-t border-slate-800 text-right">
+                <button onclick="closeLegalModal()" class="px-5 py-2 rounded-xl bg-red-600 hover:bg-red-500 font-bold text-xs text-white transition font-mono">
+                    Schließen
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Responsive Footer -->
+    <footer class="max-w-7xl mx-auto mt-12 pt-8 pb-12 border-t border-slate-800/80 text-center text-xs text-slate-500 space-y-3">
+        <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-slate-400">
+            <a href="#marquee-section" class="hover:text-white transition">Marquee Game</a>
+            <span>&bull;</span>
+            <a href="#fixtures-grid" class="hover:text-white transition">Alle 76 Spiele</a>
+            <span>&bull;</span>
+            <a href="#feature-importance-list" class="hover:text-white transition">Modell-Faktoren</a>
+            <span>&bull;</span>
+            <button onclick="openLegalModal()" class="hover:text-amber-400 transition text-amber-400/90 font-bold cursor-pointer">Impressum &amp; Datenschutz</button>
+            <span>&bull;</span>
+            <a href="https://github.com/RLKO31/fcbb-basketball-predictor" target="_blank" class="hover:text-white transition flex items-center gap-1 inline-flex">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub Repo
+            </a>
+        </div>
+        <p class="max-w-2xl mx-auto text-[11px] text-slate-500">
+            &copy; 2026 FC Bayern Basketball AI Predictor &bull; Ralf Oppel &bull; THWS Portfolio Project<br>
+            Rein wissenschaftliches KI-Demonstrationsprojekt &bull; Keine Wettberatung
+        </p>
+    </footer>
+
+</body>
+</html>

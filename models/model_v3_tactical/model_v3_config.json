@@ -1,0 +1,131 @@
+{
+    "model_name": "Model v3 Basketball Tactical & Time-Decay (Multiplicative & Dispersed)",
+    "best_window": 8,
+    "window_results": {
+        "1": {
+            "val_accuracy": 72.84,
+            "val_log_loss": 0.6116
+        },
+        "2": {
+            "val_accuracy": 67.9,
+            "val_log_loss": 0.5768
+        },
+        "3": {
+            "val_accuracy": 66.67,
+            "val_log_loss": 0.6182
+        },
+        "4": {
+            "val_accuracy": 66.67,
+            "val_log_loss": 0.5973
+        },
+        "5": {
+            "val_accuracy": 66.67,
+            "val_log_loss": 0.5768
+        },
+        "6": {
+            "val_accuracy": 71.6,
+            "val_log_loss": 0.581
+        },
+        "7": {
+            "val_accuracy": 67.9,
+            "val_log_loss": 0.5795
+        },
+        "8": {
+            "val_accuracy": 72.84,
+            "val_log_loss": 0.5832
+        },
+        "9": {
+            "val_accuracy": 66.67,
+            "val_log_loss": 0.5809
+        },
+        "10": {
+            "val_accuracy": 65.43,
+            "val_log_loss": 0.5865
+        }
+    },
+    "classification": {
+        "test_accuracy": 77.94,
+        "test_log_loss": 0.4943
+    },
+    "score_regression": {
+        "mae_home": 9.95,
+        "rmse_home": 12.94,
+        "mae_away": 8.38,
+        "rmse_away": 10.65,
+        "mae_margin": 10.67,
+        "implied_winner_accuracy": 77.94,
+        "dispersion_scaling": {
+            "scale_home": 1.25,
+            "scale_away": 1.281,
+            "baseline_mean_home": 80.6,
+            "baseline_mean_away": 77.23
+        }
+    },
+    "optimal_features": [
+        "home_pts_decay_8",
+        "away_pts_decay_8",
+        "home_pts_conceded_decay_8",
+        "away_pts_conceded_decay_8",
+        "home_pace_decay_8",
+        "away_pace_decay_8",
+        "home_ortg_decay_8",
+        "away_ortg_decay_8",
+        "home_drtg_decay_8",
+        "away_drtg_decay_8",
+        "home_net_rtg_decay_8",
+        "away_net_rtg_decay_8",
+        "home_win_rate_decay_8",
+        "away_win_rate_decay_8",
+        "net_rtg_diff_8",
+        "pace_projected_8",
+        "off_def_mismatch_home_8",
+        "off_def_mismatch_away_8",
+        "rest_diff",
+        "b2b_diff",
+        "comp_tier",
+        "is_euroleague",
+        "is_bbl"
+    ],
+    "top_features": [
+        {
+            "feature": "home_net_rtg_decay_8",
+            "importance": 9.16
+        },
+        {
+            "feature": "net_rtg_diff_8",
+            "importance": 7.79
+        },
+        {
+            "feature": "home_pace_decay_8",
+            "importance": 7.21
+        },
+        {
+            "feature": "home_ortg_decay_8",
+            "importance": 6.05
+        },
+        {
+            "feature": "away_win_rate_decay_8",
+            "importance": 5.88
+        },
+        {
+            "feature": "home_win_rate_decay_8",
+            "importance": 5.29
+        },
+        {
+            "feature": "pace_projected_8",
+            "importance": 4.93
+        },
+        {
+            "feature": "home_pts_decay_8",
+            "importance": 4.81
+        },
+        {
+            "feature": "off_def_mismatch_away_8",
+            "importance": 4.7
+        },
+        {
+            "feature": "rest_diff",
+            "importance": 4.54
+        }
+    ]
+}

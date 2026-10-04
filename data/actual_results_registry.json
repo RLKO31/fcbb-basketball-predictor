@@ -1,0 +1,50 @@
+{
+    "_description": "Verified registry of actual completed matches for FC Bayern Basketball 2026/2027 season.",
+    "last_sync": "2026-10-02T17:29:50.597397",
+    "results": {
+        "bbl_2627_md1": {
+            "match_id": "bbl_2627_md1",
+            "competition": "BBL",
+            "date": "2026-09-20",
+            "home_team": "FC Bayern M\u00fcnchen",
+            "away_team": "Bamberg Baskets",
+            "home_score": 108,
+            "away_score": 72,
+            "played": true,
+            "source": "official_bbl"
+        },
+        "el_2627_rd1": {
+            "match_id": "el_2627_rd1",
+            "competition": "EuroLeague",
+            "date": "2026-09-24",
+            "home_team": "Hapoel Tel Aviv",
+            "away_team": "FC Bayern M\u00fcnchen",
+            "home_score": 84,
+            "away_score": 86,
+            "played": true,
+            "source": "euroleague_api"
+        },
+        "bbl_2627_md23": {
+            "match_id": "bbl_2627_md23",
+            "competition": "BBL",
+            "date": "2026-09-26",
+            "home_team": "FC Bayern M\u00fcnchen",
+            "away_team": "ALBA Berlin",
+            "home_score": 95,
+            "away_score": 61,
+            "played": true,
+            "source": "official_bbl"
+        },
+        "el_2627_rd2": {
+            "match_id": "el_2627_rd2",
+            "competition": "EuroLeague",
+            "date": "2026-09-29",
+            "home_team": "Fenerbahce Beko Istanbul",
+            "away_team": "FC Bayern M\u00fcnchen",
+            "home_score": 100,
+            "away_score": 76,
+            "played": true,
+            "source": "euroleague_api"
+        }
+    }
+}

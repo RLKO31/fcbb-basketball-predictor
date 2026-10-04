@@ -1,0 +1,475 @@
+[
+    {
+        "id": "bbl_2025_alba",
+        "competition": "BBL",
+        "round": "Round 29 - Regular Season",
+        "date": "2025-05-11",
+        "venue": "BMW Park, Munich",
+        "home_team": "FC Bayern M\u00fcnchen",
+        "away_team": "ALBA Berlin",
+        "opponent": "ALBA Berlin",
+        "is_bayern_home": true,
+        "probabilities": {
+            "home_win": 72.8,
+            "away_win": 27.2,
+            "bayern_win": 72.8,
+            "confidence": "High"
+        },
+        "predicted_score": {
+            "home": 89,
+            "away": 76,
+            "bayern": 89,
+            "opponent": 76,
+            "formatted": "89 : 76",
+            "bayern_formatted": "FC Bayern 89 : 76 ALBA Berlin",
+            "margin": 13,
+            "total_points": 165,
+            "over_under_line": 164.5
+        },
+        "tactical_factors": {
+            "projected_pace": 72.2,
+            "rest_days": {
+                "home": 3,
+                "away": 6,
+                "bayern": 3,
+                "opponent": 6,
+                "advantage": "ALBA Berlin"
+            },
+            "net_rating_diff": 6.5,
+            "home_off_rating": 120.4,
+            "away_off_rating": 105.2,
+            "home_def_rating": 123.2,
+            "away_def_rating": 114.5
+        }
+    },
+    {
+        "id": "bbl_2025_ulm",
+        "competition": "BBL",
+        "round": "Round 30 - Regular Season",
+        "date": "2025-05-15",
+        "venue": "ratiopharm arena, Neu-Ulm",
+        "home_team": "ratiopharm ulm",
+        "away_team": "FC Bayern M\u00fcnchen",
+        "opponent": "ratiopharm ulm",
+        "is_bayern_home": false,
+        "probabilities": {
+            "home_win": 62.9,
+            "away_win": 37.1,
+            "bayern_win": 37.1,
+            "confidence": "Moderate"
+        },
+        "predicted_score": {
+            "home": 85,
+            "away": 76,
+            "bayern": 76,
+            "opponent": 85,
+            "formatted": "85 : 76",
+            "bayern_formatted": "FC Bayern 76 : 85 ratiopharm ulm",
+            "margin": 9,
+            "total_points": 161,
+            "over_under_line": 160.5
+        },
+        "tactical_factors": {
+            "projected_pace": 73.3,
+            "rest_days": {
+                "home": 5,
+                "away": 4,
+                "bayern": 4,
+                "opponent": 5,
+                "advantage": "ratiopharm ulm"
+            },
+            "net_rating_diff": -5.0,
+            "home_off_rating": 110.4,
+            "away_off_rating": 120.4,
+            "home_def_rating": 118.2,
+            "away_def_rating": 123.2
+        }
+    },
+    {
+        "id": "bbl_2025_bonn",
+        "competition": "BBL",
+        "round": "Round 31 - Regular Season",
+        "date": "2025-05-18",
+        "venue": "BMW Park, Munich",
+        "home_team": "FC Bayern M\u00fcnchen",
+        "away_team": "Telekom Baskets Bonn",
+        "opponent": "Telekom Baskets Bonn",
+        "is_bayern_home": true,
+        "probabilities": {
+            "home_win": 75.7,
+            "away_win": 24.3,
+            "bayern_win": 75.7,
+            "confidence": "High"
+        },
+        "predicted_score": {
+            "home": 89,
+            "away": 76,
+            "bayern": 89,
+            "opponent": 76,
+            "formatted": "89 : 76",
+            "bayern_formatted": "FC Bayern 89 : 76 Telekom Baskets Bonn",
+            "margin": 13,
+            "total_points": 165,
+            "over_under_line": 164.5
+        },
+        "tactical_factors": {
+            "projected_pace": 72.7,
+            "rest_days": {
+                "home": 3,
+                "away": 7,
+                "bayern": 3,
+                "opponent": 7,
+                "advantage": "Telekom Baskets Bonn"
+            },
+            "net_rating_diff": 5.6,
+            "home_off_rating": 120.4,
+            "away_off_rating": 106.4,
+            "home_def_rating": 123.2,
+            "away_def_rating": 114.8
+        }
+    },
+    {
+        "id": "bbl_2025_chemnitz",
+        "competition": "BBL",
+        "round": "Round 32 - Regular Season",
+        "date": "2025-05-22",
+        "venue": "Messe Chemnitz",
+        "home_team": "NINERS Chemnitz",
+        "away_team": "FC Bayern M\u00fcnchen",
+        "opponent": "NINERS Chemnitz",
+        "is_bayern_home": false,
+        "probabilities": {
+            "home_win": 47.3,
+            "away_win": 52.7,
+            "bayern_win": 52.7,
+            "confidence": "Moderate"
+        },
+        "predicted_score": {
+            "home": 71,
+            "away": 84,
+            "bayern": 84,
+            "opponent": 71,
+            "formatted": "71 : 84",
+            "bayern_formatted": "FC Bayern 84 : 71 NINERS Chemnitz",
+            "margin": -13,
+            "total_points": 155,
+            "over_under_line": 154.5
+        },
+        "tactical_factors": {
+            "projected_pace": 72.0,
+            "rest_days": {
+                "home": 6,
+                "away": 4,
+                "bayern": 4,
+                "opponent": 6,
+                "advantage": "NINERS Chemnitz"
+            },
+            "net_rating_diff": -11.0,
+            "home_off_rating": 99.9,
+            "away_off_rating": 120.4,
+            "home_def_rating": 113.7,
+            "away_def_rating": 123.2
+        }
+    },
+    {
+        "id": "bbl_2025_wuerzburg",
+        "competition": "BBL",
+        "round": "Round 33 - Regular Season",
+        "date": "2025-05-25",
+        "venue": "BMW Park, Munich",
+        "home_team": "FC Bayern M\u00fcnchen",
+        "away_team": "W\u00fcrzburg Baskets",
+        "opponent": "W\u00fcrzburg Baskets",
+        "is_bayern_home": true,
+        "probabilities": {
+            "home_win": 80.1,
+            "away_win": 19.9,
+            "bayern_win": 80.1,
+            "confidence": "High"
+        },
+        "predicted_score": {
+            "home": 90,
+            "away": 77,
+            "bayern": 90,
+            "opponent": 77,
+            "formatted": "90 : 77",
+            "bayern_formatted": "FC Bayern 90 : 77 W\u00fcrzburg Baskets",
+            "margin": 13,
+            "total_points": 167,
+            "over_under_line": 166.5
+        },
+        "tactical_factors": {
+            "projected_pace": 71.6,
+            "rest_days": {
+                "home": 3,
+                "away": 7,
+                "bayern": 3,
+                "opponent": 7,
+                "advantage": "W\u00fcrzburg Baskets"
+            },
+            "net_rating_diff": 15.0,
+            "home_off_rating": 120.4,
+            "away_off_rating": 97.7,
+            "home_def_rating": 123.2,
+            "away_def_rating": 115.5
+        }
+    },
+    {
+        "id": "el_2025_real",
+        "competition": "EuroLeague",
+        "round": "Playoffs Round 1",
+        "date": "2025-05-08",
+        "venue": "WiZink Center, Madrid",
+        "home_team": "Real Madrid",
+        "away_team": "FC Bayern M\u00fcnchen",
+        "opponent": "Real Madrid",
+        "is_bayern_home": false,
+        "probabilities": {
+            "home_win": 84.7,
+            "away_win": 15.3,
+            "bayern_win": 15.3,
+            "confidence": "High"
+        },
+        "predicted_score": {
+            "home": 82,
+            "away": 72,
+            "bayern": 72,
+            "opponent": 82,
+            "formatted": "82 : 72",
+            "bayern_formatted": "FC Bayern 72 : 82 Real Madrid",
+            "margin": 10,
+            "total_points": 154,
+            "over_under_line": 153.5
+        },
+        "tactical_factors": {
+            "projected_pace": 72.0,
+            "rest_days": {
+                "home": 4,
+                "away": 3,
+                "bayern": 3,
+                "opponent": 4,
+                "advantage": "Real Madrid"
+            },
+            "net_rating_diff": 11.8,
+            "home_off_rating": 118.4,
+            "away_off_rating": 120.4,
+            "home_def_rating": 109.4,
+            "away_def_rating": 123.2
+        }
+    },
+    {
+        "id": "el_2025_pana",
+        "competition": "EuroLeague",
+        "round": "Playoffs Round 2",
+        "date": "2025-05-13",
+        "venue": "SAP Garden, Munich",
+        "home_team": "FC Bayern M\u00fcnchen",
+        "away_team": "Panathinaikos AKTOR Athens",
+        "opponent": "Panathinaikos AKTOR Athens",
+        "is_bayern_home": true,
+        "probabilities": {
+            "home_win": 76.7,
+            "away_win": 23.3,
+            "bayern_win": 76.7,
+            "confidence": "High"
+        },
+        "predicted_score": {
+            "home": 86,
+            "away": 76,
+            "bayern": 86,
+            "opponent": 76,
+            "formatted": "86 : 76",
+            "bayern_formatted": "FC Bayern 86 : 76 Panathinaikos AKTOR Athens",
+            "margin": 10,
+            "total_points": 162,
+            "over_under_line": 161.5
+        },
+        "tactical_factors": {
+            "projected_pace": 72.0,
+            "rest_days": {
+                "home": 2,
+                "away": 4,
+                "bayern": 2,
+                "opponent": 4,
+                "advantage": "Panathinaikos AKTOR Athens"
+            },
+            "net_rating_diff": -16.8,
+            "home_off_rating": 120.4,
+            "away_off_rating": 116.8,
+            "home_def_rating": 123.2,
+            "away_def_rating": 102.8
+        }
+    },
+    {
+        "id": "el_2025_fener",
+        "competition": "EuroLeague",
+        "round": "Playoffs Round 3",
+        "date": "2025-05-16",
+        "venue": "Ulker Sports Arena, Istanbul",
+        "home_team": "Fenerbahce Beko Istanbul",
+        "away_team": "FC Bayern M\u00fcnchen",
+        "opponent": "Fenerbahce Beko Istanbul",
+        "is_bayern_home": false,
+        "probabilities": {
+            "home_win": 80.3,
+            "away_win": 19.7,
+            "bayern_win": 19.7,
+            "confidence": "High"
+        },
+        "predicted_score": {
+            "home": 81,
+            "away": 73,
+            "bayern": 73,
+            "opponent": 81,
+            "formatted": "81 : 73",
+            "bayern_formatted": "FC Bayern 73 : 81 Fenerbahce Beko Istanbul",
+            "margin": 8,
+            "total_points": 154,
+            "over_under_line": 153.5
+        },
+        "tactical_factors": {
+            "projected_pace": 72.0,
+            "rest_days": {
+                "home": 4,
+                "away": 3,
+                "bayern": 3,
+                "opponent": 4,
+                "advantage": "Fenerbahce Beko Istanbul"
+            },
+            "net_rating_diff": 13.3,
+            "home_off_rating": 112.4,
+            "away_off_rating": 120.4,
+            "home_def_rating": 101.9,
+            "away_def_rating": 123.2
+        }
+    },
+    {
+        "id": "el_2025_oly",
+        "competition": "EuroLeague",
+        "round": "EuroLeague Final Four",
+        "date": "2025-05-23",
+        "venue": "Etihad Arena / Final Four Host",
+        "home_team": "FC Bayern M\u00fcnchen",
+        "away_team": "Olympiacos Piraeus",
+        "opponent": "Olympiacos Piraeus",
+        "is_bayern_home": true,
+        "probabilities": {
+            "home_win": 75.1,
+            "away_win": 24.9,
+            "bayern_win": 75.1,
+            "confidence": "High"
+        },
+        "predicted_score": {
+            "home": 85,
+            "away": 76,
+            "bayern": 85,
+            "opponent": 76,
+            "formatted": "85 : 76",
+            "bayern_formatted": "FC Bayern 85 : 76 Olympiacos Piraeus",
+            "margin": 9,
+            "total_points": 161,
+            "over_under_line": 160.5
+        },
+        "tactical_factors": {
+            "projected_pace": 72.0,
+            "rest_days": {
+                "home": 5,
+                "away": 5,
+                "bayern": 5,
+                "opponent": 5,
+                "advantage": "Olympiacos Piraeus"
+            },
+            "net_rating_diff": -13.8,
+            "home_off_rating": 120.4,
+            "away_off_rating": 118.0,
+            "home_def_rating": 123.2,
+            "away_def_rating": 107.0
+        }
+    },
+    {
+        "id": "el_2025_barca",
+        "competition": "EuroLeague",
+        "round": "EuroLeague Marquee",
+        "date": "2025-05-28",
+        "venue": "Palau Blaugrana, Barcelona",
+        "home_team": "FC Barcelona",
+        "away_team": "FC Bayern M\u00fcnchen",
+        "opponent": "FC Barcelona",
+        "is_bayern_home": false,
+        "probabilities": {
+            "home_win": 74.7,
+            "away_win": 25.3,
+            "bayern_win": 25.3,
+            "confidence": "High"
+        },
+        "predicted_score": {
+            "home": 81,
+            "away": 73,
+            "bayern": 73,
+            "opponent": 81,
+            "formatted": "81 : 73",
+            "bayern_formatted": "FC Bayern 73 : 81 FC Barcelona",
+            "margin": 8,
+            "total_points": 154,
+            "over_under_line": 153.5
+        },
+        "tactical_factors": {
+            "projected_pace": 72.0,
+            "rest_days": {
+                "home": 4,
+                "away": 3,
+                "bayern": 3,
+                "opponent": 4,
+                "advantage": "FC Barcelona"
+            },
+            "net_rating_diff": 3.5,
+            "home_off_rating": 106.6,
+            "away_off_rating": 120.4,
+            "home_def_rating": 105.9,
+            "away_def_rating": 123.2
+        }
+    },
+    {
+        "id": "pokal_2025_final",
+        "competition": "BBL-Pokal",
+        "round": "TOP FOUR Final",
+        "date": "2025-06-01",
+        "venue": "BMW Park, Munich (Host)",
+        "home_team": "FC Bayern M\u00fcnchen",
+        "away_team": "ALBA Berlin",
+        "opponent": "ALBA Berlin",
+        "is_bayern_home": true,
+        "probabilities": {
+            "home_win": 72.8,
+            "away_win": 27.2,
+            "bayern_win": 72.8,
+            "confidence": "High"
+        },
+        "predicted_score": {
+            "home": 89,
+            "away": 76,
+            "bayern": 89,
+            "opponent": 76,
+            "formatted": "89 : 76",
+            "bayern_formatted": "FC Bayern 89 : 76 ALBA Berlin",
+            "margin": 13,
+            "total_points": 165,
+            "over_under_line": 164.5
+        },
+        "tactical_factors": {
+            "projected_pace": 72.2,
+            "rest_days": {
+                "home": 1,
+                "away": 1,
+                "bayern": 1,
+                "opponent": 1,
+                "advantage": "ALBA Berlin"
+            },
+            "net_rating_diff": 6.5,
+            "home_off_rating": 120.4,
+            "away_off_rating": 105.2,
+            "home_def_rating": 123.2,
+            "away_def_rating": 114.5
+        }
+    }
+]
