@@ -41,41 +41,206 @@
     </script>
     
     <style>
+        /* Smooth transitions for theme switching */
+        body, .glass-card, header, footer, section, div, span, button, input {
+            transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+        }
+
+        /* Default Light Mode (Light Blue Atmosphere) */
         body {
+            background-color: #eaf3fb;
+            background-image: 
+                radial-gradient(circle at 12% 15%, rgba(220, 38, 38, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 88% 85%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(186, 230, 253, 0.60) 0%, transparent 75%);
+            color: #1e293b;
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(186, 230, 253, 0.95);
+            box-shadow: 0 4px 20px -2px rgba(14, 116, 144, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+        }
+        .glass-card:hover {
+            border-color: rgba(220, 38, 38, 0.45);
+            box-shadow: 0 8px 25px -4px rgba(220, 38, 38, 0.12), 0 4px 10px -2px rgba(14, 116, 144, 0.06);
+        }
+
+        .glow-red {
+            box-shadow: 0 0 25px -5px rgba(220, 38, 38, 0.25);
+        }
+        .glow-emerald {
+            box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.22);
+        }
+
+        /* Light Mode Specific Overrides */
+        body:not(.dark) header {
+            border-bottom-color: rgba(186, 230, 253, 0.9);
+        }
+        body:not(.dark) footer {
+            border-top-color: rgba(186, 230, 253, 0.9);
+        }
+        body:not(.dark) .text-white {
+            color: #0f172a !important;
+        }
+        body:not(.dark) .text-slate-200 {
+            color: #1e293b !important;
+        }
+        body:not(.dark) .text-slate-300 {
+            color: #334155 !important;
+        }
+        body:not(.dark) .text-slate-400 {
+            color: #475569 !important;
+        }
+        body:not(.dark) .text-slate-500 {
+            color: #64748b !important;
+        }
+        body:not(.dark) .border-slate-800,
+        body:not(.dark) .border-slate-800\/80,
+        body:not(.dark) .border-slate-800\/90,
+        body:not(.dark) .border-slate-800\/60,
+        body:not(.dark) .border-slate-700 {
+            border-color: #cbd5e1 !important;
+        }
+        body:not(.dark) .divide-slate-800 > :not([hidden]) ~ :not([hidden]) {
+            border-color: #e2e8f0 !important;
+        }
+        body:not(.dark) .bg-slate-900,
+        body:not(.dark) .bg-slate-900\/95,
+        body:not(.dark) .bg-slate-900\/90,
+        body:not(.dark) .bg-slate-900\/80,
+        body:not(.dark) .bg-slate-900\/70 {
+            background-color: #f8fbff !important;
+            border-color: #dbeafe !important;
+        }
+        body:not(.dark) .bg-slate-800,
+        body:not(.dark) .bg-slate-800\/80 {
+            background-color: #e2e8f0 !important;
+            color: #1e293b !important;
+        }
+
+        /* Badges in Light Mode */
+        body:not(.dark) .badge-el {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1px solid #fde68a;
+        }
+        body:not(.dark) .badge-bbl {
+            background: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #fca5a5;
+        }
+        body:not(.dark) .badge-pokal {
+            background: #d1fae5;
+            color: #047857;
+            border: 1px solid #6ee7b7;
+        }
+        body:not(.dark) .bg-red-950,
+        body:not(.dark) .bg-red-950\/80,
+        body:not(.dark) .bg-red-950\/50 {
+            background-color: #fee2e2 !important;
+            color: #b91c1c !important;
+            border-color: #fca5a5 !important;
+        }
+        body:not(.dark) .bg-emerald-950,
+        body:not(.dark) .bg-emerald-950\/90 {
+            background-color: #d1fae5 !important;
+            color: #065f46 !important;
+            border-color: #a7f3d0 !important;
+        }
+        body:not(.dark) .text-emerald-400 {
+            color: #059669 !important;
+        }
+        body:not(.dark) .text-amber-400 {
+            color: #d97706 !important;
+        }
+        body:not(.dark) .text-red-400 {
+            color: #dc2626 !important;
+        }
+
+        /* Elements that must ALWAYS have white text */
+        .bg-red-600,
+        .bg-red-600 *,
+        .tab-btn.bg-red-600,
+        .bg-gradient-to-br,
+        .bg-gradient-to-br * {
+            color: #ffffff !important;
+        }
+
+        /* Search input in light mode */
+        body:not(.dark) #search-input {
+            background-color: #ffffff !important;
+            border-color: #bae6fd !important;
+            color: #0f172a !important;
+        }
+        body:not(.dark) #search-input::placeholder {
+            color: #94a3b8 !important;
+        }
+
+        /* Filter Tab Bar in light mode */
+        body:not(.dark) .tab-btn:not(.bg-red-600) {
+            color: #475569 !important;
+        }
+        body:not(.dark) .tab-btn:not(.bg-red-600):hover {
+            color: #0f172a !important;
+            background-color: rgba(241, 245, 249, 0.9);
+        }
+
+        /* Modal in light mode */
+        body:not(.dark) #legal-modal {
+            background-color: rgba(15, 23, 42, 0.65) !important;
+        }
+        body:not(.dark) #legal-modal .glass-card {
+            background: #ffffff !important;
+            border-color: #cbd5e1 !important;
+        }
+        body:not(.dark) #legal-modal button.rounded-full {
+            background-color: #f1f5f9 !important;
+            color: #64748b !important;
+        }
+        body:not(.dark) #legal-modal button.rounded-full:hover {
+            background-color: #e2e8f0 !important;
+            color: #0f172a !important;
+        }
+
+        /* ---------------- DARK MODE (Active when body has .dark) ---------------- */
+        body.dark {
             background-color: #060911;
             background-image: 
                 radial-gradient(circle at 12% 15%, rgba(220, 38, 38, 0.15) 0%, transparent 40%),
                 radial-gradient(circle at 88% 85%, rgba(245, 158, 11, 0.10) 0%, transparent 40%),
                 radial-gradient(circle at 50% 50%, rgba(30, 41, 59, 0.25) 0%, transparent 70%);
             color: #f1f5f9;
-            font-family: 'Outfit', sans-serif;
-            min-height: 100vh;
         }
-        .glass-card {
+        body.dark .glass-card {
             background: rgba(15, 23, 42, 0.78);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: none;
         }
-        .glass-card:hover {
+        body.dark .glass-card:hover {
             border-color: rgba(220, 38, 38, 0.4);
         }
-        .glow-red {
+        body.dark .glow-red {
             box-shadow: 0 0 25px -5px rgba(220, 38, 38, 0.35);
         }
-        .glow-emerald {
+        body.dark .glow-emerald {
             box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.30);
         }
-        .badge-el {
+        body.dark .badge-el {
             background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.2));
             color: #fbbf24;
             border: 1px solid rgba(245, 158, 11, 0.4);
         }
-        .badge-bbl {
+        body.dark .badge-bbl {
             background: linear-gradient(135deg, rgba(220, 38, 38, 0.2), rgba(185, 28, 28, 0.2));
             color: #f87171;
             border: 1px solid rgba(220, 38, 38, 0.4);
         }
-        .badge-pokal {
+        body.dark .badge-pokal {
             background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2));
             color: #34d399;
             border: 1px solid rgba(16, 185, 129, 0.4);
@@ -83,6 +248,13 @@
     </style>
 </head>
 <body class="p-4 md:p-8">
+    <script>
+        // Early theme initialization to avoid flash
+        if (localStorage.getItem('fcbb_theme') === 'dark') {
+            document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
+        }
+    </script>
 
     <!-- Top Navigation Header -->
     <header class="max-w-7xl mx-auto mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-800">
@@ -100,6 +272,10 @@
         </div>
         
         <div class="flex flex-wrap items-center gap-3">
+            <button id="theme-toggle-btn" onclick="toggleTheme()" class="glass-card px-3.5 py-1.5 rounded-xl flex items-center gap-2 hover:border-amber-400/60 transition cursor-pointer text-xs font-mono font-bold shadow-sm" title="Modus wechseln (Hell / Dunkel)">
+                <span id="theme-icon" class="text-sm">🌙</span>
+                <span id="theme-text">Dark Mode</span>
+            </button>
             <div class="glass-card px-3.5 py-1.5 rounded-xl flex items-center gap-2 border-emerald-500/30">
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 <span class="text-xs font-mono text-emerald-400 font-bold">Daily Sync Active</span>
@@ -679,8 +855,46 @@
             if (e.target === m) closeLegalModal();
         });
 
+        // Theme Manager (Light Mode Standard / Dark Mode toggle)
+        function getInitialTheme() {
+            const saved = localStorage.getItem('fcbb_theme');
+            return (saved === 'dark') ? 'dark' : 'light';
+        }
+
+        function applyTheme(theme) {
+            const isDark = (theme === 'dark');
+            if (isDark) {
+                document.body.classList.add('dark');
+                document.documentElement.classList.add('dark');
+            } else {
+                document.body.classList.remove('dark');
+                document.documentElement.classList.remove('dark');
+            }
+            updateThemeControls(isDark);
+        }
+
+        function updateThemeControls(isDark) {
+            const icon = document.getElementById('theme-icon');
+            const text = document.getElementById('theme-text');
+            const fIcon = document.getElementById('theme-footer-icon');
+            const fText = document.getElementById('theme-footer-text');
+            
+            if (icon) icon.innerText = isDark ? '☀️' : '🌙';
+            if (text) text.innerText = isDark ? 'Light Mode' : 'Dark Mode';
+            if (fIcon) fIcon.innerText = isDark ? '☀️' : '🌙';
+            if (fText) fText.innerText = isDark ? 'Light Mode' : 'Dark Mode';
+        }
+
+        function toggleTheme() {
+            const current = document.body.classList.contains('dark') ? 'dark' : 'light';
+            const next = current === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('fcbb_theme', next);
+            applyTheme(next);
+        }
+
         // Initialize Dashboard
         window.addEventListener('DOMContentLoaded', () => {
+            applyTheme(getInitialTheme());
             renderMarquee();
             renderFixtures();
             renderFeatureImportance();
@@ -752,6 +966,10 @@
             <a href="#feature-importance-list" class="hover:text-white transition">Modell-Faktoren</a>
             <span>&bull;</span>
             <button onclick="openLegalModal()" class="hover:text-amber-400 transition text-amber-400/90 font-bold cursor-pointer">Impressum &amp; Datenschutz</button>
+            <span>&bull;</span>
+            <button onclick="toggleTheme()" class="hover:text-amber-400 transition cursor-pointer font-bold inline-flex items-center gap-1.5">
+                <span id="theme-footer-icon">🌙</span> <span id="theme-footer-text">Dark Mode</span>
+            </button>
             <span>&bull;</span>
             <a href="https://github.com/RLKO31/fcbb-basketball-predictor" target="_blank" class="hover:text-white transition flex items-center gap-1 inline-flex">
                 <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub Repo

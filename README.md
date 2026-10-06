@@ -12,7 +12,7 @@ Forecasting both **binary match outcomes (win/loss probabilities)** and **exact 
 2. **Turkish Airlines EuroLeague** (Continental European Elite)
 3. **BBL-Pokal** (German National Cup)
 
-Designed as a production-grade portfolio project featuring an interactive, dark-themed, glassmorphic Single Page Application (SPA) dashboard.
+Designed as a production-grade portfolio project featuring an interactive glassmorphic Single Page Application (SPA) dashboard with a default Light Blue stadium theme and an instant 1-click Dark Mode toggle.
 
 ---
 
@@ -25,6 +25,7 @@ Experience the interactive web dashboard live:
 
 ## 🌟 Key Features & Innovations
 
+- **Dual Theme Engine (Light & Dark Mode):** Modern light blue stadium aesthetic enabled by default for crisp presentation, with an instant 1-click toggle to switch to dark mode (preference persisted via `localStorage`).
 - **Multi-Competition Cross-Horizon Harmonization:** Models the grueling schedule fatigue and "travel tax" of competing concurrently in domestic (BBL) and continental (EuroLeague) leagues (e.g. Thursday night in Istanbul $\rightarrow$ Sunday afternoon in Munich).
 - **Pace-Normalized Advanced Metrics:** Raw scoring converted into possession-normalized pace metrics:
   - **Pace** (possessions per 40 minutes)
