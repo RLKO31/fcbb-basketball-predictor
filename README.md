@@ -6,6 +6,12 @@
 [![Tailwind CSS](https://img.shields.io/badge/UI-Tailwind_CSS-38B2AC.svg)](https://tailwindcss.com/)
 [![GitHub Pages](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-22c55e.svg)](https://RLKO31.github.io/fcbb-basketball-predictor/)
 
+[English](#english-version) | [Deutsch](#deutsche-version)
+
+---
+
+## English Version
+
 An end-to-end Machine Learning intelligence and game forecasting system engineered for **FC Bayern München Basketball**. 
 Forecasting both **binary match outcomes (win/loss probabilities)** and **exact point totals/spreads** across three concurrent competitions:
 1. **easyCredit BBL** (German Basketball Bundesliga)
@@ -14,19 +20,14 @@ Forecasting both **binary match outcomes (win/loss probabilities)** and **exact 
 
 Designed as a production-grade portfolio project featuring an interactive glassmorphic Single Page Application (SPA) dashboard with a default Light Blue stadium theme and an instant 1-click Dark Mode toggle.
 
----
-
-## Live Web Demo
-
-Experience the interactive web dashboard live:
-**[Launch FC Bayern Basketball Dashboard](https://RLKO31.github.io/fcbb-basketball-predictor/)** *(or open [`index.html`](file:///index.html) locally in your browser)*
+**Live Demo:** [https://RLKO31.github.io/fcbb-basketball-predictor/](https://RLKO31.github.io/fcbb-basketball-predictor/) *(or open [`index.html`](file:///index.html) locally in your browser)*
 
 ---
 
-## Key Features & Innovations
+### Key Features & Innovations
 
 - **Dual Theme Engine (Light & Dark Mode):** Modern light blue stadium aesthetic enabled by default for crisp presentation, with an instant 1-click toggle to switch to dark mode (preference persisted via `localStorage`).
-- **Multi-Competition Cross-Horizon Harmonization:** Models the grueling schedule fatigue and "travel tax" of competing concurrently in domestic (BBL) and continental (EuroLeague) leagues (e.g. Thursday night in Istanbul $\rightarrow$ Sunday afternoon in Munich).
+- **Multi-Competition Cross-Horizon Harmonization:** Models the grueling schedule fatigue and "travel tax" of competing concurrently in domestic (BBL) and continental (EuroLeague) leagues (e.g. Thursday night in Istanbul -> Sunday afternoon in Munich).
 - **Pace-Normalized Advanced Metrics:** Raw scoring converted into possession-normalized pace metrics:
   - **Pace** (possessions per 40 minutes)
   - **Offensive Rating (ORtg)** (points scored per 100 possessions)
@@ -39,7 +40,7 @@ Experience the interactive web dashboard live:
 
 ---
 
-## System Architecture & Methodology
+### System Architecture & Methodology
 
 ```mermaid
 flowchart TD
@@ -81,26 +82,26 @@ flowchart TD
 
 ---
 
-## Mathematical Formulations
+### Mathematical Formulations
 
-### 1. Possession & Pace Estimation
+#### 1. Possession & Pace Estimation
 Standardized to 40-minute regulation time:
 $$\text{Possessions} \approx 0.96 \cdot \left( \text{FGA} + 0.44 \cdot \text{FTA} - \text{ORB} + \text{TOV} \right)$$
 $$\text{Pace} = \frac{40 \cdot \text{Possessions}}{\text{Minutes Played}}$$
 
-### 2. Offensive & Defensive Ratings
+#### 2. Offensive & Defensive Ratings
 Normalized per 100 possessions:
 $$\text{ORtg} = \frac{\text{Points Scored}}{\text{Possessions}} \cdot 100, \quad \text{DRtg} = \frac{\text{Points Allowed}}{\text{Possessions}} \cdot 100$$
 $$\text{Net Rating} = \text{ORtg} - \text{DRtg}$$
 
-### 3. Exponential Time-Decay Prior
+#### 3. Exponential Time-Decay Prior
 Decay applied over historical matches $t \in [1..W^*]$:
 $$w_t = \gamma^{W^* - t} \cdot \exp\left(-\lambda \cdot \Delta\text{days}\right) \cdot \text{TierWeight}$$
 Where $\gamma = 0.85$, $\lambda = 0.015$, and $\text{TierWeight} \in \{1.0 \text{ (BBL)}, 1.25 \text{ (EuroLeague)}\}$.
 
 ---
 
-## Key Benchmark Results
+### Key Benchmark Results
 
 | Metric | Holdout Test Set (2024–2025) | Reality Scorecard (Live 2026/2027) |
 |:---|:---:|:---:|
@@ -113,7 +114,7 @@ Where $\gamma = 0.85$, $\lambda = 0.015$, and $\text{TierWeight} \in \{1.0 \text
 
 ---
 
-## Repository Structure
+### Repository Structure
 
 ```
 fcbb-basketball-predictor/
@@ -147,9 +148,9 @@ fcbb-basketball-predictor/
 
 ---
 
-## How to Run Locally
+### How to Run Locally
 
-### Option 1: Direct Browser Launch
+#### Option 1: Direct Browser Launch
 Open `index.html` directly in any web browser without server setup:
 ```bash
 git clone https://github.com/RLKO31/fcbb-basketball-predictor.git
@@ -157,19 +158,19 @@ cd fcbb-basketball-predictor
 start index.html
 ```
 
-### Option 2: Run Full Data & Training Pipeline
+#### Option 2: Run Full Data & Training Pipeline
 ```bash
 py run_pipeline.py
 ```
 
-### Option 3: Synchronize with Live Results
+#### Option 3: Synchronize with Live Results
 ```bash
 py update_results.py
 ```
 
 ---
 
-## Legal Assessment & Data Usage Compliance
+### Legal Assessment & Data Usage Compliance
 
 | Aspect | Usage in Project | Legal Status under German & EU Law |
 |:---|:---|:---|
@@ -181,10 +182,85 @@ py update_results.py
 
 ---
 
-## Impressum (§ 5 DDG) & Contact
+### Impressum (§ 5 DDG) & Contact
 
 - **Operator / Developer:** Ralf Oppel
 - **Academic Affiliation:** Technische Hochschule Würzburg-Schweinfurt (THWS)
 - **Contact:** [ralf.oppel@study.thws.de](mailto:ralf.oppel@study.thws.de)
 - **Responsible for Content (§ 18 Abs. 2 MStV):** Ralf Oppel
 - **License:** [MIT License](LICENSE)
+
+---
+
+## Deutsche Version
+
+Ein durchgängiges Machine-Learning- und Spielprognosesystem für **FC Bayern München Basketball**. 
+Prognostiziert sowohl **binäre Spielausgänge (Sieg-/Niederlagewahrscheinlichkeiten)** als auch **exakte Punktzahlen und Punktabstände** über drei parallele Wettbewerbe:
+1. **easyCredit BBL** (Basketball-Bundesliga)
+2. **Turkish Airlines EuroLeague** (Europäische Königsklasse)
+3. **BBL-Pokal** (Deutscher Vereinspokal)
+
+Entwickelt als produktionsreifes Portfolio-Projekt mit einem interaktiven Glassmorphism-Single-Page-Dashboard (SPA), standardmäßigem hellblauen Arena-Design und 1-Klick-Dark-Mode.
+
+**Live-Webseite:** [https://RLKO31.github.io/fcbb-basketball-predictor/](https://RLKO31.github.io/fcbb-basketball-predictor/) *(oder lokal [`index.html`](file:///index.html) im Browser öffnen)*
+
+---
+
+### Kernfunktionen & Innovationen
+
+- **Duales Design (Light & Dark Mode):** Modernes, hellblaues Stadion-Design als Standard für beste Lesbarkeit, mit sofortigem Umschalter auf Dark Mode (Auswahl in `localStorage` gespeichert).
+- **Multi-Wettbewerbs-Harmonisierung:** Modelliert die Belastungs- und Reisestrapazen paralleler BBL- und EuroLeague-Spiele (z. B. Donnerstagabend in Istanbul -> Sonntagnachmittag in München).
+- **Ballbesitz-normierte Metriken (Pace-Normalisierung):**
+  - **Pace** (Ballbesitze pro 40 Spielminuten)
+  - **Offensiv-Rating (ORtg)** (erzielte Punkte pro 100 Ballbesitze)
+  - **Defensiv-Rating (DRtg)** (zugelassene Punkte pro 100 Ballbesitze)
+  - **Net-Rating ($\Delta\text{NetRtg}$)** (Punktdifferenz pro 100 Ballbesitze)
+- **1D Exponentielles Time-Decay-Gedächtnis:** Dynamische Gewichtung aktueller Formkurven bei gleichzeitiger Berücksichtigung historischer Duelle über ein optimales Fenster ($W^* = 8$ Spiele).
+- **Gestapelte Punkte-Regressoren (Stacked Dual Regressors):** Vorhersage exakter Endstände unter Berücksichtigung von Siegchancen, Tempo und Defensivstärken.
+- **Laufender Reality-Check:** Automatischer Ergebnisabgleich der Modellprognosen mit den realen Spielergebnissen der Saison 2026/2027.
+- **76-Spiele-Spielplan:** Durchsuchbarer und filterbarer Gesamtkalender mit Spielkarten, Austragungsorten und Over/Under-Linien.
+
+---
+
+### Systemarchitektur & Methodik
+
+Das System gliedert sich in vier integrierte Stufen:
+1. **Multi-Wettbewerbs-Datenerfassung:** Automatisierter Abruf von EuroLeague-Boxscores und BBL-Archiven inklusive Reisetage-Berechnung.
+2. **Taktische Feature-Pipeline:** Ballbesitznormierung, exponentielle Form-Gewichtung und rollierende Zeitfenster.
+3. **Kombiniertes Machine-Learning-Kernmodell:** Ensemble aus Random Forest und HistGradientBoosting (77,94% Holdout-Genauigkeit) plus gestapelte Punkteregressoren.
+4. **Interaktives Web-Dashboard:** Reaktive Single-Page-Anwendung mit Scorecard, 76-Spiele-Raster und Impressum.
+
+---
+
+### Wichtige Benchmark-Ergebnisse
+
+| Metrik | Testdatensatz (2024–2025) | Reality Scorecard (Live 2026/2027) |
+|:---|:---:|:---:|
+| **Sieger-Klassifikationsgenauigkeit** | **77,94%** | **100,0%** (4/4 Spiele) |
+| **Log Loss** | **0,4943** | — |
+| **Punkte-Spread-Siegergenauigkeit** | **76,47%** | **100,0%** |
+| **Auswärtspunkte MAE** | **7,15 Pkt** (RMSE: 9,60) | **&plusmn;7,8 Pkt** |
+| **Heimpunkte MAE** | **9,73 Pkt** (RMSE: 12,85) | **&plusmn;12,0 Pkt** |
+| **Spread-Differenz MAE** | **11,2 Pkt** | **&plusmn;15,2 Pkt** |
+
+---
+
+### Datenquellen & Rechtliche Einordnung
+
+| Bereich | Nutzung im Projekt | Rechtliche Bewertung |
+|:---|:---|:---|
+| **EuroLeague REST API** | Spieltermine, Endstände und Boxscores via `euroleague-api` | **Zulässig**. Sportergebnisse, Spielstände und Spielpläne sind reine Fakten ohne Urheberschutz (§ 2 Abs. 2 UrhG). |
+| **Text- & Data-Mining (TDM)** | Feature-Engineering und Training der ML-Modelle | **Zulässig**. Ausdrücklich gestattet gem. **§§ 44b, 60d UrhG** (EU-DSM-Richtlinie) für wissenschaftliche Forschung und Studien. |
+| **easyCredit BBL & Pokal** | Historische Spielarchive | **Zulässig**. Historische Spielergebnisse sind gemeinfreie Tatsachen. |
+| **Vereinsnamen & Marken** | "FC Bayern München Basketball", Gegnernamen | **Zulässige nominative Nutzung**. Markennamen dienen ausschließlich der Identifikation der Mannschaften gem. **§ 23 MarkenG** ohne geschäftliche Billigung. |
+| **Wettausschluss** | Punktespreads und Siegchancen | **Konform**. Ausdrücklicher Ausschluss jeglicher Wettberatung gem. Glücksspielstaatsvertrag (**GlüStV**). |
+
+---
+
+### Impressum (§ 5 DDG) & Kontakt
+
+- **Betreiber / Entwickler:** Ralf Oppel
+- **Akademische Einrichtung:** Technische Hochschule Würzburg-Schweinfurt (THWS)
+- **Kontakt:** [ralf.oppel@study.thws.de](mailto:ralf.oppel@study.thws.de)
+- **Verantwortlich gem. § 18 Abs. 2 MStV:** Ralf Oppel
+- **Lizenz:** [MIT License](LICENSE)
