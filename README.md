@@ -1,4 +1,4 @@
-# 🏀 FC Bayern Basketball Model v3 & Season 2026/2027 Live Tracker
+# FC Bayern Basketball Model v3 & Season 2026/2027 Live Tracker
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python: 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
@@ -16,14 +16,14 @@ Designed as a production-grade portfolio project featuring an interactive glassm
 
 ---
 
-## 🌐 Live Web Demo
+## Live Web Demo
 
 Experience the interactive web dashboard live:
-👉 **[Launch FC Bayern Basketball Dashboard](https://RLKO31.github.io/fcbb-basketball-predictor/)** *(or open [`index.html`](file:///index.html) locally in your browser)*
+**[Launch FC Bayern Basketball Dashboard](https://RLKO31.github.io/fcbb-basketball-predictor/)** *(or open [`index.html`](file:///index.html) locally in your browser)*
 
 ---
 
-## 🌟 Key Features & Innovations
+## Key Features & Innovations
 
 - **Dual Theme Engine (Light & Dark Mode):** Modern light blue stadium aesthetic enabled by default for crisp presentation, with an instant 1-click toggle to switch to dark mode (preference persisted via `localStorage`).
 - **Multi-Competition Cross-Horizon Harmonization:** Models the grueling schedule fatigue and "travel tax" of competing concurrently in domestic (BBL) and continental (EuroLeague) leagues (e.g. Thursday night in Istanbul $\rightarrow$ Sunday afternoon in Munich).
@@ -39,7 +39,7 @@ Experience the interactive web dashboard live:
 
 ---
 
-## 🧠 System Architecture & Methodology
+## System Architecture & Methodology
 
 ```mermaid
 flowchart TD
@@ -81,7 +81,7 @@ flowchart TD
 
 ---
 
-## 📐 Mathematical Formulations
+## Mathematical Formulations
 
 ### 1. Possession & Pace Estimation
 Standardized to 40-minute regulation time:
@@ -100,7 +100,7 @@ Where $\gamma = 0.85$, $\lambda = 0.015$, and $\text{TierWeight} \in \{1.0 \text
 
 ---
 
-## 📊 Key Benchmark Results
+## Key Benchmark Results
 
 | Metric | Holdout Test Set (2024–2025) | Reality Scorecard (Live 2026/2027) |
 |:---|:---:|:---:|
@@ -113,7 +113,7 @@ Where $\gamma = 0.85$, $\lambda = 0.015$, and $\text{TierWeight} \in \{1.0 \text
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 fcbb-basketball-predictor/
@@ -147,7 +147,7 @@ fcbb-basketball-predictor/
 
 ---
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 ### Option 1: Direct Browser Launch
 Open `index.html` directly in any web browser without server setup:
@@ -169,7 +169,7 @@ py update_results.py
 
 ---
 
-## ⚖️ Legal Assessment & Data Usage Compliance
+## Legal Assessment & Data Usage Compliance
 
 | Aspect | Usage in Project | Legal Status under German & EU Law |
 |:---|:---|:---|
@@ -181,7 +181,7 @@ py update_results.py
 
 ---
 
-## 📜 Impressum (§ 5 DDG) & Contact
+## Impressum (§ 5 DDG) & Contact
 
 - **Operator / Developer:** Ralf Oppel
 - **Academic Affiliation:** Technische Hochschule Würzburg-Schweinfurt (THWS)
