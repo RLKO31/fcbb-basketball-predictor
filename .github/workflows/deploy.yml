@@ -14,8 +14,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "pages-deploy"
+  cancel-in-progress: true
 
 jobs:
   build-and-update:
@@ -52,6 +52,7 @@ jobs:
           git add data/ dashboard/ index.html
           if ! git diff --staged --quiet; then
             git commit -m "Auto-update: Sync latest scores and forecast [skip ci]"
+            git pull --rebase origin main || true
             git push
           else
             echo "No changes to commit."

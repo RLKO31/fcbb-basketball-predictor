@@ -1,50 +1,50 @@
 {
     "season": "2026-2027",
-    "generated_date": "2026-10-07",
-    "last_sync_timestamp": "2026-10-07 12:57 CEST",
+    "generated_date": "2026-10-26",
+    "last_sync_timestamp": "2026-10-26 10:59 CEST",
     "total_matches": 76,
     "performance_tracking": {
-        "played_matches": 6,
-        "winner_hits": 5,
-        "winner_accuracy": 83.3,
-        "mean_home_error": 12.5,
-        "mean_away_error": 10.7,
-        "mean_spread_error": 20.2,
-        "mean_total_error": 16.2
+        "played_matches": 13,
+        "winner_hits": 9,
+        "winner_accuracy": 69.2,
+        "mean_home_error": 10.8,
+        "mean_away_error": 13.6,
+        "mean_spread_error": 15.8,
+        "mean_total_error": 21.1
     },
     "overall": {
-        "wins": 49,
-        "losses": 27,
-        "win_rate": 64.5,
-        "avg_points_scored": 83.9,
-        "avg_points_conceded": 77.9
+        "wins": 50,
+        "losses": 26,
+        "win_rate": 65.8,
+        "avg_points_scored": 85.6,
+        "avg_points_conceded": 79.5
     },
     "competitions": {
         "BBL": {
             "games": 34,
-            "wins": 31,
-            "losses": 3,
-            "win_rate": 91.2,
-            "avg_points": 90.7,
-            "avg_conceded": 74.5,
+            "wins": 30,
+            "losses": 4,
+            "win_rate": 88.2,
+            "avg_points": 90.6,
+            "avg_conceded": 75.8,
             "projected_finish": "1st Seed (Championship Favorite)"
         },
         "EuroLeague": {
             "games": 38,
-            "wins": 15,
-            "losses": 23,
-            "win_rate": 39.5,
-            "avg_points": 77.5,
-            "avg_conceded": 81.2,
+            "wins": 16,
+            "losses": 22,
+            "win_rate": 42.1,
+            "avg_points": 80.8,
+            "avg_conceded": 83.5,
             "projected_finish": "Play-In / Top 8 Contender"
         },
         "BBL-Pokal": {
             "games": 4,
-            "wins": 3,
-            "losses": 1,
-            "win_rate": 75.0,
-            "avg_points": 87.2,
-            "avg_conceded": 76.2,
+            "wins": 4,
+            "losses": 0,
+            "win_rate": 100.0,
+            "avg_points": 89.0,
+            "avg_conceded": 72.0,
             "projected_finish": "TOP FOUR Champion"
         }
     },
@@ -470,8 +470,8 @@
             "date": "2026-10-08",
             "month": "2026-10",
             "venue": "Sap Garden",
-            "status": "UPCOMING (FORECAST)",
-            "is_played": false,
+            "status": "FINAL (PLAYED)",
+            "is_played": true,
             "home_team": "FC Bayern M\u00fcnchen",
             "away_team": "Virtus Segafredo Bologna",
             "opponent": "Virtus Segafredo Bologna",
@@ -494,8 +494,28 @@
                 "total_points": 154,
                 "over_under_line": 153.5
             },
-            "actual_score": null,
-            "comparison": null,
+            "actual_score": {
+                "home": 87,
+                "away": 94,
+                "bayern": 87,
+                "opponent": 94,
+                "formatted": "87 : 94",
+                "bayern_formatted": "FC Bayern 87 : 94 Virtus Segafredo Bologna",
+                "margin": -7,
+                "total_points": 181
+            },
+            "comparison": {
+                "winner_hit": false,
+                "actual_winner": "Virtus Segafredo Bologna",
+                "predicted_winner": "FC Bayern M\u00fcnchen",
+                "diff_home": 7,
+                "diff_away": 20,
+                "abs_diff_home": 7,
+                "abs_diff_away": 20,
+                "diff_margin": -13,
+                "abs_diff_margin": 13,
+                "diff_total": 27
+            },
             "tactical_factors": {
                 "projected_pace": 72.1,
                 "rest_days": {
@@ -519,32 +539,52 @@
             "date": "2026-10-10",
             "month": "2026-10",
             "venue": "Messe Chemnitz",
-            "status": "UPCOMING (FORECAST)",
-            "is_played": false,
+            "status": "FINAL (PLAYED)",
+            "is_played": true,
             "home_team": "NINERS Chemnitz",
             "away_team": "FC Bayern M\u00fcnchen",
             "opponent": "NINERS Chemnitz",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 22.0,
-                "away_win": 78.0,
-                "bayern_win": 78.0,
+                "home_win": 17.7,
+                "away_win": 82.3,
+                "bayern_win": 82.3,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 73,
-                "away": 92,
-                "bayern": 92,
-                "opponent": 73,
-                "formatted": "73 : 92",
-                "bayern_formatted": "FC Bayern 92 : 73 NINERS Chemnitz",
-                "margin": -19,
-                "total_points": 165,
-                "over_under_line": 164.5
+                "home": 64,
+                "away": 88,
+                "bayern": 88,
+                "opponent": 64,
+                "formatted": "64 : 88",
+                "bayern_formatted": "FC Bayern 88 : 64 NINERS Chemnitz",
+                "margin": -24,
+                "total_points": 152,
+                "over_under_line": 151.5
             },
-            "actual_score": null,
-            "comparison": null,
+            "actual_score": {
+                "home": 83,
+                "away": 87,
+                "bayern": 87,
+                "opponent": 83,
+                "formatted": "83 : 87",
+                "bayern_formatted": "FC Bayern 87 : 83 NINERS Chemnitz",
+                "margin": -4,
+                "total_points": 170
+            },
+            "comparison": {
+                "winner_hit": true,
+                "actual_winner": "FC Bayern M\u00fcnchen",
+                "predicted_winner": "FC Bayern M\u00fcnchen",
+                "diff_home": 19,
+                "diff_away": -1,
+                "abs_diff_home": 19,
+                "abs_diff_away": 1,
+                "diff_margin": 20,
+                "abs_diff_margin": 20,
+                "diff_total": 18
+            },
             "tactical_factors": {
                 "projected_pace": 71.3,
                 "rest_days": {
@@ -554,11 +594,11 @@
                     "opponent": 7,
                     "advantage": "NINERS Chemnitz"
                 },
-                "net_rating_diff": -36.3,
+                "net_rating_diff": -31.5,
                 "home_off_rating": 85.9,
-                "away_off_rating": 123.3,
+                "away_off_rating": 125.8,
                 "home_def_rating": 105.3,
-                "away_def_rating": 106.3
+                "away_def_rating": 113.7
             }
         },
         {
@@ -568,32 +608,52 @@
             "date": "2026-10-14",
             "month": "2026-10",
             "venue": "Turkcell Basketball Development Center",
-            "status": "UPCOMING (FORECAST)",
-            "is_played": false,
+            "status": "FINAL (PLAYED)",
+            "is_played": true,
             "home_team": "Anadolu Efes Istanbul",
             "away_team": "FC Bayern M\u00fcnchen",
             "opponent": "Anadolu Efes Istanbul",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 79.0,
-                "away_win": 21.0,
-                "bayern_win": 21.0,
+                "home_win": 77.9,
+                "away_win": 22.1,
+                "bayern_win": 22.1,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 87,
-                "away": 75,
-                "bayern": 75,
-                "opponent": 87,
-                "formatted": "87 : 75",
-                "bayern_formatted": "FC Bayern 75 : 87 Anadolu Efes Istanbul",
-                "margin": 12,
-                "total_points": 162,
-                "over_under_line": 161.5
+                "home": 84,
+                "away": 70,
+                "bayern": 70,
+                "opponent": 84,
+                "formatted": "84 : 70",
+                "bayern_formatted": "FC Bayern 70 : 84 Anadolu Efes Istanbul",
+                "margin": 14,
+                "total_points": 154,
+                "over_under_line": 153.5
             },
-            "actual_score": null,
-            "comparison": null,
+            "actual_score": {
+                "home": 93,
+                "away": 101,
+                "bayern": 101,
+                "opponent": 93,
+                "formatted": "93 : 101",
+                "bayern_formatted": "FC Bayern 101 : 93 Anadolu Efes Istanbul",
+                "margin": -8,
+                "total_points": 194
+            },
+            "comparison": {
+                "winner_hit": false,
+                "actual_winner": "FC Bayern M\u00fcnchen",
+                "predicted_winner": "Anadolu Efes Istanbul",
+                "diff_home": 9,
+                "diff_away": 31,
+                "abs_diff_home": 9,
+                "abs_diff_away": 31,
+                "diff_margin": -22,
+                "abs_diff_margin": 22,
+                "diff_total": 40
+            },
             "tactical_factors": {
                 "projected_pace": 71.9,
                 "rest_days": {
@@ -603,11 +663,11 @@
                     "opponent": 7,
                     "advantage": "Anadolu Efes Istanbul"
                 },
-                "net_rating_diff": -10.5,
+                "net_rating_diff": -2.4,
                 "home_off_rating": 136.6,
-                "away_off_rating": 124.4,
+                "away_off_rating": 125.1,
                 "home_def_rating": 128.2,
-                "away_def_rating": 105.5
+                "away_def_rating": 114.3
             }
         },
         {
@@ -617,32 +677,52 @@
             "date": "2026-10-16",
             "month": "2026-10",
             "venue": "Turkcell Basketball Development Center",
-            "status": "UPCOMING (FORECAST)",
-            "is_played": false,
+            "status": "FINAL (PLAYED)",
+            "is_played": true,
             "home_team": "Besiktas Istanbul",
             "away_team": "FC Bayern M\u00fcnchen",
             "opponent": "Besiktas Istanbul",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 62.3,
-                "away_win": 37.7,
-                "bayern_win": 37.7,
+                "home_win": 63.4,
+                "away_win": 36.6,
+                "bayern_win": 36.6,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 80,
-                "away": 71,
-                "bayern": 71,
-                "opponent": 80,
-                "formatted": "80 : 71",
-                "bayern_formatted": "FC Bayern 71 : 80 Besiktas Istanbul",
+                "home": 79,
+                "away": 70,
+                "bayern": 70,
+                "opponent": 79,
+                "formatted": "79 : 70",
+                "bayern_formatted": "FC Bayern 70 : 79 Besiktas Istanbul",
                 "margin": 9,
-                "total_points": 151,
-                "over_under_line": 150.5
+                "total_points": 149,
+                "over_under_line": 148.5
             },
-            "actual_score": null,
-            "comparison": null,
+            "actual_score": {
+                "home": 95,
+                "away": 87,
+                "bayern": 87,
+                "opponent": 95,
+                "formatted": "95 : 87",
+                "bayern_formatted": "FC Bayern 87 : 95 Besiktas Istanbul",
+                "margin": 8,
+                "total_points": 182
+            },
+            "comparison": {
+                "winner_hit": true,
+                "actual_winner": "Besiktas Istanbul",
+                "predicted_winner": "Besiktas Istanbul",
+                "diff_home": 16,
+                "diff_away": 17,
+                "abs_diff_home": 16,
+                "abs_diff_away": 17,
+                "diff_margin": -1,
+                "abs_diff_margin": 1,
+                "diff_total": 33
+            },
             "tactical_factors": {
                 "projected_pace": 72.1,
                 "rest_days": {
@@ -652,11 +732,11 @@
                     "opponent": 7,
                     "advantage": "Besiktas Istanbul"
                 },
-                "net_rating_diff": -8.8,
+                "net_rating_diff": -9.4,
                 "home_off_rating": 108.0,
-                "away_off_rating": 118.5,
+                "away_off_rating": 128.1,
                 "home_def_rating": 108.0,
-                "away_def_rating": 109.7
+                "away_def_rating": 118.7
             }
         },
         {
@@ -665,33 +745,53 @@
             "round": "BBL-Pokal Round of 16",
             "date": "2026-10-18",
             "month": "2026-10",
-            "venue": "Telekom Dome, Bonn",
-            "status": "UPCOMING (FORECAST)",
-            "is_played": false,
-            "home_team": "Telekom Baskets Bonn",
+            "venue": "Inselpark Arena, Hamburg",
+            "status": "FINAL (PLAYED)",
+            "is_played": true,
+            "home_team": "Hamburg Towers",
             "away_team": "FC Bayern M\u00fcnchen",
-            "opponent": "Telekom Baskets Bonn",
+            "opponent": "Hamburg Towers",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 54.2,
-                "away_win": 45.8,
-                "bayern_win": 45.8,
-                "tip": "OPPONENT WIN",
+                "home_win": 25.2,
+                "away_win": 74.8,
+                "bayern_win": 74.8,
+                "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 82,
-                "away": 81,
-                "bayern": 81,
-                "opponent": 82,
-                "formatted": "82 : 81",
-                "bayern_formatted": "FC Bayern 81 : 82 Telekom Baskets Bonn",
-                "margin": 1,
-                "total_points": 163,
-                "over_under_line": 162.5
+                "home": 65,
+                "away": 89,
+                "bayern": 89,
+                "opponent": 65,
+                "formatted": "65 : 89",
+                "bayern_formatted": "FC Bayern 89 : 65 Hamburg Towers",
+                "margin": -24,
+                "total_points": 154,
+                "over_under_line": 153.5
             },
-            "actual_score": null,
-            "comparison": null,
+            "actual_score": {
+                "home": 63,
+                "away": 85,
+                "bayern": 85,
+                "opponent": 63,
+                "formatted": "63 : 85",
+                "bayern_formatted": "FC Bayern 85 : 63 Hamburg Towers",
+                "margin": -22,
+                "total_points": 148
+            },
+            "comparison": {
+                "winner_hit": true,
+                "actual_winner": "FC Bayern M\u00fcnchen",
+                "predicted_winner": "FC Bayern M\u00fcnchen",
+                "diff_home": -2,
+                "diff_away": -4,
+                "abs_diff_home": 2,
+                "abs_diff_away": 4,
+                "diff_margin": 2,
+                "abs_diff_margin": 2,
+                "diff_total": -6
+            },
             "tactical_factors": {
                 "projected_pace": 72.9,
                 "rest_days": {
@@ -699,13 +799,13 @@
                     "away": 2,
                     "bayern": 2,
                     "opponent": 7,
-                    "advantage": "Telekom Baskets Bonn"
+                    "advantage": "Hamburg Towers"
                 },
-                "net_rating_diff": -14.1,
-                "home_off_rating": 109.2,
-                "away_off_rating": 113.6,
-                "home_def_rating": 119.4,
-                "away_def_rating": 109.7
+                "net_rating_diff": -26.4,
+                "home_off_rating": 101.6,
+                "away_off_rating": 126.8,
+                "home_def_rating": 123.2,
+                "away_def_rating": 122.0
             }
         },
         {
@@ -715,32 +815,52 @@
             "date": "2026-10-22",
             "month": "2026-10",
             "venue": "Sap Garden",
-            "status": "UPCOMING (FORECAST)",
-            "is_played": false,
+            "status": "FINAL (PLAYED)",
+            "is_played": true,
             "home_team": "FC Bayern M\u00fcnchen",
             "away_team": "Dubai Basketball",
             "opponent": "Dubai Basketball",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 63.1,
-                "away_win": 36.9,
-                "bayern_win": 63.1,
+                "home_win": 67.3,
+                "away_win": 32.7,
+                "bayern_win": 67.3,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 79,
-                "away": 78,
-                "bayern": 79,
-                "opponent": 78,
-                "formatted": "79 : 78",
-                "bayern_formatted": "FC Bayern 79 : 78 Dubai Basketball",
-                "margin": 1,
-                "total_points": 157,
-                "over_under_line": 156.5
+                "home": 84,
+                "away": 77,
+                "bayern": 84,
+                "opponent": 77,
+                "formatted": "84 : 77",
+                "bayern_formatted": "FC Bayern 84 : 77 Dubai Basketball",
+                "margin": 7,
+                "total_points": 161,
+                "over_under_line": 160.5
             },
-            "actual_score": null,
-            "comparison": null,
+            "actual_score": {
+                "home": 91,
+                "away": 107,
+                "bayern": 91,
+                "opponent": 107,
+                "formatted": "91 : 107",
+                "bayern_formatted": "FC Bayern 91 : 107 Dubai Basketball",
+                "margin": -16,
+                "total_points": 198
+            },
+            "comparison": {
+                "winner_hit": false,
+                "actual_winner": "Dubai Basketball",
+                "predicted_winner": "FC Bayern M\u00fcnchen",
+                "diff_home": 7,
+                "diff_away": 30,
+                "abs_diff_home": 7,
+                "abs_diff_away": 30,
+                "diff_margin": -23,
+                "abs_diff_margin": 23,
+                "diff_total": 37
+            },
             "tactical_factors": {
                 "projected_pace": 72.1,
                 "rest_days": {
@@ -750,10 +870,10 @@
                     "opponent": 7,
                     "advantage": "Dubai Basketball"
                 },
-                "net_rating_diff": 1.1,
-                "home_off_rating": 112.5,
+                "net_rating_diff": 8.4,
+                "home_off_rating": 124.5,
                 "away_off_rating": 108.0,
-                "home_def_rating": 111.3,
+                "home_def_rating": 116.1,
                 "away_def_rating": 108.0
             }
         },
@@ -764,34 +884,54 @@
             "date": "2026-10-25",
             "month": "2026-10",
             "venue": "BMW Park, Munich",
-            "status": "UPCOMING (FORECAST)",
-            "is_played": false,
+            "status": "FINAL (PLAYED)",
+            "is_played": true,
             "home_team": "FC Bayern M\u00fcnchen",
             "away_team": "Hamburg Towers",
             "opponent": "Hamburg Towers",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 87.9,
-                "away_win": 12.1,
-                "bayern_win": 87.9,
+                "home_win": 74.5,
+                "away_win": 25.5,
+                "bayern_win": 74.5,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 87,
-                "away": 68,
-                "bayern": 87,
-                "opponent": 68,
-                "formatted": "87 : 68",
-                "bayern_formatted": "FC Bayern 87 : 68 Hamburg Towers",
-                "margin": 19,
-                "total_points": 155,
-                "over_under_line": 154.5
+                "home": 102,
+                "away": 87,
+                "bayern": 102,
+                "opponent": 87,
+                "formatted": "102 : 87",
+                "bayern_formatted": "FC Bayern 102 : 87 Hamburg Towers",
+                "margin": 15,
+                "total_points": 189,
+                "over_under_line": 188.5
             },
-            "actual_score": null,
-            "comparison": null,
+            "actual_score": {
+                "home": 96,
+                "away": 77,
+                "bayern": 96,
+                "opponent": 77,
+                "formatted": "96 : 77",
+                "bayern_formatted": "FC Bayern 96 : 77 Hamburg Towers",
+                "margin": 19,
+                "total_points": 173
+            },
+            "comparison": {
+                "winner_hit": true,
+                "actual_winner": "FC Bayern M\u00fcnchen",
+                "predicted_winner": "FC Bayern M\u00fcnchen",
+                "diff_home": -6,
+                "diff_away": -10,
+                "abs_diff_home": 6,
+                "abs_diff_away": 10,
+                "diff_margin": 4,
+                "abs_diff_margin": 4,
+                "diff_total": -16
+            },
             "tactical_factors": {
-                "projected_pace": 73.0,
+                "projected_pace": 72.5,
                 "rest_days": {
                     "home": 3,
                     "away": 7,
@@ -799,11 +939,11 @@
                     "opponent": 7,
                     "advantage": "Hamburg Towers"
                 },
-                "net_rating_diff": 24.5,
-                "home_off_rating": 112.1,
-                "away_off_rating": 101.6,
-                "home_def_rating": 109.3,
-                "away_def_rating": 123.2
+                "net_rating_diff": 33.0,
+                "home_off_rating": 125.9,
+                "away_off_rating": 86.4,
+                "home_def_rating": 123.0,
+                "away_def_rating": 116.6
             }
         },
         {
@@ -820,22 +960,22 @@
             "opponent": "FC Barcelona",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 31.7,
-                "away_win": 68.3,
-                "bayern_win": 31.7,
-                "tip": "OPPONENT WIN",
+                "home_win": 59.8,
+                "away_win": 40.2,
+                "bayern_win": 59.8,
+                "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 63,
-                "away": 82,
-                "bayern": 63,
-                "opponent": 82,
-                "formatted": "63 : 82",
-                "bayern_formatted": "FC Bayern 63 : 82 FC Barcelona",
-                "margin": -19,
-                "total_points": 145,
-                "over_under_line": 144.5
+                "home": 82,
+                "away": 80,
+                "bayern": 82,
+                "opponent": 80,
+                "formatted": "82 : 80",
+                "bayern_formatted": "FC Bayern 82 : 80 FC Barcelona",
+                "margin": 2,
+                "total_points": 162,
+                "over_under_line": 161.5
             },
             "actual_score": null,
             "comparison": null,
@@ -849,9 +989,9 @@
                     "advantage": "FC Barcelona"
                 },
                 "net_rating_diff": 12.7,
-                "home_off_rating": 113.4,
+                "home_off_rating": 127.7,
                 "away_off_rating": 137.4,
-                "home_def_rating": 105.5,
+                "home_def_rating": 119.8,
                 "away_def_rating": 142.3
             }
         },
@@ -869,27 +1009,27 @@
             "opponent": "Crvena Zvezda Meridianbet Belgrade",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 72.5,
-                "away_win": 27.5,
-                "bayern_win": 27.5,
+                "home_win": 67.5,
+                "away_win": 32.5,
+                "bayern_win": 32.5,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 89,
-                "away": 74,
-                "bayern": 74,
-                "opponent": 89,
-                "formatted": "89 : 74",
-                "bayern_formatted": "FC Bayern 74 : 89 Crvena Zvezda Meridianbet Belgrade",
+                "home": 84,
+                "away": 69,
+                "bayern": 69,
+                "opponent": 84,
+                "formatted": "84 : 69",
+                "bayern_formatted": "FC Bayern 69 : 84 Crvena Zvezda Meridianbet Belgrade",
                 "margin": 15,
-                "total_points": 163,
-                "over_under_line": 162.5
+                "total_points": 153,
+                "over_under_line": 152.5
             },
             "actual_score": null,
             "comparison": null,
             "tactical_factors": {
-                "projected_pace": 71.9,
+                "projected_pace": 71.8,
                 "rest_days": {
                     "home": 7,
                     "away": 2,
@@ -897,11 +1037,11 @@
                     "opponent": 7,
                     "advantage": "Crvena Zvezda Meridianbet Belgrade"
                 },
-                "net_rating_diff": -6.1,
+                "net_rating_diff": -13.3,
                 "home_off_rating": 126.1,
-                "away_off_rating": 105.4,
+                "away_off_rating": 123.3,
                 "home_def_rating": 135.3,
-                "away_def_rating": 108.5
+                "away_def_rating": 119.1
             }
         },
         {
@@ -918,27 +1058,27 @@
             "opponent": "ROSTOCK SEAWOLVES",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 18.8,
-                "away_win": 81.2,
-                "bayern_win": 81.2,
+                "home_win": 27.2,
+                "away_win": 72.8,
+                "bayern_win": 72.8,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 75,
-                "away": 97,
-                "bayern": 97,
-                "opponent": 75,
-                "formatted": "75 : 97",
-                "bayern_formatted": "FC Bayern 97 : 75 ROSTOCK SEAWOLVES",
-                "margin": -22,
-                "total_points": 172,
-                "over_under_line": 171.5
+                "home": 71,
+                "away": 89,
+                "bayern": 89,
+                "opponent": 71,
+                "formatted": "71 : 89",
+                "bayern_formatted": "FC Bayern 89 : 71 ROSTOCK SEAWOLVES",
+                "margin": -18,
+                "total_points": 160,
+                "over_under_line": 159.5
             },
             "actual_score": null,
             "comparison": null,
             "tactical_factors": {
-                "projected_pace": 73.4,
+                "projected_pace": 73.3,
                 "rest_days": {
                     "home": 7,
                     "away": 3,
@@ -946,11 +1086,11 @@
                     "opponent": 7,
                     "advantage": "ROSTOCK SEAWOLVES"
                 },
-                "net_rating_diff": -5.5,
+                "net_rating_diff": -12.2,
                 "home_off_rating": 109.6,
-                "away_off_rating": 104.6,
+                "away_off_rating": 116.8,
                 "home_def_rating": 122.9,
-                "away_def_rating": 112.4
+                "away_def_rating": 118.1
             }
         },
         {
@@ -967,9 +1107,9 @@
             "opponent": "Basketball L\u00f6wen Braunschweig",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 83.2,
-                "away_win": 16.8,
-                "bayern_win": 83.2,
+                "home_win": 92.4,
+                "away_win": 7.6,
+                "bayern_win": 92.4,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
@@ -987,7 +1127,7 @@
             "actual_score": null,
             "comparison": null,
             "tactical_factors": {
-                "projected_pace": 72.3,
+                "projected_pace": 72.2,
                 "rest_days": {
                     "home": 2,
                     "away": 7,
@@ -995,10 +1135,10 @@
                     "opponent": 7,
                     "advantage": "Basketball L\u00f6wen Braunschweig"
                 },
-                "net_rating_diff": 23.2,
-                "home_off_rating": 109.1,
+                "net_rating_diff": 28.5,
+                "home_off_rating": 117.5,
                 "away_off_rating": 97.4,
-                "home_def_rating": 110.8,
+                "home_def_rating": 113.9,
                 "away_def_rating": 122.3
             }
         },
@@ -1016,27 +1156,27 @@
             "opponent": "LDLC ASVEL Villeurbanne",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 66.3,
-                "away_win": 33.7,
-                "bayern_win": 33.7,
+                "home_win": 60.3,
+                "away_win": 39.7,
+                "bayern_win": 39.7,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 77,
-                "away": 72,
-                "bayern": 72,
-                "opponent": 77,
-                "formatted": "77 : 72",
-                "bayern_formatted": "FC Bayern 72 : 77 LDLC ASVEL Villeurbanne",
-                "margin": 5,
-                "total_points": 149,
-                "over_under_line": 148.5
+                "home": 78,
+                "away": 74,
+                "bayern": 74,
+                "opponent": 78,
+                "formatted": "78 : 74",
+                "bayern_formatted": "FC Bayern 74 : 78 LDLC ASVEL Villeurbanne",
+                "margin": 4,
+                "total_points": 152,
+                "over_under_line": 151.5
             },
             "actual_score": null,
             "comparison": null,
             "tactical_factors": {
-                "projected_pace": 72.0,
+                "projected_pace": 71.9,
                 "rest_days": {
                     "home": 7,
                     "away": 2,
@@ -1044,11 +1184,11 @@
                     "opponent": 7,
                     "advantage": "LDLC ASVEL Villeurbanne"
                 },
-                "net_rating_diff": -16.6,
+                "net_rating_diff": -19.6,
                 "home_off_rating": 94.7,
-                "away_off_rating": 111.6,
+                "away_off_rating": 117.0,
                 "home_def_rating": 108.1,
-                "away_def_rating": 108.5
+                "away_def_rating": 110.8
             }
         },
         {
@@ -1065,27 +1205,27 @@
             "opponent": "Telekom Baskets Bonn",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 62.3,
-                "away_win": 37.7,
-                "bayern_win": 37.7,
+                "home_win": 54.6,
+                "away_win": 45.4,
+                "bayern_win": 45.4,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 83,
-                "away": 82,
-                "bayern": 82,
-                "opponent": 83,
-                "formatted": "83 : 82",
-                "bayern_formatted": "FC Bayern 82 : 83 Telekom Baskets Bonn",
+                "home": 79,
+                "away": 78,
+                "bayern": 78,
+                "opponent": 79,
+                "formatted": "79 : 78",
+                "bayern_formatted": "FC Bayern 78 : 79 Telekom Baskets Bonn",
                 "margin": 1,
-                "total_points": 165,
-                "over_under_line": 164.5
+                "total_points": 157,
+                "over_under_line": 156.5
             },
             "actual_score": null,
             "comparison": null,
             "tactical_factors": {
-                "projected_pace": 72.6,
+                "projected_pace": 72.9,
                 "rest_days": {
                     "home": 14,
                     "away": 3,
@@ -1093,11 +1233,11 @@
                     "opponent": 14,
                     "advantage": "Telekom Baskets Bonn"
                 },
-                "net_rating_diff": 0.0,
-                "home_off_rating": 112.5,
-                "away_off_rating": 109.4,
-                "home_def_rating": 111.1,
-                "away_def_rating": 108.0
+                "net_rating_diff": -14.3,
+                "home_off_rating": 109.2,
+                "away_off_rating": 113.3,
+                "home_def_rating": 119.4,
+                "away_def_rating": 109.2
             }
         },
         {
@@ -1114,22 +1254,22 @@
             "opponent": "Valencia Basket",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 69.7,
-                "away_win": 30.3,
-                "bayern_win": 30.3,
+                "home_win": 68.5,
+                "away_win": 31.5,
+                "bayern_win": 31.5,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
                 "home": 77,
-                "away": 71,
-                "bayern": 71,
+                "away": 70,
+                "bayern": 70,
                 "opponent": 77,
-                "formatted": "77 : 71",
-                "bayern_formatted": "FC Bayern 71 : 77 Valencia Basket",
-                "margin": 6,
-                "total_points": 148,
-                "over_under_line": 147.5
+                "formatted": "77 : 70",
+                "bayern_formatted": "FC Bayern 70 : 77 Valencia Basket",
+                "margin": 7,
+                "total_points": 147,
+                "over_under_line": 146.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1142,11 +1282,11 @@
                     "opponent": 7,
                     "advantage": "Valencia Basket"
                 },
-                "net_rating_diff": 1.0,
+                "net_rating_diff": 0.1,
                 "home_off_rating": 101.8,
-                "away_off_rating": 110.1,
+                "away_off_rating": 111.9,
                 "home_def_rating": 99.8,
-                "away_def_rating": 109.1
+                "away_def_rating": 110.0
             }
         },
         {
@@ -1163,22 +1303,22 @@
             "opponent": "ratiopharm ulm",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 77.0,
-                "away_win": 23.0,
-                "bayern_win": 77.0,
+                "home_win": 75.7,
+                "away_win": 24.3,
+                "bayern_win": 75.7,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 89,
-                "away": 72,
-                "bayern": 89,
-                "opponent": 72,
-                "formatted": "89 : 72",
-                "bayern_formatted": "FC Bayern 89 : 72 ratiopharm ulm",
+                "home": 88,
+                "away": 71,
+                "bayern": 88,
+                "opponent": 71,
+                "formatted": "88 : 71",
+                "bayern_formatted": "FC Bayern 88 : 71 ratiopharm ulm",
                 "margin": 17,
-                "total_points": 161,
-                "over_under_line": 160.5
+                "total_points": 159,
+                "over_under_line": 158.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1191,10 +1331,10 @@
                     "opponent": 7,
                     "advantage": "ratiopharm ulm"
                 },
-                "net_rating_diff": 6.7,
-                "home_off_rating": 107.2,
+                "net_rating_diff": 8.3,
+                "home_off_rating": 107.4,
                 "away_off_rating": 109.7,
-                "home_def_rating": 108.6,
+                "home_def_rating": 107.3,
                 "away_def_rating": 117.8
             }
         },
@@ -1212,22 +1352,22 @@
             "opponent": "Zalgiris Kaunas",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 62.2,
-                "away_win": 37.8,
-                "bayern_win": 37.8,
+                "home_win": 62.1,
+                "away_win": 37.9,
+                "bayern_win": 37.9,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 86,
+                "home": 88,
                 "away": 76,
                 "bayern": 76,
-                "opponent": 86,
-                "formatted": "86 : 76",
-                "bayern_formatted": "FC Bayern 76 : 86 Zalgiris Kaunas",
-                "margin": 10,
-                "total_points": 162,
-                "over_under_line": 161.5
+                "opponent": 88,
+                "formatted": "88 : 76",
+                "bayern_formatted": "FC Bayern 76 : 88 Zalgiris Kaunas",
+                "margin": 12,
+                "total_points": 164,
+                "over_under_line": 163.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1240,11 +1380,11 @@
                     "opponent": 7,
                     "advantage": "Zalgiris Kaunas"
                 },
-                "net_rating_diff": -20.2,
+                "net_rating_diff": -21.6,
                 "home_off_rating": 112.4,
-                "away_off_rating": 109.8,
+                "away_off_rating": 109.2,
                 "home_def_rating": 130.0,
-                "away_def_rating": 107.2
+                "away_def_rating": 105.3
             }
         },
         {
@@ -1261,22 +1401,22 @@
             "opponent": "Baskonia Vitoria-Gasteiz",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 34.2,
-                "away_win": 65.8,
-                "bayern_win": 34.2,
+                "home_win": 29.9,
+                "away_win": 70.1,
+                "bayern_win": 29.9,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 68,
+                "home": 69,
                 "away": 81,
-                "bayern": 68,
+                "bayern": 69,
                 "opponent": 81,
-                "formatted": "68 : 81",
-                "bayern_formatted": "FC Bayern 68 : 81 Baskonia Vitoria-Gasteiz",
-                "margin": -13,
-                "total_points": 149,
-                "over_under_line": 148.5
+                "formatted": "69 : 81",
+                "bayern_formatted": "FC Bayern 69 : 81 Baskonia Vitoria-Gasteiz",
+                "margin": -12,
+                "total_points": 150,
+                "over_under_line": 149.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1289,10 +1429,10 @@
                     "opponent": 7,
                     "advantage": "Baskonia Vitoria-Gasteiz"
                 },
-                "net_rating_diff": -24.5,
-                "home_off_rating": 109.9,
+                "net_rating_diff": -25.6,
+                "home_off_rating": 108.1,
                 "away_off_rating": 149.9,
-                "home_def_rating": 110.0,
+                "home_def_rating": 109.3,
                 "away_def_rating": 125.6
             }
         },
@@ -1310,22 +1450,22 @@
             "opponent": "W\u00fcrzburg Baskets",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 52.0,
-                "away_win": 48.0,
-                "bayern_win": 48.0,
+                "home_win": 51.6,
+                "away_win": 48.4,
+                "bayern_win": 48.4,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 90,
-                "away": 89,
-                "bayern": 89,
-                "opponent": 90,
-                "formatted": "90 : 89",
-                "bayern_formatted": "FC Bayern 89 : 90 W\u00fcrzburg Baskets",
+                "home": 89,
+                "away": 88,
+                "bayern": 88,
+                "opponent": 89,
+                "formatted": "89 : 88",
+                "bayern_formatted": "FC Bayern 88 : 89 W\u00fcrzburg Baskets",
                 "margin": 1,
-                "total_points": 179,
-                "over_under_line": 178.5
+                "total_points": 177,
+                "over_under_line": 176.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1338,11 +1478,11 @@
                     "opponent": 7,
                     "advantage": "W\u00fcrzburg Baskets"
                 },
-                "net_rating_diff": -7.1,
+                "net_rating_diff": -6.5,
                 "home_off_rating": 101.1,
-                "away_off_rating": 106.5,
+                "away_off_rating": 105.7,
                 "home_def_rating": 111.7,
-                "away_def_rating": 110.0
+                "away_def_rating": 109.8
             }
         },
         {
@@ -1359,9 +1499,9 @@
             "opponent": "Maccabi Playtika Tel Aviv",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 50.7,
-                "away_win": 49.3,
-                "bayern_win": 50.7,
+                "home_win": 50.8,
+                "away_win": 49.2,
+                "bayern_win": 50.8,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
@@ -1387,10 +1527,10 @@
                     "opponent": 7,
                     "advantage": "Maccabi Playtika Tel Aviv"
                 },
-                "net_rating_diff": -7.2,
-                "home_off_rating": 109.1,
+                "net_rating_diff": -7.4,
+                "home_off_rating": 108.6,
                 "away_off_rating": 130.1,
-                "home_def_rating": 113.5,
+                "home_def_rating": 113.3,
                 "away_def_rating": 127.4
             }
         },
@@ -1408,22 +1548,22 @@
             "opponent": "MHP RIESEN Ludwigsburg",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 80.8,
-                "away_win": 19.2,
-                "bayern_win": 80.8,
+                "home_win": 80.2,
+                "away_win": 19.8,
+                "bayern_win": 80.2,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 83,
+                "home": 86,
                 "away": 69,
-                "bayern": 83,
+                "bayern": 86,
                 "opponent": 69,
-                "formatted": "83 : 69",
-                "bayern_formatted": "FC Bayern 83 : 69 MHP RIESEN Ludwigsburg",
-                "margin": 14,
-                "total_points": 152,
-                "over_under_line": 151.5
+                "formatted": "86 : 69",
+                "bayern_formatted": "FC Bayern 86 : 69 MHP RIESEN Ludwigsburg",
+                "margin": 17,
+                "total_points": 155,
+                "over_under_line": 154.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1436,10 +1576,10 @@
                     "opponent": 7,
                     "advantage": "MHP RIESEN Ludwigsburg"
                 },
-                "net_rating_diff": 10.8,
-                "home_off_rating": 110.2,
+                "net_rating_diff": 10.6,
+                "home_off_rating": 109.8,
                 "away_off_rating": 102.1,
-                "home_def_rating": 114.1,
+                "home_def_rating": 113.9,
                 "away_def_rating": 116.9
             }
         },
@@ -1457,22 +1597,22 @@
             "opponent": "Paris Basketball",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 53.6,
-                "away_win": 46.4,
-                "bayern_win": 53.6,
+                "home_win": 51.7,
+                "away_win": 48.3,
+                "bayern_win": 51.7,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 79,
-                "away": 78,
-                "bayern": 79,
-                "opponent": 78,
-                "formatted": "79 : 78",
-                "bayern_formatted": "FC Bayern 79 : 78 Paris Basketball",
+                "home": 82,
+                "away": 81,
+                "bayern": 82,
+                "opponent": 81,
+                "formatted": "82 : 81",
+                "bayern_formatted": "FC Bayern 82 : 81 Paris Basketball",
                 "margin": 1,
-                "total_points": 157,
-                "over_under_line": 156.5
+                "total_points": 163,
+                "over_under_line": 162.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1485,10 +1625,10 @@
                     "opponent": 7,
                     "advantage": "Paris Basketball"
                 },
-                "net_rating_diff": -4.9,
-                "home_off_rating": 111.8,
+                "net_rating_diff": -4.2,
+                "home_off_rating": 112.2,
                 "away_off_rating": 132.1,
-                "home_def_rating": 110.7,
+                "home_def_rating": 110.4,
                 "away_def_rating": 126.1
             }
         },
@@ -1506,20 +1646,20 @@
             "opponent": "MLP Academics Heidelberg",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 64.3,
-                "away_win": 35.7,
-                "bayern_win": 35.7,
+                "home_win": 63.6,
+                "away_win": 36.4,
+                "bayern_win": 36.4,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 84,
-                "away": 78,
-                "bayern": 78,
-                "opponent": 84,
-                "formatted": "84 : 78",
-                "bayern_formatted": "FC Bayern 78 : 84 MLP Academics Heidelberg",
-                "margin": 6,
+                "home": 86,
+                "away": 76,
+                "bayern": 76,
+                "opponent": 86,
+                "formatted": "86 : 76",
+                "bayern_formatted": "FC Bayern 76 : 86 MLP Academics Heidelberg",
+                "margin": 10,
                 "total_points": 162,
                 "over_under_line": 161.5
             },
@@ -1534,11 +1674,11 @@
                     "opponent": 7,
                     "advantage": "MLP Academics Heidelberg"
                 },
-                "net_rating_diff": -13.8,
+                "net_rating_diff": -14.3,
                 "home_off_rating": 104.7,
-                "away_off_rating": 111.3,
+                "away_off_rating": 112.9,
                 "home_def_rating": 117.2,
-                "away_def_rating": 110.1
+                "away_def_rating": 111.1
             }
         },
         {
@@ -1555,22 +1695,22 @@
             "opponent": "EA7 Emporio Armani Milan",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 71.9,
-                "away_win": 28.1,
-                "bayern_win": 28.1,
+                "home_win": 70.2,
+                "away_win": 29.8,
+                "bayern_win": 29.8,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 87,
-                "away": 72,
-                "bayern": 72,
-                "opponent": 87,
-                "formatted": "87 : 72",
-                "bayern_formatted": "FC Bayern 72 : 87 EA7 Emporio Armani Milan",
-                "margin": 15,
-                "total_points": 159,
-                "over_under_line": 158.5
+                "home": 88,
+                "away": 70,
+                "bayern": 70,
+                "opponent": 88,
+                "formatted": "88 : 70",
+                "bayern_formatted": "FC Bayern 70 : 88 EA7 Emporio Armani Milan",
+                "margin": 18,
+                "total_points": 158,
+                "over_under_line": 157.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1583,11 +1723,11 @@
                     "opponent": 7,
                     "advantage": "EA7 Emporio Armani Milan"
                 },
-                "net_rating_diff": -16.8,
+                "net_rating_diff": -16.1,
                 "home_off_rating": 101.3,
-                "away_off_rating": 111.2,
+                "away_off_rating": 112.0,
                 "home_def_rating": 118.3,
-                "away_def_rating": 111.5
+                "away_def_rating": 113.0
             }
         },
         {
@@ -1604,22 +1744,22 @@
             "opponent": "SYNTAINICS MBC",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 79.5,
-                "away_win": 20.5,
-                "bayern_win": 79.5,
+                "home_win": 76.4,
+                "away_win": 23.6,
+                "bayern_win": 76.4,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 85,
-                "away": 72,
-                "bayern": 85,
-                "opponent": 72,
-                "formatted": "85 : 72",
-                "bayern_formatted": "FC Bayern 85 : 72 SYNTAINICS MBC",
+                "home": 86,
+                "away": 73,
+                "bayern": 86,
+                "opponent": 73,
+                "formatted": "86 : 73",
+                "bayern_formatted": "FC Bayern 86 : 73 SYNTAINICS MBC",
                 "margin": 13,
-                "total_points": 157,
-                "over_under_line": 156.5
+                "total_points": 159,
+                "over_under_line": 158.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1632,10 +1772,10 @@
                     "opponent": 7,
                     "advantage": "SYNTAINICS MBC"
                 },
-                "net_rating_diff": 21.3,
+                "net_rating_diff": 19.7,
                 "home_off_rating": 108.0,
                 "away_off_rating": 100.5,
-                "home_def_rating": 114.5,
+                "home_def_rating": 116.1,
                 "away_def_rating": 128.3
             }
         },
@@ -1653,22 +1793,22 @@
             "opponent": "Real Madrid",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 77.8,
-                "away_win": 22.2,
-                "bayern_win": 22.2,
+                "home_win": 74.2,
+                "away_win": 25.8,
+                "bayern_win": 25.8,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 81,
+                "home": 83,
                 "away": 74,
                 "bayern": 74,
-                "opponent": 81,
-                "formatted": "81 : 74",
-                "bayern_formatted": "FC Bayern 74 : 81 Real Madrid",
-                "margin": 7,
-                "total_points": 155,
-                "over_under_line": 154.5
+                "opponent": 83,
+                "formatted": "83 : 74",
+                "bayern_formatted": "FC Bayern 74 : 83 Real Madrid",
+                "margin": 9,
+                "total_points": 157,
+                "over_under_line": 156.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1681,11 +1821,11 @@
                     "opponent": 7,
                     "advantage": "Real Madrid"
                 },
-                "net_rating_diff": 28.4,
+                "net_rating_diff": 29.6,
                 "home_off_rating": 128.9,
-                "away_off_rating": 109.9,
+                "away_off_rating": 110.2,
                 "home_def_rating": 101.4,
-                "away_def_rating": 110.9
+                "away_def_rating": 112.3
             }
         },
         {
@@ -1702,22 +1842,22 @@
             "opponent": "ratiopharm ulm",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 91.5,
-                "away_win": 8.5,
-                "bayern_win": 91.5,
+                "home_win": 91.4,
+                "away_win": 8.6,
+                "bayern_win": 91.4,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 83,
-                "away": 68,
-                "bayern": 83,
-                "opponent": 68,
-                "formatted": "83 : 68",
-                "bayern_formatted": "FC Bayern 83 : 68 ratiopharm ulm",
-                "margin": 15,
-                "total_points": 151,
-                "over_under_line": 150.5
+                "home": 85,
+                "away": 71,
+                "bayern": 85,
+                "opponent": 71,
+                "formatted": "85 : 71",
+                "bayern_formatted": "FC Bayern 85 : 71 ratiopharm ulm",
+                "margin": 14,
+                "total_points": 156,
+                "over_under_line": 155.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1730,11 +1870,11 @@
                     "opponent": 14,
                     "advantage": "ratiopharm ulm"
                 },
-                "net_rating_diff": 20.9,
-                "home_off_rating": 108.9,
-                "away_off_rating": 98.8,
-                "home_def_rating": 111.3,
-                "away_def_rating": 122.1
+                "net_rating_diff": 19.2,
+                "home_off_rating": 109.0,
+                "away_off_rating": 97.4,
+                "home_def_rating": 113.2,
+                "away_def_rating": 120.7
             }
         },
         {
@@ -1751,22 +1891,22 @@
             "opponent": "Panathinaikos AKTOR Athens",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 53.4,
-                "away_win": 46.6,
-                "bayern_win": 53.4,
+                "home_win": 50.7,
+                "away_win": 49.3,
+                "bayern_win": 50.7,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 81,
-                "away": 80,
-                "bayern": 81,
-                "opponent": 80,
-                "formatted": "81 : 80",
-                "bayern_formatted": "FC Bayern 81 : 80 Panathinaikos AKTOR Athens",
+                "home": 85,
+                "away": 84,
+                "bayern": 85,
+                "opponent": 84,
+                "formatted": "85 : 84",
+                "bayern_formatted": "FC Bayern 85 : 84 Panathinaikos AKTOR Athens",
                 "margin": 1,
-                "total_points": 161,
-                "over_under_line": 160.5
+                "total_points": 169,
+                "over_under_line": 168.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1779,10 +1919,10 @@
                     "opponent": 7,
                     "advantage": "Panathinaikos AKTOR Athens"
                 },
-                "net_rating_diff": -14.0,
-                "home_off_rating": 109.5,
+                "net_rating_diff": -15.8,
+                "home_off_rating": 110.2,
                 "away_off_rating": 116.0,
-                "home_def_rating": 107.0,
+                "home_def_rating": 109.5,
                 "away_def_rating": 99.5
             }
         },
@@ -1800,22 +1940,22 @@
             "opponent": "SKYLINERS Frankfurt",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 33.1,
-                "away_win": 66.9,
-                "bayern_win": 66.9,
+                "home_win": 31.3,
+                "away_win": 68.7,
+                "bayern_win": 68.7,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 78,
-                "away": 89,
-                "bayern": 89,
-                "opponent": 78,
-                "formatted": "78 : 89",
-                "bayern_formatted": "FC Bayern 89 : 78 SKYLINERS Frankfurt",
-                "margin": -11,
-                "total_points": 167,
-                "over_under_line": 166.5
+                "home": 72,
+                "away": 87,
+                "bayern": 87,
+                "opponent": 72,
+                "formatted": "72 : 87",
+                "bayern_formatted": "FC Bayern 87 : 72 SKYLINERS Frankfurt",
+                "margin": -15,
+                "total_points": 159,
+                "over_under_line": 158.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1828,11 +1968,11 @@
                     "opponent": 7,
                     "advantage": "SKYLINERS Frankfurt"
                 },
-                "net_rating_diff": -23.4,
+                "net_rating_diff": -22.1,
                 "home_off_rating": 96.5,
-                "away_off_rating": 110.0,
+                "away_off_rating": 112.0,
                 "home_def_rating": 117.7,
-                "away_def_rating": 107.8
+                "away_def_rating": 111.1
             }
         },
         {
@@ -1849,9 +1989,9 @@
             "opponent": "Olympiacos Piraeus",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 30.8,
-                "away_win": 69.2,
-                "bayern_win": 30.8,
+                "home_win": 37.0,
+                "away_win": 63.0,
+                "bayern_win": 37.0,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
@@ -1877,10 +2017,10 @@
                     "opponent": 7,
                     "advantage": "Olympiacos Piraeus"
                 },
-                "net_rating_diff": -41.9,
-                "home_off_rating": 112.7,
+                "net_rating_diff": -42.1,
+                "home_off_rating": 113.7,
                 "away_off_rating": 147.0,
-                "home_def_rating": 108.6,
+                "home_def_rating": 109.7,
                 "away_def_rating": 100.9
             }
         },
@@ -1898,20 +2038,20 @@
             "opponent": "RASTA Vechta",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 77.4,
-                "away_win": 22.6,
-                "bayern_win": 77.4,
+                "home_win": 77.8,
+                "away_win": 22.2,
+                "bayern_win": 77.8,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 85,
-                "away": 67,
-                "bayern": 85,
-                "opponent": 67,
-                "formatted": "85 : 67",
-                "bayern_formatted": "FC Bayern 85 : 67 RASTA Vechta",
-                "margin": 18,
+                "home": 84,
+                "away": 68,
+                "bayern": 84,
+                "opponent": 68,
+                "formatted": "84 : 68",
+                "bayern_formatted": "FC Bayern 84 : 68 RASTA Vechta",
+                "margin": 16,
                 "total_points": 152,
                 "over_under_line": 151.5
             },
@@ -1926,10 +2066,10 @@
                     "opponent": 7,
                     "advantage": "RASTA Vechta"
                 },
-                "net_rating_diff": 10.8,
-                "home_off_rating": 108.8,
+                "net_rating_diff": 10.6,
+                "home_off_rating": 109.4,
                 "away_off_rating": 104.2,
-                "home_def_rating": 110.0,
+                "home_def_rating": 110.7,
                 "away_def_rating": 116.2
             }
         },
@@ -1947,22 +2087,22 @@
             "opponent": "Besiktas Istanbul",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 71.1,
-                "away_win": 28.9,
-                "bayern_win": 71.1,
+                "home_win": 60.3,
+                "away_win": 39.7,
+                "bayern_win": 60.3,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 88,
+                "home": 79,
                 "away": 70,
-                "bayern": 88,
+                "bayern": 79,
                 "opponent": 70,
-                "formatted": "88 : 70",
-                "bayern_formatted": "FC Bayern 88 : 70 Besiktas Istanbul",
-                "margin": 18,
-                "total_points": 158,
-                "over_under_line": 157.5
+                "formatted": "79 : 70",
+                "bayern_formatted": "FC Bayern 79 : 70 Besiktas Istanbul",
+                "margin": 9,
+                "total_points": 149,
+                "over_under_line": 148.5
             },
             "actual_score": null,
             "comparison": null,
@@ -1975,11 +2115,11 @@
                     "opponent": 14,
                     "advantage": "Besiktas Istanbul"
                 },
-                "net_rating_diff": -8.0,
-                "home_off_rating": 110.6,
-                "away_off_rating": 111.0,
-                "home_def_rating": 106.2,
-                "away_def_rating": 98.5
+                "net_rating_diff": -7.1,
+                "home_off_rating": 110.9,
+                "away_off_rating": 131.8,
+                "home_def_rating": 106.9,
+                "away_def_rating": 120.7
             }
         },
         {
@@ -1996,22 +2136,22 @@
             "opponent": "BG G\u00f6ttingen",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 37.2,
-                "away_win": 62.8,
-                "bayern_win": 62.8,
+                "home_win": 31.1,
+                "away_win": 68.9,
+                "bayern_win": 68.9,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 79,
-                "away": 91,
-                "bayern": 91,
-                "opponent": 79,
-                "formatted": "79 : 91",
-                "bayern_formatted": "FC Bayern 91 : 79 BG G\u00f6ttingen",
-                "margin": -12,
-                "total_points": 170,
-                "over_under_line": 169.5
+                "home": 78,
+                "away": 94,
+                "bayern": 94,
+                "opponent": 78,
+                "formatted": "78 : 94",
+                "bayern_formatted": "FC Bayern 94 : 78 BG G\u00f6ttingen",
+                "margin": -16,
+                "total_points": 172,
+                "over_under_line": 171.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2024,11 +2164,11 @@
                     "opponent": 7,
                     "advantage": "BG G\u00f6ttingen"
                 },
-                "net_rating_diff": -39.7,
+                "net_rating_diff": -36.3,
                 "home_off_rating": 96.1,
-                "away_off_rating": 114.1,
+                "away_off_rating": 111.3,
                 "home_def_rating": 124.8,
-                "away_def_rating": 103.1
+                "away_def_rating": 103.7
             }
         },
         {
@@ -2045,22 +2185,22 @@
             "opponent": "Dubai Basketball",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 66.4,
-                "away_win": 33.6,
-                "bayern_win": 33.6,
+                "home_win": 80.2,
+                "away_win": 19.8,
+                "bayern_win": 19.8,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 77,
-                "away": 73,
-                "bayern": 73,
-                "opponent": 77,
-                "formatted": "77 : 73",
-                "bayern_formatted": "FC Bayern 73 : 77 Dubai Basketball",
-                "margin": 4,
-                "total_points": 150,
-                "over_under_line": 149.5
+                "home": 84,
+                "away": 78,
+                "bayern": 78,
+                "opponent": 84,
+                "formatted": "84 : 78",
+                "bayern_formatted": "FC Bayern 78 : 84 Dubai Basketball",
+                "margin": 6,
+                "total_points": 162,
+                "over_under_line": 161.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2073,11 +2213,11 @@
                     "opponent": 14,
                     "advantage": "Dubai Basketball"
                 },
-                "net_rating_diff": -13.3,
-                "home_off_rating": 108.2,
-                "away_off_rating": 116.2,
-                "home_def_rating": 109.6,
-                "away_def_rating": 104.4
+                "net_rating_diff": 12.0,
+                "home_off_rating": 148.4,
+                "away_off_rating": 114.7,
+                "home_def_rating": 126.2,
+                "away_def_rating": 104.5
             }
         },
         {
@@ -2094,9 +2234,9 @@
             "opponent": "HAKRO Merlins Crailsheim",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 88.1,
-                "away_win": 11.9,
-                "bayern_win": 88.1,
+                "home_win": 88.2,
+                "away_win": 11.8,
+                "bayern_win": 88.2,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
@@ -2122,10 +2262,10 @@
                     "opponent": 7,
                     "advantage": "HAKRO Merlins Crailsheim"
                 },
-                "net_rating_diff": 35.4,
-                "home_off_rating": 112.9,
+                "net_rating_diff": 33.6,
+                "home_off_rating": 113.6,
                 "away_off_rating": 104.3,
-                "home_def_rating": 104.6,
+                "home_def_rating": 107.1,
                 "away_def_rating": 131.4
             }
         },
@@ -2143,22 +2283,22 @@
             "opponent": "Maccabi Playtika Tel Aviv",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 76.3,
-                "away_win": 23.7,
-                "bayern_win": 23.7,
+                "home_win": 77.0,
+                "away_win": 23.0,
+                "bayern_win": 23.0,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 77,
+                "home": 78,
                 "away": 76,
                 "bayern": 76,
-                "opponent": 77,
-                "formatted": "77 : 76",
-                "bayern_formatted": "FC Bayern 76 : 77 Maccabi Playtika Tel Aviv",
-                "margin": 1,
-                "total_points": 153,
-                "over_under_line": 152.5
+                "opponent": 78,
+                "formatted": "78 : 76",
+                "bayern_formatted": "FC Bayern 76 : 78 Maccabi Playtika Tel Aviv",
+                "margin": 2,
+                "total_points": 154,
+                "over_under_line": 153.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2171,11 +2311,11 @@
                     "opponent": 14,
                     "advantage": "Maccabi Playtika Tel Aviv"
                 },
-                "net_rating_diff": -12.9,
+                "net_rating_diff": -11.5,
                 "home_off_rating": 114.2,
-                "away_off_rating": 114.1,
+                "away_off_rating": 114.5,
                 "home_def_rating": 115.6,
-                "away_def_rating": 102.5
+                "away_def_rating": 104.4
             }
         },
         {
@@ -2192,22 +2332,22 @@
             "opponent": "Panathinaikos AKTOR Athens",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 66.7,
-                "away_win": 33.3,
-                "bayern_win": 33.3,
+                "home_win": 79.5,
+                "away_win": 20.5,
+                "bayern_win": 20.5,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 75,
-                "away": 72,
-                "bayern": 72,
-                "opponent": 75,
-                "formatted": "75 : 72",
-                "bayern_formatted": "FC Bayern 72 : 75 Panathinaikos AKTOR Athens",
-                "margin": 3,
-                "total_points": 147,
-                "over_under_line": 146.5
+                "home": 82,
+                "away": 76,
+                "bayern": 76,
+                "opponent": 82,
+                "formatted": "82 : 76",
+                "bayern_formatted": "FC Bayern 76 : 82 Panathinaikos AKTOR Athens",
+                "margin": 6,
+                "total_points": 158,
+                "over_under_line": 157.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2220,11 +2360,11 @@
                     "opponent": 14,
                     "advantage": "Panathinaikos AKTOR Athens"
                 },
-                "net_rating_diff": -10.1,
-                "home_off_rating": 111.4,
-                "away_off_rating": 111.9,
-                "home_def_rating": 112.8,
-                "away_def_rating": 103.2
+                "net_rating_diff": -8.6,
+                "home_off_rating": 117.0,
+                "away_off_rating": 112.0,
+                "home_def_rating": 118.4,
+                "away_def_rating": 104.8
             }
         },
         {
@@ -2241,22 +2381,22 @@
             "opponent": "Bamberg Baskets",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 37.0,
-                "away_win": 63.0,
-                "bayern_win": 63.0,
+                "home_win": 36.7,
+                "away_win": 63.3,
+                "bayern_win": 63.3,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 76,
-                "away": 91,
-                "bayern": 91,
-                "opponent": 76,
-                "formatted": "76 : 91",
-                "bayern_formatted": "FC Bayern 91 : 76 Bamberg Baskets",
-                "margin": -15,
-                "total_points": 167,
-                "over_under_line": 166.5
+                "home": 81,
+                "away": 95,
+                "bayern": 95,
+                "opponent": 81,
+                "formatted": "81 : 95",
+                "bayern_formatted": "FC Bayern 95 : 81 Bamberg Baskets",
+                "margin": -14,
+                "total_points": 176,
+                "over_under_line": 175.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2269,11 +2409,11 @@
                     "opponent": 14,
                     "advantage": "Bamberg Baskets"
                 },
-                "net_rating_diff": -54.3,
+                "net_rating_diff": -51.9,
                 "home_off_rating": 98.1,
-                "away_off_rating": 108.5,
+                "away_off_rating": 110.0,
                 "home_def_rating": 147.1,
-                "away_def_rating": 103.2
+                "away_def_rating": 107.1
             }
         },
         {
@@ -2290,22 +2430,22 @@
             "opponent": "EA7 Emporio Armani Milan",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 56.4,
-                "away_win": 43.6,
-                "bayern_win": 56.4,
+                "home_win": 69.0,
+                "away_win": 31.0,
+                "bayern_win": 69.0,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 85,
-                "away": 84,
-                "bayern": 85,
-                "opponent": 84,
-                "formatted": "85 : 84",
-                "bayern_formatted": "FC Bayern 85 : 84 EA7 Emporio Armani Milan",
-                "margin": 1,
-                "total_points": 169,
-                "over_under_line": 168.5
+                "home": 86,
+                "away": 77,
+                "bayern": 86,
+                "opponent": 77,
+                "formatted": "86 : 77",
+                "bayern_formatted": "FC Bayern 86 : 77 EA7 Emporio Armani Milan",
+                "margin": 9,
+                "total_points": 163,
+                "over_under_line": 162.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2318,11 +2458,11 @@
                     "opponent": 14,
                     "advantage": "EA7 Emporio Armani Milan"
                 },
-                "net_rating_diff": -11.4,
-                "home_off_rating": 112.4,
-                "away_off_rating": 121.3,
-                "home_def_rating": 102.9,
-                "away_def_rating": 100.4
+                "net_rating_diff": -17.9,
+                "home_off_rating": 114.8,
+                "away_off_rating": 122.7,
+                "home_def_rating": 107.6,
+                "away_def_rating": 97.6
             }
         },
         {
@@ -2339,27 +2479,27 @@
             "opponent": "Telekom Baskets Bonn",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 73.9,
-                "away_win": 26.1,
-                "bayern_win": 73.9,
+                "home_win": 83.3,
+                "away_win": 16.7,
+                "bayern_win": 83.3,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 90,
-                "away": 79,
-                "bayern": 90,
-                "opponent": 79,
-                "formatted": "90 : 79",
-                "bayern_formatted": "FC Bayern 90 : 79 Telekom Baskets Bonn",
-                "margin": 11,
-                "total_points": 169,
-                "over_under_line": 168.5
+                "home": 89,
+                "away": 75,
+                "bayern": 89,
+                "opponent": 75,
+                "formatted": "89 : 75",
+                "bayern_formatted": "FC Bayern 89 : 75 Telekom Baskets Bonn",
+                "margin": 14,
+                "total_points": 164,
+                "over_under_line": 163.5
             },
             "actual_score": null,
             "comparison": null,
             "tactical_factors": {
-                "projected_pace": 72.5,
+                "projected_pace": 72.6,
                 "rest_days": {
                     "home": 3,
                     "away": 14,
@@ -2367,11 +2507,11 @@
                     "opponent": 14,
                     "advantage": "Telekom Baskets Bonn"
                 },
-                "net_rating_diff": 5.5,
-                "home_off_rating": 113.6,
-                "away_off_rating": 113.6,
-                "home_def_rating": 106.7,
-                "away_def_rating": 112.2
+                "net_rating_diff": 6.6,
+                "home_off_rating": 115.9,
+                "away_off_rating": 108.4,
+                "home_def_rating": 107.9,
+                "away_def_rating": 107.0
             }
         },
         {
@@ -2388,22 +2528,22 @@
             "opponent": "Valencia Basket",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 77.1,
-                "away_win": 22.9,
-                "bayern_win": 77.1,
+                "home_win": 80.7,
+                "away_win": 19.3,
+                "bayern_win": 80.7,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
                 "home": 88,
-                "away": 71,
+                "away": 72,
                 "bayern": 88,
-                "opponent": 71,
-                "formatted": "88 : 71",
-                "bayern_formatted": "FC Bayern 88 : 71 Valencia Basket",
-                "margin": 17,
-                "total_points": 159,
-                "over_under_line": 158.5
+                "opponent": 72,
+                "formatted": "88 : 72",
+                "bayern_formatted": "FC Bayern 88 : 72 Valencia Basket",
+                "margin": 16,
+                "total_points": 160,
+                "over_under_line": 159.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2416,11 +2556,11 @@
                     "opponent": 14,
                     "advantage": "Valencia Basket"
                 },
-                "net_rating_diff": -0.6,
-                "home_off_rating": 115.4,
+                "net_rating_diff": 0.4,
+                "home_off_rating": 117.6,
                 "away_off_rating": 107.1,
-                "home_def_rating": 107.6,
-                "away_def_rating": 98.7
+                "home_def_rating": 107.5,
+                "away_def_rating": 97.4
             }
         },
         {
@@ -2437,22 +2577,22 @@
             "opponent": "ratiopharm ulm",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 32.7,
-                "away_win": 67.3,
-                "bayern_win": 67.3,
+                "home_win": 33.9,
+                "away_win": 66.1,
+                "bayern_win": 66.1,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 85,
-                "away": 95,
-                "bayern": 95,
-                "opponent": 85,
-                "formatted": "85 : 95",
-                "bayern_formatted": "FC Bayern 95 : 85 ratiopharm ulm",
-                "margin": -10,
-                "total_points": 180,
-                "over_under_line": 179.5
+                "home": 84,
+                "away": 97,
+                "bayern": 97,
+                "opponent": 84,
+                "formatted": "84 : 97",
+                "bayern_formatted": "FC Bayern 97 : 84 ratiopharm ulm",
+                "margin": -13,
+                "total_points": 181,
+                "over_under_line": 180.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2465,11 +2605,11 @@
                     "opponent": 14,
                     "advantage": "ratiopharm ulm"
                 },
-                "net_rating_diff": -33.0,
-                "home_off_rating": 95.5,
-                "away_off_rating": 116.7,
-                "home_def_rating": 117.1,
-                "away_def_rating": 105.2
+                "net_rating_diff": -33.4,
+                "home_off_rating": 97.7,
+                "away_off_rating": 118.2,
+                "home_def_rating": 118.4,
+                "away_def_rating": 105.5
             }
         },
         {
@@ -2486,22 +2626,22 @@
             "opponent": "Crvena Zvezda Meridianbet Belgrade",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 77.9,
-                "away_win": 22.1,
-                "bayern_win": 77.9,
+                "home_win": 72.0,
+                "away_win": 28.0,
+                "bayern_win": 72.0,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 91,
-                "away": 82,
-                "bayern": 91,
-                "opponent": 82,
-                "formatted": "91 : 82",
-                "bayern_formatted": "FC Bayern 91 : 82 Crvena Zvezda Meridianbet Belgrade",
-                "margin": 9,
-                "total_points": 173,
-                "over_under_line": 172.5
+                "home": 93,
+                "away": 78,
+                "bayern": 93,
+                "opponent": 78,
+                "formatted": "93 : 78",
+                "bayern_formatted": "FC Bayern 93 : 78 Crvena Zvezda Meridianbet Belgrade",
+                "margin": 15,
+                "total_points": 171,
+                "over_under_line": 170.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2514,11 +2654,11 @@
                     "opponent": 14,
                     "advantage": "Crvena Zvezda Meridianbet Belgrade"
                 },
-                "net_rating_diff": -8.1,
-                "home_off_rating": 120.4,
-                "away_off_rating": 123.8,
-                "home_def_rating": 107.7,
-                "away_def_rating": 102.9
+                "net_rating_diff": -6.0,
+                "home_off_rating": 122.0,
+                "away_off_rating": 117.0,
+                "home_def_rating": 107.1,
+                "away_def_rating": 96.1
             }
         },
         {
@@ -2535,22 +2675,22 @@
             "opponent": "Olympiacos Piraeus",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 75.1,
-                "away_win": 24.9,
-                "bayern_win": 24.9,
+                "home_win": 72.2,
+                "away_win": 27.8,
+                "bayern_win": 27.8,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 83,
-                "away": 73,
-                "bayern": 73,
-                "opponent": 83,
-                "formatted": "83 : 73",
-                "bayern_formatted": "FC Bayern 73 : 83 Olympiacos Piraeus",
+                "home": 85,
+                "away": 75,
+                "bayern": 75,
+                "opponent": 85,
+                "formatted": "85 : 75",
+                "bayern_formatted": "FC Bayern 75 : 85 Olympiacos Piraeus",
                 "margin": 10,
-                "total_points": 156,
-                "over_under_line": 155.5
+                "total_points": 160,
+                "over_under_line": 159.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2563,11 +2703,11 @@
                     "opponent": 14,
                     "advantage": "Olympiacos Piraeus"
                 },
-                "net_rating_diff": 6.0,
+                "net_rating_diff": 2.3,
                 "home_off_rating": 114.4,
-                "away_off_rating": 122.0,
+                "away_off_rating": 123.9,
                 "home_def_rating": 96.2,
-                "away_def_rating": 109.8
+                "away_def_rating": 108.0
             }
         },
         {
@@ -2584,22 +2724,22 @@
             "opponent": "NINERS Chemnitz",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 92.6,
-                "away_win": 7.4,
-                "bayern_win": 92.6,
+                "home_win": 86.8,
+                "away_win": 13.2,
+                "bayern_win": 86.8,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
                 "home": 88,
-                "away": 69,
+                "away": 76,
                 "bayern": 88,
-                "opponent": 69,
-                "formatted": "88 : 69",
-                "bayern_formatted": "FC Bayern 88 : 69 NINERS Chemnitz",
-                "margin": 19,
-                "total_points": 157,
-                "over_under_line": 156.5
+                "opponent": 76,
+                "formatted": "88 : 76",
+                "bayern_formatted": "FC Bayern 88 : 76 NINERS Chemnitz",
+                "margin": 12,
+                "total_points": 164,
+                "over_under_line": 163.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2612,11 +2752,11 @@
                     "opponent": 14,
                     "advantage": "NINERS Chemnitz"
                 },
-                "net_rating_diff": 33.0,
-                "home_off_rating": 117.7,
-                "away_off_rating": 102.4,
-                "home_def_rating": 111.3,
-                "away_def_rating": 129.0
+                "net_rating_diff": 15.1,
+                "home_off_rating": 119.9,
+                "away_off_rating": 116.4,
+                "home_def_rating": 110.4,
+                "away_def_rating": 122.0
             }
         },
         {
@@ -2633,22 +2773,22 @@
             "opponent": "Virtus Segafredo Bologna",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 65.5,
-                "away_win": 34.5,
-                "bayern_win": 34.5,
+                "home_win": 70.6,
+                "away_win": 29.4,
+                "bayern_win": 29.4,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 77,
+                "home": 84,
                 "away": 70,
                 "bayern": 70,
-                "opponent": 77,
-                "formatted": "77 : 70",
-                "bayern_formatted": "FC Bayern 70 : 77 Virtus Segafredo Bologna",
-                "margin": 7,
-                "total_points": 147,
-                "over_under_line": 146.5
+                "opponent": 84,
+                "formatted": "84 : 70",
+                "bayern_formatted": "FC Bayern 70 : 84 Virtus Segafredo Bologna",
+                "margin": 14,
+                "total_points": 154,
+                "over_under_line": 153.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2661,11 +2801,11 @@
                     "opponent": 14,
                     "advantage": "Virtus Segafredo Bologna"
                 },
-                "net_rating_diff": -19.4,
-                "home_off_rating": 102.6,
-                "away_off_rating": 119.5,
-                "home_def_rating": 111.0,
-                "away_def_rating": 108.5
+                "net_rating_diff": -2.1,
+                "home_off_rating": 130.4,
+                "away_off_rating": 121.2,
+                "home_def_rating": 120.7,
+                "away_def_rating": 109.3
             }
         },
         {
@@ -2682,22 +2822,22 @@
             "opponent": "EWE Baskets Oldenburg",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 27.0,
-                "away_win": 73.0,
-                "bayern_win": 73.0,
+                "home_win": 26.7,
+                "away_win": 73.3,
+                "bayern_win": 73.3,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 77,
+                "home": 73,
                 "away": 93,
                 "bayern": 93,
-                "opponent": 77,
-                "formatted": "77 : 93",
-                "bayern_formatted": "FC Bayern 93 : 77 EWE Baskets Oldenburg",
-                "margin": -16,
-                "total_points": 170,
-                "over_under_line": 169.5
+                "opponent": 73,
+                "formatted": "73 : 93",
+                "bayern_formatted": "FC Bayern 93 : 73 EWE Baskets Oldenburg",
+                "margin": -20,
+                "total_points": 166,
+                "over_under_line": 165.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2710,11 +2850,11 @@
                     "opponent": 14,
                     "advantage": "EWE Baskets Oldenburg"
                 },
-                "net_rating_diff": -78.3,
+                "net_rating_diff": -76.6,
                 "home_off_rating": 82.4,
-                "away_off_rating": 113.8,
+                "away_off_rating": 114.8,
                 "home_def_rating": 155.2,
-                "away_def_rating": 108.3
+                "away_def_rating": 111.1
             }
         },
         {
@@ -2731,9 +2871,9 @@
             "opponent": "ALBA Berlin",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 91.7,
-                "away_win": 8.3,
-                "bayern_win": 91.7,
+                "home_win": 91.8,
+                "away_win": 8.2,
+                "bayern_win": 91.8,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
@@ -2759,10 +2899,10 @@
                     "opponent": 14,
                     "advantage": "ALBA Berlin"
                 },
-                "net_rating_diff": 55.7,
-                "home_off_rating": 116.6,
+                "net_rating_diff": 54.8,
+                "home_off_rating": 117.4,
                 "away_off_rating": 83.4,
-                "home_def_rating": 107.4,
+                "home_def_rating": 109.1,
                 "away_def_rating": 130.0
             }
         },
@@ -2780,20 +2920,20 @@
             "opponent": "W\u00fcrzburg Baskets",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 75.7,
-                "away_win": 24.3,
-                "bayern_win": 75.7,
+                "home_win": 74.1,
+                "away_win": 25.9,
+                "bayern_win": 74.1,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 90,
-                "away": 79,
-                "bayern": 90,
-                "opponent": 79,
-                "formatted": "90 : 79",
-                "bayern_formatted": "FC Bayern 90 : 79 W\u00fcrzburg Baskets",
-                "margin": 11,
+                "home": 91,
+                "away": 78,
+                "bayern": 91,
+                "opponent": 78,
+                "formatted": "91 : 78",
+                "bayern_formatted": "FC Bayern 91 : 78 W\u00fcrzburg Baskets",
+                "margin": 13,
                 "total_points": 169,
                 "over_under_line": 168.5
             },
@@ -2808,11 +2948,11 @@
                     "opponent": 14,
                     "advantage": "W\u00fcrzburg Baskets"
                 },
-                "net_rating_diff": 11.4,
-                "home_off_rating": 119.5,
-                "away_off_rating": 125.9,
-                "home_def_rating": 106.8,
-                "away_def_rating": 124.5
+                "net_rating_diff": 10.5,
+                "home_off_rating": 120.3,
+                "away_off_rating": 124.5,
+                "home_def_rating": 108.4,
+                "away_def_rating": 123.1
             }
         },
         {
@@ -2829,22 +2969,22 @@
             "opponent": "ALBA Berlin",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 46.5,
-                "away_win": 53.5,
-                "bayern_win": 53.5,
+                "home_win": 44.0,
+                "away_win": 56.0,
+                "bayern_win": 56.0,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 85,
-                "away": 88,
-                "bayern": 88,
-                "opponent": 85,
-                "formatted": "85 : 88",
-                "bayern_formatted": "FC Bayern 88 : 85 ALBA Berlin",
+                "home": 84,
+                "away": 87,
+                "bayern": 87,
+                "opponent": 84,
+                "formatted": "84 : 87",
+                "bayern_formatted": "FC Bayern 87 : 84 ALBA Berlin",
                 "margin": -3,
-                "total_points": 173,
-                "over_under_line": 172.5
+                "total_points": 171,
+                "over_under_line": 170.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2859,9 +2999,9 @@
                 },
                 "net_rating_diff": -40.6,
                 "home_off_rating": 103.0,
-                "away_off_rating": 120.7,
+                "away_off_rating": 121.6,
                 "home_def_rating": 130.8,
-                "away_def_rating": 107.9
+                "away_def_rating": 108.8
             }
         },
         {
@@ -2878,22 +3018,22 @@
             "opponent": "LDLC ASVEL Villeurbanne",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 80.1,
-                "away_win": 19.9,
-                "bayern_win": 80.1,
+                "home_win": 81.7,
+                "away_win": 18.3,
+                "bayern_win": 81.7,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 90,
-                "away": 74,
-                "bayern": 90,
-                "opponent": 74,
-                "formatted": "90 : 74",
-                "bayern_formatted": "FC Bayern 90 : 74 LDLC ASVEL Villeurbanne",
-                "margin": 16,
-                "total_points": 164,
-                "over_under_line": 163.5
+                "home": 87,
+                "away": 75,
+                "bayern": 87,
+                "opponent": 75,
+                "formatted": "87 : 75",
+                "bayern_formatted": "FC Bayern 87 : 75 LDLC ASVEL Villeurbanne",
+                "margin": 12,
+                "total_points": 162,
+                "over_under_line": 161.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2906,11 +3046,11 @@
                     "opponent": 14,
                     "advantage": "LDLC ASVEL Villeurbanne"
                 },
-                "net_rating_diff": 3.9,
-                "home_off_rating": 120.4,
-                "away_off_rating": 106.9,
-                "home_def_rating": 109.7,
-                "away_def_rating": 100.0
+                "net_rating_diff": 5.0,
+                "home_off_rating": 120.8,
+                "away_off_rating": 108.5,
+                "home_def_rating": 110.2,
+                "away_def_rating": 102.9
             }
         },
         {
@@ -2927,22 +3067,22 @@
             "opponent": "W\u00fcrzburg Baskets",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 90.1,
-                "away_win": 9.9,
-                "bayern_win": 90.1,
+                "home_win": 90.2,
+                "away_win": 9.8,
+                "bayern_win": 90.2,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
                 "home": 95,
-                "away": 71,
+                "away": 68,
                 "bayern": 95,
-                "opponent": 71,
-                "formatted": "95 : 71",
-                "bayern_formatted": "FC Bayern 95 : 71 W\u00fcrzburg Baskets",
-                "margin": 24,
-                "total_points": 166,
-                "over_under_line": 165.5
+                "opponent": 68,
+                "formatted": "95 : 68",
+                "bayern_formatted": "FC Bayern 95 : 68 W\u00fcrzburg Baskets",
+                "margin": 27,
+                "total_points": 163,
+                "over_under_line": 162.5
             },
             "actual_score": null,
             "comparison": null,
@@ -2955,11 +3095,11 @@
                     "opponent": 14,
                     "advantage": "W\u00fcrzburg Baskets"
                 },
-                "net_rating_diff": 26.3,
-                "home_off_rating": 121.4,
-                "away_off_rating": 112.6,
-                "home_def_rating": 107.5,
-                "away_def_rating": 125.1
+                "net_rating_diff": 26.6,
+                "home_off_rating": 120.4,
+                "away_off_rating": 111.2,
+                "home_def_rating": 108.6,
+                "away_def_rating": 126.0
             }
         },
         {
@@ -2976,22 +3116,22 @@
             "opponent": "Anadolu Efes Istanbul",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 61.8,
-                "away_win": 38.2,
-                "bayern_win": 61.8,
+                "home_win": 76.3,
+                "away_win": 23.7,
+                "bayern_win": 76.3,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 81,
-                "away": 79,
-                "bayern": 81,
-                "opponent": 79,
-                "formatted": "81 : 79",
-                "bayern_formatted": "FC Bayern 81 : 79 Anadolu Efes Istanbul",
-                "margin": 2,
-                "total_points": 160,
-                "over_under_line": 159.5
+                "home": 91,
+                "away": 73,
+                "bayern": 91,
+                "opponent": 73,
+                "formatted": "91 : 73",
+                "bayern_formatted": "FC Bayern 91 : 73 Anadolu Efes Istanbul",
+                "margin": 18,
+                "total_points": 164,
+                "over_under_line": 163.5
             },
             "actual_score": null,
             "comparison": null,
@@ -3004,11 +3144,11 @@
                     "opponent": 14,
                     "advantage": "Anadolu Efes Istanbul"
                 },
-                "net_rating_diff": 2.8,
-                "home_off_rating": 124.7,
-                "away_off_rating": 121.0,
-                "home_def_rating": 105.2,
-                "away_def_rating": 104.3
+                "net_rating_diff": 29.9,
+                "home_off_rating": 123.7,
+                "away_off_rating": 129.3,
+                "home_def_rating": 105.0,
+                "away_def_rating": 140.5
             }
         },
         {
@@ -3025,22 +3165,22 @@
             "opponent": "Hapoel Tel Aviv",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 82.9,
-                "away_win": 17.1,
-                "bayern_win": 82.9,
+                "home_win": 75.0,
+                "away_win": 25.0,
+                "bayern_win": 75.0,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
                 "home": 89,
-                "away": 83,
+                "away": 80,
                 "bayern": 89,
-                "opponent": 83,
-                "formatted": "89 : 83",
-                "bayern_formatted": "FC Bayern 89 : 83 Hapoel Tel Aviv",
-                "margin": 6,
-                "total_points": 172,
-                "over_under_line": 171.5
+                "opponent": 80,
+                "formatted": "89 : 80",
+                "bayern_formatted": "FC Bayern 89 : 80 Hapoel Tel Aviv",
+                "margin": 9,
+                "total_points": 169,
+                "over_under_line": 168.5
             },
             "actual_score": null,
             "comparison": null,
@@ -3053,10 +3193,10 @@
                     "opponent": 14,
                     "advantage": "Hapoel Tel Aviv"
                 },
-                "net_rating_diff": 17.7,
-                "home_off_rating": 121.6,
+                "net_rating_diff": 23.3,
+                "home_off_rating": 124.4,
                 "away_off_rating": 115.5,
-                "home_def_rating": 106.7,
+                "home_def_rating": 104.0,
                 "away_def_rating": 118.3
             }
         },
@@ -3074,22 +3214,22 @@
             "opponent": "MHP RIESEN Ludwigsburg",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 33.1,
-                "away_win": 66.9,
-                "bayern_win": 66.9,
+                "home_win": 30.7,
+                "away_win": 69.3,
+                "bayern_win": 69.3,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 77,
-                "away": 91,
-                "bayern": 91,
-                "opponent": 77,
-                "formatted": "77 : 91",
-                "bayern_formatted": "FC Bayern 91 : 77 MHP RIESEN Ludwigsburg",
+                "home": 81,
+                "away": 95,
+                "bayern": 95,
+                "opponent": 81,
+                "formatted": "81 : 95",
+                "bayern_formatted": "FC Bayern 95 : 81 MHP RIESEN Ludwigsburg",
                 "margin": -14,
-                "total_points": 168,
-                "over_under_line": 167.5
+                "total_points": 176,
+                "over_under_line": 175.5
             },
             "actual_score": null,
             "comparison": null,
@@ -3102,11 +3242,11 @@
                     "opponent": 14,
                     "advantage": "MHP RIESEN Ludwigsburg"
                 },
-                "net_rating_diff": -33.8,
+                "net_rating_diff": -43.8,
                 "home_off_rating": 95.8,
-                "away_off_rating": 123.0,
-                "home_def_rating": 115.3,
-                "away_def_rating": 108.7
+                "away_off_rating": 125.3,
+                "home_def_rating": 119.4,
+                "away_def_rating": 105.1
             }
         },
         {
@@ -3123,22 +3263,22 @@
             "opponent": "Partizan Mozzart Bet Belgrade",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 74.3,
-                "away_win": 25.7,
-                "bayern_win": 25.7,
+                "home_win": 72.2,
+                "away_win": 27.8,
+                "bayern_win": 27.8,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 84,
-                "away": 72,
-                "bayern": 72,
-                "opponent": 84,
-                "formatted": "84 : 72",
-                "bayern_formatted": "FC Bayern 72 : 84 Partizan Mozzart Bet Belgrade",
-                "margin": 12,
-                "total_points": 156,
-                "over_under_line": 155.5
+                "home": 85,
+                "away": 76,
+                "bayern": 76,
+                "opponent": 85,
+                "formatted": "85 : 76",
+                "bayern_formatted": "FC Bayern 76 : 85 Partizan Mozzart Bet Belgrade",
+                "margin": 9,
+                "total_points": 161,
+                "over_under_line": 160.5
             },
             "actual_score": null,
             "comparison": null,
@@ -3151,11 +3291,11 @@
                     "opponent": 14,
                     "advantage": "Partizan Mozzart Bet Belgrade"
                 },
-                "net_rating_diff": -12.3,
+                "net_rating_diff": -17.0,
                 "home_off_rating": 119.3,
-                "away_off_rating": 123.5,
+                "away_off_rating": 126.5,
                 "home_def_rating": 116.5,
-                "away_def_rating": 108.4
+                "away_def_rating": 106.7
             }
         },
         {
@@ -3172,27 +3312,27 @@
             "opponent": "ROSTOCK SEAWOLVES",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 95.0,
-                "away_win": 5.0,
-                "bayern_win": 95.0,
+                "home_win": 92.9,
+                "away_win": 7.1,
+                "bayern_win": 92.9,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 88,
-                "away": 69,
-                "bayern": 88,
-                "opponent": 69,
-                "formatted": "88 : 69",
-                "bayern_formatted": "FC Bayern 88 : 69 ROSTOCK SEAWOLVES",
+                "home": 94,
+                "away": 75,
+                "bayern": 94,
+                "opponent": 75,
+                "formatted": "94 : 75",
+                "bayern_formatted": "FC Bayern 94 : 75 ROSTOCK SEAWOLVES",
                 "margin": 19,
-                "total_points": 157,
-                "over_under_line": 156.5
+                "total_points": 169,
+                "over_under_line": 168.5
             },
             "actual_score": null,
             "comparison": null,
             "tactical_factors": {
-                "projected_pace": 72.8,
+                "projected_pace": 72.7,
                 "rest_days": {
                     "home": 3,
                     "away": 14,
@@ -3200,11 +3340,11 @@
                     "opponent": 14,
                     "advantage": "ROSTOCK SEAWOLVES"
                 },
-                "net_rating_diff": 36.7,
-                "home_off_rating": 117.2,
-                "away_off_rating": 102.2,
-                "home_def_rating": 110.6,
-                "away_def_rating": 132.2
+                "net_rating_diff": 35.9,
+                "home_off_rating": 121.0,
+                "away_off_rating": 96.9,
+                "home_def_rating": 109.6,
+                "away_def_rating": 121.4
             }
         },
         {
@@ -3221,22 +3361,22 @@
             "opponent": "Real Madrid",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 80.5,
-                "away_win": 19.5,
-                "bayern_win": 80.5,
+                "home_win": 72.2,
+                "away_win": 27.8,
+                "bayern_win": 72.2,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 86,
-                "away": 74,
-                "bayern": 86,
-                "opponent": 74,
-                "formatted": "86 : 74",
-                "bayern_formatted": "FC Bayern 86 : 74 Real Madrid",
-                "margin": 12,
-                "total_points": 160,
-                "over_under_line": 159.5
+                "home": 90,
+                "away": 83,
+                "bayern": 90,
+                "opponent": 83,
+                "formatted": "90 : 83",
+                "bayern_formatted": "FC Bayern 90 : 83 Real Madrid",
+                "margin": 7,
+                "total_points": 173,
+                "over_under_line": 172.5
             },
             "actual_score": null,
             "comparison": null,
@@ -3249,10 +3389,10 @@
                     "opponent": 14,
                     "advantage": "Real Madrid"
                 },
-                "net_rating_diff": 0.6,
-                "home_off_rating": 117.7,
-                "away_off_rating": 112.8,
-                "home_def_rating": 107.3,
+                "net_rating_diff": 1.7,
+                "home_off_rating": 122.5,
+                "away_off_rating": 115.6,
+                "home_def_rating": 108.3,
                 "away_def_rating": 103.1
             }
         },
@@ -3270,27 +3410,27 @@
             "opponent": "Zalgiris Kaunas",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 72.1,
-                "away_win": 27.9,
-                "bayern_win": 72.1,
+                "home_win": 63.4,
+                "away_win": 36.6,
+                "bayern_win": 63.4,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
                 "home": 88,
-                "away": 87,
+                "away": 86,
                 "bayern": 88,
-                "opponent": 87,
-                "formatted": "88 : 87",
-                "bayern_formatted": "FC Bayern 88 : 87 Zalgiris Kaunas",
-                "margin": 1,
-                "total_points": 175,
-                "over_under_line": 174.5
+                "opponent": 86,
+                "formatted": "88 : 86",
+                "bayern_formatted": "FC Bayern 88 : 86 Zalgiris Kaunas",
+                "margin": 2,
+                "total_points": 174,
+                "over_under_line": 173.5
             },
             "actual_score": null,
             "comparison": null,
             "tactical_factors": {
-                "projected_pace": 72.1,
+                "projected_pace": 72.0,
                 "rest_days": {
                     "home": 2,
                     "away": 14,
@@ -3298,10 +3438,10 @@
                     "opponent": 14,
                     "advantage": "Zalgiris Kaunas"
                 },
-                "net_rating_diff": -1.7,
-                "home_off_rating": 118.0,
-                "away_off_rating": 119.6,
-                "home_def_rating": 105.8,
+                "net_rating_diff": -3.3,
+                "home_off_rating": 123.2,
+                "away_off_rating": 122.4,
+                "home_def_rating": 109.8,
                 "away_def_rating": 105.7
             }
         },
@@ -3319,27 +3459,27 @@
             "opponent": "Hamburg Towers",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 41.9,
-                "away_win": 58.1,
-                "bayern_win": 58.1,
+                "home_win": 37.8,
+                "away_win": 62.2,
+                "bayern_win": 62.2,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 80,
-                "away": 89,
-                "bayern": 89,
-                "opponent": 80,
-                "formatted": "80 : 89",
-                "bayern_formatted": "FC Bayern 89 : 80 Hamburg Towers",
-                "margin": -9,
-                "total_points": 169,
-                "over_under_line": 168.5
+                "home": 81,
+                "away": 93,
+                "bayern": 93,
+                "opponent": 81,
+                "formatted": "81 : 93",
+                "bayern_formatted": "FC Bayern 93 : 81 Hamburg Towers",
+                "margin": -12,
+                "total_points": 174,
+                "over_under_line": 173.5
             },
             "actual_score": null,
             "comparison": null,
             "tactical_factors": {
-                "projected_pace": 72.6,
+                "projected_pace": 72.4,
                 "rest_days": {
                     "home": 14,
                     "away": 2,
@@ -3347,11 +3487,11 @@
                     "opponent": 14,
                     "advantage": "Hamburg Towers"
                 },
-                "net_rating_diff": -35.0,
-                "home_off_rating": 93.2,
-                "away_off_rating": 118.6,
-                "home_def_rating": 119.2,
-                "away_def_rating": 109.6
+                "net_rating_diff": -38.7,
+                "home_off_rating": 97.4,
+                "away_off_rating": 123.1,
+                "home_def_rating": 125.4,
+                "away_def_rating": 112.4
             }
         },
         {
@@ -3368,22 +3508,22 @@
             "opponent": "Baskonia Vitoria-Gasteiz",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 73.5,
-                "away_win": 26.5,
-                "bayern_win": 26.5,
+                "home_win": 68.5,
+                "away_win": 31.5,
+                "bayern_win": 31.5,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
                 "home": 80,
-                "away": 72,
-                "bayern": 72,
+                "away": 74,
+                "bayern": 74,
                 "opponent": 80,
-                "formatted": "80 : 72",
-                "bayern_formatted": "FC Bayern 72 : 80 Baskonia Vitoria-Gasteiz",
-                "margin": 8,
-                "total_points": 152,
-                "over_under_line": 151.5
+                "formatted": "80 : 74",
+                "bayern_formatted": "FC Bayern 74 : 80 Baskonia Vitoria-Gasteiz",
+                "margin": 6,
+                "total_points": 154,
+                "over_under_line": 153.5
             },
             "actual_score": null,
             "comparison": null,
@@ -3396,11 +3536,11 @@
                     "opponent": 14,
                     "advantage": "Baskonia Vitoria-Gasteiz"
                 },
-                "net_rating_diff": 9.4,
+                "net_rating_diff": 5.9,
                 "home_off_rating": 112.7,
-                "away_off_rating": 118.9,
-                "home_def_rating": 94.6,
-                "away_def_rating": 110.2
+                "away_off_rating": 123.8,
+                "home_def_rating": 96.0,
+                "away_def_rating": 113.0
             }
         },
         {
@@ -3417,27 +3557,27 @@
             "opponent": "Basketball L\u00f6wen Braunschweig",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 37.4,
-                "away_win": 62.6,
-                "bayern_win": 62.6,
+                "home_win": 33.2,
+                "away_win": 66.8,
+                "bayern_win": 66.8,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 75,
-                "away": 87,
-                "bayern": 87,
-                "opponent": 75,
-                "formatted": "75 : 87",
-                "bayern_formatted": "FC Bayern 87 : 75 Basketball L\u00f6wen Braunschweig",
-                "margin": -12,
-                "total_points": 162,
-                "over_under_line": 161.5
+                "home": 78,
+                "away": 86,
+                "bayern": 86,
+                "opponent": 78,
+                "formatted": "78 : 86",
+                "bayern_formatted": "FC Bayern 86 : 78 Basketball L\u00f6wen Braunschweig",
+                "margin": -8,
+                "total_points": 164,
+                "over_under_line": 163.5
             },
             "actual_score": null,
             "comparison": null,
             "tactical_factors": {
-                "projected_pace": 72.3,
+                "projected_pace": 72.2,
                 "rest_days": {
                     "home": 14,
                     "away": 2,
@@ -3445,11 +3585,11 @@
                     "opponent": 14,
                     "advantage": "Basketball L\u00f6wen Braunschweig"
                 },
-                "net_rating_diff": -21.9,
-                "home_off_rating": 102.4,
-                "away_off_rating": 114.4,
-                "home_def_rating": 120.3,
-                "away_def_rating": 110.4
+                "net_rating_diff": -23.3,
+                "home_off_rating": 102.5,
+                "away_off_rating": 118.4,
+                "home_def_rating": 120.5,
+                "away_def_rating": 113.1
             }
         },
         {
@@ -3466,27 +3606,27 @@
             "opponent": "FC Barcelona",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 78.9,
-                "away_win": 21.1,
-                "bayern_win": 21.1,
+                "home_win": 64.3,
+                "away_win": 35.7,
+                "bayern_win": 35.7,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 85,
-                "away": 76,
-                "bayern": 76,
-                "opponent": 85,
-                "formatted": "85 : 76",
-                "bayern_formatted": "FC Bayern 76 : 85 FC Barcelona",
-                "margin": 9,
-                "total_points": 161,
-                "over_under_line": 160.5
+                "home": 79,
+                "away": 75,
+                "bayern": 75,
+                "opponent": 79,
+                "formatted": "79 : 75",
+                "bayern_formatted": "FC Bayern 75 : 79 FC Barcelona",
+                "margin": 4,
+                "total_points": 154,
+                "over_under_line": 153.5
             },
             "actual_score": null,
             "comparison": null,
             "tactical_factors": {
-                "projected_pace": 72.1,
+                "projected_pace": 72.0,
                 "rest_days": {
                     "home": 14,
                     "away": 2,
@@ -3494,11 +3634,11 @@
                     "opponent": 14,
                     "advantage": "FC Barcelona"
                 },
-                "net_rating_diff": 20.0,
-                "home_off_rating": 114.0,
-                "away_off_rating": 115.2,
-                "home_def_rating": 87.6,
-                "away_def_rating": 108.8
+                "net_rating_diff": -8.8,
+                "home_off_rating": 111.3,
+                "away_off_rating": 118.3,
+                "home_def_rating": 114.0,
+                "away_def_rating": 112.2
             }
         },
         {
@@ -3515,27 +3655,27 @@
             "opponent": "Fenerbahce Beko Istanbul",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 39.4,
-                "away_win": 60.6,
-                "bayern_win": 39.4,
-                "tip": "OPPONENT WIN",
+                "home_win": 50.9,
+                "away_win": 49.1,
+                "bayern_win": 50.9,
+                "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 73,
+                "home": 93,
                 "away": 92,
-                "bayern": 73,
+                "bayern": 93,
                 "opponent": 92,
-                "formatted": "73 : 92",
-                "bayern_formatted": "FC Bayern 73 : 92 Fenerbahce Beko Istanbul",
-                "margin": -19,
-                "total_points": 165,
-                "over_under_line": 164.5
+                "formatted": "93 : 92",
+                "bayern_formatted": "FC Bayern 93 : 92 Fenerbahce Beko Istanbul",
+                "margin": 1,
+                "total_points": 185,
+                "over_under_line": 184.5
             },
             "actual_score": null,
             "comparison": null,
             "tactical_factors": {
-                "projected_pace": 72.3,
+                "projected_pace": 72.2,
                 "rest_days": {
                     "home": 2,
                     "away": 14,
@@ -3543,10 +3683,10 @@
                     "opponent": 14,
                     "advantage": "Fenerbahce Beko Istanbul"
                 },
-                "net_rating_diff": -31.9,
-                "home_off_rating": 112.4,
+                "net_rating_diff": -30.4,
+                "home_off_rating": 114.3,
                 "away_off_rating": 138.3,
-                "home_def_rating": 111.1,
+                "home_def_rating": 111.5,
                 "away_def_rating": 105.1
             }
         },
@@ -3564,22 +3704,22 @@
             "opponent": "MLP Academics Heidelberg",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 71.7,
-                "away_win": 28.3,
-                "bayern_win": 71.7,
+                "home_win": 77.9,
+                "away_win": 22.1,
+                "bayern_win": 77.9,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 92,
-                "away": 78,
-                "bayern": 92,
-                "opponent": 78,
-                "formatted": "92 : 78",
-                "bayern_formatted": "FC Bayern 92 : 78 MLP Academics Heidelberg",
-                "margin": 14,
-                "total_points": 170,
-                "over_under_line": 169.5
+                "home": 86,
+                "away": 80,
+                "bayern": 86,
+                "opponent": 80,
+                "formatted": "86 : 80",
+                "bayern_formatted": "FC Bayern 86 : 80 MLP Academics Heidelberg",
+                "margin": 6,
+                "total_points": 166,
+                "over_under_line": 165.5
             },
             "actual_score": null,
             "comparison": null,
@@ -3592,11 +3732,11 @@
                     "opponent": 14,
                     "advantage": "MLP Academics Heidelberg"
                 },
-                "net_rating_diff": -12.8,
-                "home_off_rating": 110.2,
-                "away_off_rating": 116.0,
-                "home_def_rating": 114.7,
-                "away_def_rating": 107.7
+                "net_rating_diff": -10.6,
+                "home_off_rating": 118.2,
+                "away_off_rating": 118.8,
+                "home_def_rating": 115.1,
+                "away_def_rating": 105.0
             }
         },
         {
@@ -3613,27 +3753,27 @@
             "opponent": "Paris Basketball",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 67.2,
-                "away_win": 32.8,
-                "bayern_win": 32.8,
+                "home_win": 74.2,
+                "away_win": 25.8,
+                "bayern_win": 25.8,
                 "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 79,
-                "away": 69,
-                "bayern": 69,
-                "opponent": 79,
-                "formatted": "79 : 69",
-                "bayern_formatted": "FC Bayern 69 : 79 Paris Basketball",
-                "margin": 10,
-                "total_points": 148,
-                "over_under_line": 147.5
+                "home": 84,
+                "away": 71,
+                "bayern": 71,
+                "opponent": 84,
+                "formatted": "84 : 71",
+                "bayern_formatted": "FC Bayern 71 : 84 Paris Basketball",
+                "margin": 13,
+                "total_points": 155,
+                "over_under_line": 154.5
             },
             "actual_score": null,
             "comparison": null,
             "tactical_factors": {
-                "projected_pace": 72.0,
+                "projected_pace": 71.9,
                 "rest_days": {
                     "home": 14,
                     "away": 4,
@@ -3641,11 +3781,11 @@
                     "opponent": 14,
                     "advantage": "Paris Basketball"
                 },
-                "net_rating_diff": -0.4,
-                "home_off_rating": 108.8,
-                "away_off_rating": 113.2,
-                "home_def_rating": 110.2,
-                "away_def_rating": 114.2
+                "net_rating_diff": -4.7,
+                "home_off_rating": 113.0,
+                "away_off_rating": 117.9,
+                "home_def_rating": 114.4,
+                "away_def_rating": 114.7
             }
         },
         {
@@ -3662,22 +3802,22 @@
             "opponent": "SYNTAINICS MBC",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 45.2,
-                "away_win": 54.8,
-                "bayern_win": 54.8,
-                "tip": "BAYERN WIN",
+                "home_win": 50.9,
+                "away_win": 49.1,
+                "bayern_win": 49.1,
+                "tip": "OPPONENT WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 80,
-                "away": 94,
-                "bayern": 94,
-                "opponent": 80,
-                "formatted": "80 : 94",
-                "bayern_formatted": "FC Bayern 94 : 80 SYNTAINICS MBC",
-                "margin": -14,
-                "total_points": 174,
-                "over_under_line": 173.5
+                "home": 92,
+                "away": 91,
+                "bayern": 91,
+                "opponent": 92,
+                "formatted": "92 : 91",
+                "bayern_formatted": "FC Bayern 91 : 92 SYNTAINICS MBC",
+                "margin": 1,
+                "total_points": 183,
+                "over_under_line": 182.5
             },
             "actual_score": null,
             "comparison": null,
@@ -3690,11 +3830,11 @@
                     "opponent": 14,
                     "advantage": "SYNTAINICS MBC"
                 },
-                "net_rating_diff": -12.7,
-                "home_off_rating": 98.6,
-                "away_off_rating": 108.6,
-                "home_def_rating": 116.4,
-                "away_def_rating": 113.6
+                "net_rating_diff": -15.4,
+                "home_off_rating": 100.0,
+                "away_off_rating": 112.8,
+                "home_def_rating": 117.8,
+                "away_def_rating": 115.2
             }
         },
         {
@@ -3711,22 +3851,22 @@
             "opponent": "SKYLINERS Frankfurt",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 66.2,
-                "away_win": 33.8,
-                "bayern_win": 66.2,
+                "home_win": 82.7,
+                "away_win": 17.3,
+                "bayern_win": 82.7,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 88,
-                "away": 72,
-                "bayern": 88,
-                "opponent": 72,
-                "formatted": "88 : 72",
-                "bayern_formatted": "FC Bayern 88 : 72 SKYLINERS Frankfurt",
-                "margin": 16,
-                "total_points": 160,
-                "over_under_line": 159.5
+                "home": 89,
+                "away": 79,
+                "bayern": 89,
+                "opponent": 79,
+                "formatted": "89 : 79",
+                "bayern_formatted": "FC Bayern 89 : 79 SKYLINERS Frankfurt",
+                "margin": 10,
+                "total_points": 168,
+                "over_under_line": 167.5
             },
             "actual_score": null,
             "comparison": null,
@@ -3739,11 +3879,11 @@
                     "opponent": 14,
                     "advantage": "SKYLINERS Frankfurt"
                 },
-                "net_rating_diff": 15.1,
-                "home_off_rating": 112.2,
-                "away_off_rating": 109.4,
-                "home_def_rating": 112.6,
-                "away_def_rating": 124.8
+                "net_rating_diff": 18.6,
+                "home_off_rating": 114.9,
+                "away_off_rating": 101.0,
+                "home_def_rating": 117.3,
+                "away_def_rating": 122.0
             }
         },
         {
@@ -3760,20 +3900,20 @@
             "opponent": "RASTA Vechta",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 31.5,
-                "away_win": 68.5,
-                "bayern_win": 68.5,
+                "home_win": 36.2,
+                "away_win": 63.8,
+                "bayern_win": 63.8,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 72,
-                "away": 92,
-                "bayern": 92,
-                "opponent": 72,
-                "formatted": "72 : 92",
-                "bayern_formatted": "FC Bayern 92 : 72 RASTA Vechta",
-                "margin": -20,
+                "home": 73,
+                "away": 91,
+                "bayern": 91,
+                "opponent": 73,
+                "formatted": "73 : 91",
+                "bayern_formatted": "FC Bayern 91 : 73 RASTA Vechta",
+                "margin": -18,
                 "total_points": 164,
                 "over_under_line": 163.5
             },
@@ -3788,11 +3928,11 @@
                     "opponent": 14,
                     "advantage": "RASTA Vechta"
                 },
-                "net_rating_diff": -29.1,
-                "home_off_rating": 92.5,
-                "away_off_rating": 114.1,
-                "home_def_rating": 117.4,
-                "away_def_rating": 109.9
+                "net_rating_diff": -22.5,
+                "home_off_rating": 93.9,
+                "away_off_rating": 116.4,
+                "home_def_rating": 116.0,
+                "away_def_rating": 115.9
             }
         },
         {
@@ -3809,22 +3949,22 @@
             "opponent": "BG G\u00f6ttingen",
             "is_bayern_home": true,
             "probabilities": {
-                "home_win": 93.4,
-                "away_win": 6.6,
-                "bayern_win": 93.4,
+                "home_win": 93.7,
+                "away_win": 6.3,
+                "bayern_win": 93.7,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
                 "home": 91,
-                "away": 68,
+                "away": 71,
                 "bayern": 91,
-                "opponent": 68,
-                "formatted": "91 : 68",
-                "bayern_formatted": "FC Bayern 91 : 68 BG G\u00f6ttingen",
-                "margin": 23,
-                "total_points": 159,
-                "over_under_line": 158.5
+                "opponent": 71,
+                "formatted": "91 : 71",
+                "bayern_formatted": "FC Bayern 91 : 71 BG G\u00f6ttingen",
+                "margin": 20,
+                "total_points": 162,
+                "over_under_line": 161.5
             },
             "actual_score": null,
             "comparison": null,
@@ -3837,11 +3977,11 @@
                     "opponent": 14,
                     "advantage": "BG G\u00f6ttingen"
                 },
-                "net_rating_diff": 27.0,
-                "home_off_rating": 117.9,
-                "away_off_rating": 108.2,
-                "home_def_rating": 107.4,
-                "away_def_rating": 124.7
+                "net_rating_diff": 28.7,
+                "home_off_rating": 119.3,
+                "away_off_rating": 106.8,
+                "home_def_rating": 112.7,
+                "away_def_rating": 128.8
             }
         },
         {
@@ -3858,22 +3998,22 @@
             "opponent": "HAKRO Merlins Crailsheim",
             "is_bayern_home": false,
             "probabilities": {
-                "home_win": 26.6,
-                "away_win": 73.4,
-                "bayern_win": 73.4,
+                "home_win": 24.0,
+                "away_win": 76.0,
+                "bayern_win": 76.0,
                 "tip": "BAYERN WIN",
                 "confidence": "High"
             },
             "predicted_score": {
-                "home": 76,
-                "away": 94,
-                "bayern": 94,
-                "opponent": 76,
-                "formatted": "76 : 94",
-                "bayern_formatted": "FC Bayern 94 : 76 HAKRO Merlins Crailsheim",
-                "margin": -18,
-                "total_points": 170,
-                "over_under_line": 169.5
+                "home": 75,
+                "away": 92,
+                "bayern": 92,
+                "opponent": 75,
+                "formatted": "75 : 92",
+                "bayern_formatted": "FC Bayern 92 : 75 HAKRO Merlins Crailsheim",
+                "margin": -17,
+                "total_points": 167,
+                "over_under_line": 166.5
             },
             "actual_score": null,
             "comparison": null,
@@ -3886,11 +4026,11 @@
                     "opponent": 14,
                     "advantage": "HAKRO Merlins Crailsheim"
                 },
-                "net_rating_diff": -41.3,
+                "net_rating_diff": -37.5,
                 "home_off_rating": 92.8,
-                "away_off_rating": 119.6,
+                "away_off_rating": 120.8,
                 "home_def_rating": 118.7,
-                "away_def_rating": 104.2
+                "away_def_rating": 109.2
             }
         }
     ]
