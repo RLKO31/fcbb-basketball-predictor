@@ -1,6 +1,6 @@
 {
     "_description": "Verified registry of actual completed matches for FC Bayern Basketball 2026/2027 season.",
-    "last_sync": "2026-10-29T10:48:26.723445",
+    "last_sync": "2026-10-30T10:47:34.946853",
     "results": {
         "bbl_2627_md1": {
             "match_id": "bbl_2627_md1",
@@ -154,6 +154,18 @@
             "away_team": "Fc Barcelona",
             "home_score": 84,
             "away_score": 88,
+            "played": true,
+            "source": "euroleague_api"
+        },
+        "el_2627_rd9": {
+            "match_id": "el_2627_rd9",
+            "competition": "EuroLeague",
+            "round": "EuroLeague Round 9",
+            "date": "2026-10-29",
+            "home_team": "Crvena Zvezda Meridianbet Belgrade",
+            "away_team": "Fc Bayern Munich",
+            "home_score": 103,
+            "away_score": 73,
             "played": true,
             "source": "euroleague_api"
         }
