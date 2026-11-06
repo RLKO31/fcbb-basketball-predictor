@@ -1,6 +1,6 @@
 {
     "_description": "Verified registry of actual completed matches for FC Bayern Basketball 2026/2027 season.",
-    "last_sync": "2026-11-05T12:02:45.788679",
+    "last_sync": "2026-11-06T11:57:45.618362",
     "results": {
         "bbl_2627_md1": {
             "match_id": "bbl_2627_md1",
@@ -166,6 +166,18 @@
             "away_team": "Fc Bayern Munich",
             "home_score": 103,
             "away_score": 73,
+            "played": true,
+            "source": "euroleague_api"
+        },
+        "el_2627_rd10": {
+            "match_id": "el_2627_rd10",
+            "competition": "EuroLeague",
+            "round": "EuroLeague Round 10",
+            "date": "2026-11-05",
+            "home_team": "Ldlc Asvel Villeurbanne",
+            "away_team": "Fc Bayern Munich",
+            "home_score": 95,
+            "away_score": 99,
             "played": true,
             "source": "euroleague_api"
         }
