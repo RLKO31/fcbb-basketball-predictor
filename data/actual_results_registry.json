@@ -1,6 +1,6 @@
 {
     "_description": "Verified registry of actual completed matches for FC Bayern Basketball 2026/2027 season.",
-    "last_sync": "2026-11-12T12:25:58.603786",
+    "last_sync": "2026-11-13T12:01:01.235879",
     "results": {
         "bbl_2627_md1": {
             "match_id": "bbl_2627_md1",
@@ -178,6 +178,18 @@
             "away_team": "Fc Bayern Munich",
             "home_score": 95,
             "away_score": 99,
+            "played": true,
+            "source": "euroleague_api"
+        },
+        "el_2627_rd11": {
+            "match_id": "el_2627_rd11",
+            "competition": "EuroLeague",
+            "round": "EuroLeague Round 11",
+            "date": "2026-11-12",
+            "home_team": "Valencia Basket",
+            "away_team": "Fc Bayern Munich",
+            "home_score": 102,
+            "away_score": 87,
             "played": true,
             "source": "euroleague_api"
         }
