@@ -14,8 +14,8 @@ el_2627_rd7,EuroLeague,2026-2027,EuroLeague Round 7,2026-10-22,FC Bayern Münche
 bbl_2627_md6,BBL,2026-2027,BBL Matchday 6,2026-10-25,FC Bayern München,Hamburg Towers,"BMW Park, Munich",True,96.0,77.0,3,7,-4
 el_2627_rd8,EuroLeague,2026-2027,EuroLeague Round 8,2026-10-27,FC Bayern München,FC Barcelona,Sap Garden,True,84.0,88.0,2,7,-5
 el_2627_rd9,EuroLeague,2026-2027,EuroLeague Round 9,2026-10-29,Crvena Zvezda Meridianbet Belgrade,FC Bayern München,Belgrade Arena,True,103.0,73.0,7,2,5
-bbl_2627_md3,BBL,2026-2027,BBL Matchday 3,2026-11-01,ROSTOCK SEAWOLVES,FC Bayern München,StadtHalle Rostock,False,,,7,3,4
-bbl_2627_md7,BBL,2026-2027,BBL Matchday 7,2026-11-03,FC Bayern München,Basketball Löwen Braunschweig,"BMW Park, Munich",False,,,2,7,-5
+bbl_2627_md3,BBL,2026-2027,BBL Matchday 3,2026-11-01,ROSTOCK SEAWOLVES,FC Bayern München,StadtHalle Rostock,True,69.0,67.0,7,3,4
+bbl_2627_md7,BBL,2026-2027,BBL Matchday 7,2026-11-03,FC Bayern München,Basketball Löwen Braunschweig,"BMW Park, Munich",True,108.0,66.0,2,7,-5
 el_2627_rd10,EuroLeague,2026-2027,EuroLeague Round 10,2026-11-05,LDLC ASVEL Villeurbanne,FC Bayern München,Ldlc Arena,True,95.0,99.0,7,2,5
 bbl_2627_md8,BBL,2026-2027,BBL Matchday 8,2026-11-08,Telekom Baskets Bonn,FC Bayern München,"Telekom Dome, Bonn",False,,,14,3,11
 el_2627_rd11,EuroLeague,2026-2027,EuroLeague Round 11,2026-11-12,Valencia Basket,FC Bayern München,Roig Arena,True,102.0,87.0,7,4,3

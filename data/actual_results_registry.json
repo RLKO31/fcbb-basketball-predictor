@@ -1,6 +1,6 @@
 {
     "_description": "Verified registry of actual completed matches for FC Bayern Basketball 2026/2027 season.",
-    "last_sync": "2026-11-15T11:51:28.226144",
+    "last_sync": "2026-11-16T11:33:39.324038",
     "results": {
         "bbl_2627_md1": {
             "match_id": "bbl_2627_md1",
@@ -192,6 +192,30 @@
             "away_score": 87,
             "played": true,
             "source": "euroleague_api"
+        },
+        "bbl_2627_md3": {
+            "match_id": "bbl_2627_md3",
+            "competition": "BBL",
+            "round": "BBL Matchday 3",
+            "date": "2026-11-01",
+            "home_team": "ROSTOCK SEAWOLVES",
+            "away_team": "FC Bayern M\u00fcnchen",
+            "home_score": 69,
+            "away_score": 67,
+            "played": true,
+            "source": "official_bbl"
+        },
+        "bbl_2627_md7": {
+            "match_id": "bbl_2627_md7",
+            "competition": "BBL",
+            "round": "BBL Matchday 7",
+            "date": "2026-11-03",
+            "home_team": "FC Bayern M\u00fcnchen",
+            "away_team": "Basketball L\u00f6wen Braunschweig",
+            "home_score": 108,
+            "away_score": 66,
+            "played": true,
+            "source": "official_bbl"
         }
     }
 }
