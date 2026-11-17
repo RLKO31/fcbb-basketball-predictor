@@ -33,6 +33,11 @@ try:
 except ImportError:
     from basketball_prediction.dashboard.compile_dashboard import compile_dashboard
 
+try:
+    from data.league_intel import build_league_intel
+except ImportError:
+    from basketball_prediction.data.league_intel import build_league_intel
+
 def get_resolved_path(rel_path):
     candidates = [
         os.path.join(BASE_DIR, rel_path),
@@ -278,7 +283,24 @@ def update_daily():
     # 3. Re-run Model v3 prediction & evaluation
     print(">>> [3/4] Re-running Model v3 Season Simulation & Scorecard Generation...")
     summary = predict_official_season_26_27()
-    
+
+    # 3b. Sync Live Standings & Upcoming Opponent Last-5 Form
+    try:
+        from zoneinfo import ZoneInfo
+        today_de = datetime.now(ZoneInfo("Europe/Berlin")).strftime("%Y-%m-%d")
+    except Exception:
+        today_de = datetime.now().strftime("%Y-%m-%d")
+    upcoming = [m for m in summary.get("fixtures", []) if not m.get("is_played") and m.get("date", "") >= today_de]
+    if not upcoming:
+        upcoming = [m for m in summary.get("fixtures", []) if not m.get("is_played")]
+    next_match = upcoming[0] if upcoming else None
+    intel_path = get_resolved_path("dashboard/league_intel.json")
+    build_league_intel(next_match, intel_path)
+    alt_intel = os.path.join(BASE_DIR, "basketball_prediction", "dashboard", "league_intel.json")
+    if os.path.exists(os.path.dirname(alt_intel)) and os.path.abspath(alt_intel) != os.path.abspath(intel_path):
+        import shutil
+        shutil.copy2(intel_path, alt_intel)
+
     # 4. Recompile dashboard
     print(">>> [4/4] Recompiling Interactive Web Dashboard...")
     compile_dashboard()

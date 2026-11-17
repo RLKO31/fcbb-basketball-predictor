@@ -31,9 +31,17 @@ def compile_dashboard():
     with open(config_path, "r", encoding="utf-8") as f:
         config = json.load(f)
         
+    intel_path = get_resolved_path("dashboard/league_intel.json")
+    if os.path.exists(intel_path):
+        with open(intel_path, "r", encoding="utf-8") as f:
+            intel_data = json.load(f)
+    else:
+        intel_data = {"standings": {"BBL": [], "EuroLeague": []}, "upcoming_opponent": None}
+
     # JSON payloads for embedding
     season_json = json.dumps(season_data)
     config_json = json.dumps(config)
+    intel_json = json.dumps(intel_data)
     
     perf = season_data.get("performance_tracking", {
         "played_matches": 0,
@@ -443,6 +451,11 @@ def compile_dashboard():
             <!-- Dynamically populated via JS -->
         </section>
 
+        <!-- Upcoming Opponent Last-5 League Form Overview -->
+        <section id="opponent-form-section" class="glass-card rounded-3xl p-6 border border-amber-500/20">
+            <!-- Dynamically populated via JS -->
+        </section>
+
         <!-- Filter Controls & Search -->
         <section class="flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex flex-wrap items-center gap-2 bg-slate-900/90 p-1.5 rounded-2xl border border-slate-800">
@@ -452,6 +465,7 @@ def compile_dashboard():
                 <button onclick="setCompFilter('BBL')" id="tab-BBL" class="tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase transition text-slate-400 hover:text-white">easyCredit BBL (34)</button>
                 <button onclick="setCompFilter('EuroLeague')" id="tab-EuroLeague" class="tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase transition text-slate-400 hover:text-white">EuroLeague (38)</button>
                 <button onclick="setCompFilter('BBL-Pokal')" id="tab-BBL-Pokal" class="tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase transition text-slate-400 hover:text-white">BBL-Pokal (4)</button>
+                <button onclick="setCompFilter('TABLES')" id="tab-TABLES" class="tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase transition text-amber-400 hover:text-white border border-amber-500/30">Live Tables (BBL &amp; EL)</button>
             </div>
             
             <div class="flex items-center gap-3 w-full md:w-auto">
@@ -467,6 +481,11 @@ def compile_dashboard():
 
         <!-- Fixture Cards Grid (All 76 matches of 2026/27) -->
         <section id="fixtures-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Dynamically rendered via JS -->
+        </section>
+
+        <!-- Live League Standings Section (BBL & EuroLeague) -->
+        <section id="tables-section" class="hidden grid grid-cols-1 xl:grid-cols-2 gap-6">
             <!-- Dynamically rendered via JS -->
         </section>
 
@@ -627,6 +646,7 @@ def compile_dashboard():
     <script>
         const DATA = {season_json};
         const CONFIG = {config_json};
+        const INTEL = {intel_json};
         const ALL_FIXTURES = DATA.fixtures;
         
         let currentFilter = 'ALL';
@@ -641,7 +661,17 @@ def compile_dashboard():
             if (activeTab) {{
                 activeTab.className = 'tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase transition bg-red-600 text-white shadow-md';
             }}
-            renderFixtures();
+            const fixturesGrid = document.getElementById('fixtures-grid');
+            const tablesSec = document.getElementById('tables-section');
+            if (filterKey === 'TABLES') {{
+                fixturesGrid.classList.add('hidden');
+                tablesSec.classList.remove('hidden');
+                renderStandingsTables();
+            }} else {{
+                tablesSec.classList.add('hidden');
+                fixturesGrid.classList.remove('hidden');
+                renderFixtures();
+            }}
         }}
 
         function applySearch(query) {{
@@ -945,10 +975,154 @@ def compile_dashboard():
             applyTheme(next);
         }}
 
+        function renderFormPills(formArr) {{
+            if (!formArr || !formArr.length) return '<span class="text-xs text-slate-500 font-mono">-</span>';
+            return formArr.map(r => {{
+                const isW = r === 'W';
+                return `<span class="inline-flex items-center justify-center w-5 h-5 rounded-md text-[10px] font-bold font-mono ${{isW ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40' : 'bg-red-500/20 text-red-400 border border-red-500/40'}}">${{r}}</span>`;
+            }}).join(' ');
+        }}
+
+        function renderOpponentForm() {{
+            const sec = document.getElementById('opponent-form-section');
+            if (!sec) return;
+            const opp = INTEL && INTEL.upcoming_opponent;
+            if (!opp || (!opp.recent_matches?.length && !opp.standing)) {{
+                sec.classList.add('hidden');
+                return;
+            }}
+            sec.classList.remove('hidden');
+            const st = opp.standing;
+            const sum = opp.last5_summary || {{}};
+            const matches = opp.recent_matches || [];
+            const formPills = st && st.last5_form && st.last5_form.length
+                ? renderFormPills(st.last5_form)
+                : renderFormPills(matches.slice().reverse().map(m => m.result));
+
+            const rowsHtml = matches.length ? matches.map(m => {{
+                const isW = m.result === 'W';
+                const ha = m.is_home ? 'HOME' : 'AWAY';
+                return `
+                    <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs">
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <span class="px-2 py-0.5 rounded font-mono font-bold text-[10px] ${{isW ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40' : 'bg-red-500/20 text-red-400 border border-red-500/40'}}">${{m.result}}</span>
+                            <div class="min-w-0">
+                                <div class="font-semibold text-white truncate">${{m.is_home ? 'vs' : '@'}} ${{m.other_team}}</div>
+                                <div class="text-[10px] text-slate-400 font-mono">${{m.date}} &bull; ${{m.round}} &bull; ${{ha}}</div>
+                            </div>
+                        </div>
+                        <div class="font-space font-bold text-sm whitespace-nowrap ${{isW ? 'text-emerald-400' : 'text-red-400'}}">
+                            ${{m.opp_score}} : ${{m.other_score}}
+                        </div>
+                    </div>
+                `;
+            }}).join('') : '<div class="text-xs text-slate-400 font-mono">Recent match scores unavailable.</div>';
+
+            sec.innerHTML = `
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-3 border-b border-slate-800/80">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center border border-amber-500/40">
+                            <i data-lucide="radar" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <h3 class="text-base font-bold font-space text-white">Upcoming Opponent Scouting: ${{opp.opponent}}</h3>
+                                ${{getCompBadge(opp.competition)}}
+                            </div>
+                            <p class="text-xs text-slate-400">Last ${{matches.length || 5}} league matches before ${{opp.match_date}} (${{opp.round}})</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3 text-xs font-mono">
+                        ${{st ? `<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Rank: <b class="text-white">#${{st.rank}}</b> (${{st.won}}W-${{st.lost}}L)</span>` : ''}}
+                        ${{sum.games ? `<span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">L${{sum.games}}: <b class="text-white">${{sum.wins}}W-${{sum.losses}}L</b> (${{sum.avg_pts_for}} : ${{sum.avg_pts_against}} avg)</span>` : ''}}
+                        <div class="flex items-center gap-1">${{formPills}}</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
+                    ${{rowsHtml}}
+                </div>
+            `;
+        }}
+
+        function buildTableCard(title, badgeHtml, rows, isBbl) {{
+            if (!rows || !rows.length) {{
+                return `<div class="glass-card rounded-2xl p-6"><h3 class="font-bold text-white mb-2">${{title}}</h3><p class="text-xs text-slate-400">Standings currently unavailable.</p></div>`;
+            }}
+            const bodyHtml = rows.map(r => {{
+                const rowCls = r.is_bayern
+                    ? 'bg-red-500/15 border-l-4 border-l-red-500 font-bold'
+                    : 'hover:bg-slate-800/40';
+                const diffStr = r.diff > 0 ? `+${{r.diff}}` : `${{r.diff}}`;
+                const diffCls = r.diff > 0 ? 'text-emerald-400' : (r.diff < 0 ? 'text-red-400' : 'text-slate-400');
+                const extraCol = isBbl ? (r.table_pts || `${{r.won * 2}}:${{r.lost * 2}}`) : r.win_pct;
+                const imgUrl = isBbl ? r.logo : r.crest;
+                return `
+                    <tr class="border-b border-slate-800/60 text-xs ${{rowCls}}">
+                        <td class="py-2.5 px-2 font-mono text-slate-400">${{r.rank}}</td>
+                        <td class="py-2.5 px-2">
+                            <div class="flex items-center gap-2">
+                                ${{imgUrl ? `<img src="${{imgUrl}}" alt="" class="w-5 h-5 object-contain rounded-sm" loading="lazy">` : ''}}
+                                <span class="text-white truncate max-w-[160px] sm:max-w-[210px]">${{r.team}}</span>
+                            </div>
+                        </td>
+                        <td class="py-2.5 px-2 text-center font-mono text-slate-300">${{r.played}}</td>
+                        <td class="py-2.5 px-2 text-center font-mono text-white font-semibold">${{r.won}}-${{r.lost}}</td>
+                        <td class="py-2.5 px-2 text-center font-mono text-slate-300">${{extraCol}}</td>
+                        <td class="py-2.5 px-2 text-center font-mono text-slate-400 hidden sm:table-cell">${{r.pts_for}}:${{r.pts_against}}</td>
+                        <td class="py-2.5 px-2 text-center font-mono font-bold ${{diffCls}}">${{diffStr}}</td>
+                        <td class="py-2.5 px-2 hidden md:table-cell"><div class="flex items-center justify-end gap-1">${{renderFormPills(r.last5_form)}}</div></td>
+                    </tr>
+                `;
+            }}).join('');
+
+            return `
+                <div class="glass-card rounded-3xl p-5 overflow-hidden">
+                    <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-800/80">
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-lg font-bold font-space text-white">${{title}}</h3>
+                            ${{badgeHtml}}
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-400">Live Sync: ${{(INTEL && INTEL.generated_at) || ''}}</span>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b border-slate-800 text-[10px] uppercase tracking-wider font-mono text-slate-400">
+                                    <th class="py-2 px-2">#</th>
+                                    <th class="py-2 px-2">Team</th>
+                                    <th class="py-2 px-2 text-center">GP</th>
+                                    <th class="py-2 px-2 text-center">W-L</th>
+                                    <th class="py-2 px-2 text-center">${{isBbl ? 'Pts' : 'Win%'}}</th>
+                                    <th class="py-2 px-2 text-center hidden sm:table-cell">PF:PA</th>
+                                    <th class="py-2 px-2 text-center">+/-</th>
+                                    <th class="py-2 px-2 text-right hidden md:table-cell">Last 5</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${{bodyHtml}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+        }}
+
+        function renderStandingsTables() {{
+            const sec = document.getElementById('tables-section');
+            if (!sec) return;
+            const bbl = (INTEL && INTEL.standings && INTEL.standings.BBL) || [];
+            const el = (INTEL && INTEL.standings && INTEL.standings.EuroLeague) || [];
+            const elRd = (INTEL && INTEL.euroleague_round) ? `Round ${{INTEL.euroleague_round}}` : 'Live';
+            sec.innerHTML =
+                buildTableCard('easyCredit BBL Standings', '<span class="badge-bbl px-2 py-0.5 rounded text-[10px] font-bold uppercase">BBL</span>', bbl, true) +
+                buildTableCard('EuroLeague Standings', `<span class="badge-el px-2 py-0.5 rounded text-[10px] font-bold uppercase">${{elRd}}</span>`, el, false);
+        }}
+
         // Initialize Dashboard
         window.addEventListener('DOMContentLoaded', () => {{
             applyTheme(getInitialTheme());
             renderMarquee();
+            renderOpponentForm();
             renderFixtures();
             renderFeatureImportance();
             lucide.createIcons();
