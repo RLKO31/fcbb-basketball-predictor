@@ -657,8 +657,12 @@ def compile_dashboard():
 
         function renderMarquee() {{
             // Select the next upcoming match
-            const marquee = ALL_FIXTURES.find(m => !m.is_played) || ALL_FIXTURES[0];
+            const todayStr = new Date().toISOString().slice(0, 10);
+            const marquee = ALL_FIXTURES.find(m => !m.is_played && m.date >= todayStr)
+                || ALL_FIXTURES.find(m => !m.is_played)
+                || ALL_FIXTURES[ALL_FIXTURES.length - 1];
             if (!marquee) return;
+            const badgeLabel = marquee.date === todayStr ? "TONIGHT'S MATCH" : "NEXT UPCOMING MATCH";
 
             const isBayernFav = marquee.probabilities.bayern_win >= 50;
             const marqueeEl = document.getElementById('marquee-section');
@@ -669,7 +673,7 @@ def compile_dashboard():
                         <div class="flex items-center justify-center lg:justify-start gap-2 mb-2">
                             ${{getCompBadge(marquee.competition)}}
                             <span class="text-xs text-slate-400 font-mono">${{marquee.round}}</span>
-                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-950 text-red-400 border border-red-800/60 animate-pulse">TONIGHT'S MATCH</span>
+                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-950 text-red-400 border border-red-800/60 animate-pulse">${{badgeLabel}}</span>
                         </div>
                         <h2 class="text-3xl md:text-4xl font-black font-space text-white tracking-tight">${{marquee.home_team}} <span class="text-red-500">vs</span> ${{marquee.away_team}}</h2>
                         <p class="text-xs text-slate-400 mt-2 flex items-center justify-center lg:justify-start gap-1">

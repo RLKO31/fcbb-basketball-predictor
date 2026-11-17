@@ -1,6 +1,8 @@
 import os
 import sys
 import json
+import re
+import requests
 from datetime import datetime
 import pandas as pd
 
@@ -111,7 +113,117 @@ def sync_euroleague_results(registry):
     registry["results"] = results
     return registry
 
-def sync_schedule_csv(registry):
+
+def normalize_bbl_team(name):
+    if not name:
+        return name
+    name = str(name).strip()
+    mapping = {
+        "FC Bayern München Basketball": "FC Bayern München",
+        "Fitness First Würzburg Baskets": "Würzburg Baskets",
+        "ALBA BERLIN": "ALBA Berlin",
+        "SKYLINERS": "SKYLINERS Frankfurt",
+        "RASTA Vechta": "RASTA Vechta",
+        "SYNTAINICS MBC": "SYNTAINICS MBC",
+        "Telekom Baskets Bonn": "Telekom Baskets Bonn",
+        "Basketball Löwen Braunschweig": "Basketball Löwen Braunschweig",
+        "Science City Jena": "Science City Jena",
+    }
+    return mapping.get(name, name)
+
+def _parse_bbl_date(iso_str):
+    try:
+        from zoneinfo import ZoneInfo
+        dt = datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
+        return dt.astimezone(ZoneInfo("Europe/Berlin")).strftime("%Y-%m-%d")
+    except Exception:
+        return str(iso_str)[:10]
+
+def sync_bbl_results(registry):
+    print(">>> [1b/4] Checking official easyCredit BBL page for completed & upcoming 2026/27 games...")
+    results = registry.get("results", {})
+    upcoming_updates = {}
+    try:
+        r = requests.get(
+            "https://www.easycredit-bbl.de/teams/486/2026",
+            headers={"User-Agent": "Mozilla/5.0"},
+            timeout=15
+        )
+        r.raise_for_status()
+        m = re.search(r'__NEXT_DATA__[^>]*>(.*?)</script>', r.text, re.S)
+        if not m:
+            print("  Note: __NEXT_DATA__ not found on easycredit-bbl.de")
+            return registry, upcoming_updates
+
+        pp = json.loads(m.group(1))["props"]["pageProps"]
+        df_sched = pd.read_csv(SCHEDULE_PATH) if os.path.exists(SCHEDULE_PATH) else pd.DataFrame()
+        updated_count = 0
+
+        # 1. Process finished games
+        for item in pp.get("games", {}).get("items", []):
+            if item.get("status") != "OFFICIAL":
+                continue
+            res = item.get("result") or {}
+            h_score = res.get("homeTeamFinalScore")
+            a_score = res.get("guestTeamFinalScore")
+            if h_score is None or a_score is None:
+                continue
+
+            g_date = _parse_bbl_date(item.get("scheduledTime", ""))
+            h_team = normalize_bbl_team((item.get("homeTeam") or {}).get("name", ""))
+            a_team = normalize_bbl_team((item.get("guestTeam") or {}).get("name", ""))
+            venue = (item.get("venue") or {}).get("name", "")
+            comp_raw = str(item.get("competition", "BBL")).upper()
+            comp = "BBL-Pokal" if "POKAL" in comp_raw else "BBL"
+            mday = item.get("matchDay")
+
+            # Match against schedule CSV by date + competition
+            match_id = None
+            if not df_sched.empty:
+                cand = df_sched[(df_sched["date"] == g_date) & (df_sched["competition"].isin(["BBL", "BBL-Pokal"]))]
+                if not cand.empty:
+                    match_id = str(cand.iloc[0]["match_id"])
+            if not match_id and mday is not None:
+                match_id = f"bbl_2627_md{mday}"
+
+            if match_id and (match_id not in results or not results[match_id].get("home_score")):
+                results[match_id] = {
+                    "match_id": match_id,
+                    "competition": comp,
+                    "round": f"BBL Matchday {mday}" if mday else comp,
+                    "date": g_date,
+                    "home_team": h_team,
+                    "away_team": a_team,
+                    "venue": venue,
+                    "home_score": int(h_score),
+                    "away_score": int(a_score),
+                    "played": True,
+                    "source": "easycredit_bbl_web"
+                }
+                updated_count += 1
+                print(f"  -> Recorded BBL ({g_date}): {h_team} {int(h_score)} : {int(a_score)} {a_team}")
+
+        # 2. Collect upcoming scheduled games to keep CSV aligned
+        for item in pp.get("scheduledGames", {}).get("items", []):
+            g_date = _parse_bbl_date(item.get("scheduledTime", ""))
+            h_team = normalize_bbl_team((item.get("homeTeam") or {}).get("name", ""))
+            a_team = normalize_bbl_team((item.get("guestTeam") or {}).get("name", ""))
+            venue = (item.get("venue") or {}).get("name", "")
+            if g_date and h_team and a_team:
+                upcoming_updates[g_date] = {
+                    "home_team": h_team,
+                    "away_team": a_team,
+                    "venue": venue,
+                }
+
+        print(f"  easyCredit BBL Sync Complete: {updated_count} new result(s) updated.")
+    except Exception as e:
+        print(f"  Note during easyCredit BBL sync: {e}")
+
+    registry["results"] = results
+    return registry, upcoming_updates
+
+def sync_schedule_csv(registry, bbl_upcoming=None):
     print(">>> [2/4] Synchronizing schedule dataset with verified match outcomes...")
     if not os.path.exists(SCHEDULE_PATH):
         raise FileNotFoundError(f"Schedule CSV missing: {SCHEDULE_PATH}")
@@ -127,7 +239,20 @@ def sync_schedule_csv(registry):
             df_sched.at[idx, 'played'] = True
             df_sched.at[idx, 'actual_home_score'] = float(res['home_score'])
             df_sched.at[idx, 'actual_away_score'] = float(res['away_score'])
+            if res.get('source') == 'easycredit_bbl_web':
+                if res.get('home_team'):
+                    df_sched.at[idx, 'home_team'] = res['home_team']
+                if res.get('away_team'):
+                    df_sched.at[idx, 'away_team'] = res['away_team']
+                if res.get('venue'):
+                    df_sched.at[idx, 'venue'] = res['venue']
             updated_rows += 1
+        elif bbl_upcoming and row.get('competition') in ('BBL', 'BBL-Pokal') and row.get('date') in bbl_upcoming:
+            up = bbl_upcoming[row['date']]
+            df_sched.at[idx, 'home_team'] = up['home_team']
+            df_sched.at[idx, 'away_team'] = up['away_team']
+            if up.get('venue'):
+                df_sched.at[idx, 'venue'] = up['venue']
             
     df_sched.to_csv(SCHEDULE_PATH, index=False)
     alt_sched = os.path.join(BASE_DIR, "basketball_prediction", "data", "processed", "schedule_2026_2027_official.csv")
@@ -144,10 +269,11 @@ def update_daily():
     # 1. Load registry and sync
     registry = load_registry()
     registry = sync_euroleague_results(registry)
+    registry, bbl_upcoming = sync_bbl_results(registry)
     save_registry(registry)
     
     # 2. Update CSV
-    sync_schedule_csv(registry)
+    sync_schedule_csv(registry, bbl_upcoming)
     
     # 3. Re-run Model v3 prediction & evaluation
     print(">>> [3/4] Re-running Model v3 Season Simulation & Scorecard Generation...")

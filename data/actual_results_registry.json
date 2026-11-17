@@ -1,6 +1,6 @@
 {
     "_description": "Verified registry of actual completed matches for FC Bayern Basketball 2026/2027 season.",
-    "last_sync": "2026-11-17T12:58:45.669663",
+    "last_sync": "2026-11-17T14:58:55.600655",
     "results": {
         "bbl_2627_md1": {
             "match_id": "bbl_2627_md1",
@@ -216,6 +216,32 @@
             "away_score": 66,
             "played": true,
             "source": "official_bbl"
+        },
+        "bbl_2627_md9": {
+            "match_id": "bbl_2627_md9",
+            "competition": "BBL",
+            "round": "BBL Matchday 9",
+            "date": "2026-11-15",
+            "home_team": "FC Bayern M\u00fcnchen",
+            "away_team": "SYNTAINICS MBC",
+            "venue": "BMW Park M\u00fcnchen",
+            "home_score": 91,
+            "away_score": 61,
+            "played": true,
+            "source": "easycredit_bbl_web"
+        },
+        "bbl_2627_md8": {
+            "match_id": "bbl_2627_md8",
+            "competition": "BBL",
+            "round": "BBL Matchday 8",
+            "date": "2026-11-08",
+            "home_team": "W\u00fcrzburg Baskets",
+            "away_team": "FC Bayern M\u00fcnchen",
+            "venue": "tectake ARENA W\u00fcrzburg",
+            "home_score": 73,
+            "away_score": 94,
+            "played": true,
+            "source": "easycredit_bbl_web"
         }
     }
 }
