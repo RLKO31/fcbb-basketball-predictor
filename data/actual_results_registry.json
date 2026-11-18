@@ -1,6 +1,6 @@
 {
     "_description": "Verified registry of actual completed matches for FC Bayern Basketball 2026/2027 season.",
-    "last_sync": "2026-11-17T14:11:47.657825",
+    "last_sync": "2026-11-18T12:52:31.185634",
     "results": {
         "bbl_2627_md1": {
             "match_id": "bbl_2627_md1",
@@ -242,6 +242,18 @@
             "away_score": 94,
             "played": true,
             "source": "easycredit_bbl_web"
+        },
+        "el_2627_rd12": {
+            "match_id": "el_2627_rd12",
+            "competition": "EuroLeague",
+            "round": "EuroLeague Round 12",
+            "date": "2026-11-17",
+            "home_team": "Zalgiris Kaunas",
+            "away_team": "Fc Bayern Munich",
+            "home_score": 117,
+            "away_score": 114,
+            "played": true,
+            "source": "euroleague_api"
         }
     }
 }
