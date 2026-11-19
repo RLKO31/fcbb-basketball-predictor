@@ -1,5 +1,5 @@
 {
-    "generated_at": "2026-11-18 12:52",
+    "generated_at": "2026-11-19 12:43",
     "euroleague_round": 12,
     "standings": {
         "EuroLeague": [
@@ -169,21 +169,21 @@
                 "team": "Real Madrid",
                 "code": "MAD",
                 "crest": "https://media-cdn.incrowdsports.com/371b0d9b-9250-4c09-bda7-0686cf024657.png",
-                "played": 11,
+                "played": 12,
                 "won": 7,
-                "lost": 4,
-                "win_pct": "63.6%",
-                "pts_for": 1072,
-                "pts_against": 977,
-                "diff": 95,
+                "lost": 5,
+                "win_pct": "58.3%",
+                "pts_for": 1151,
+                "pts_against": 1060,
+                "diff": 91,
                 "home_record": "4-1",
-                "away_record": "3-3",
+                "away_record": "3-4",
                 "last5_form": [
                     "W",
                     "W",
-                    "W",
                     "L",
-                    "W"
+                    "W",
+                    "L"
                 ],
                 "is_bayern": false
             },
@@ -258,6 +258,29 @@
             },
             {
                 "rank": 12,
+                "team": "Besiktas Istanbul",
+                "code": "BES",
+                "crest": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/b05e3c54-e672-4b31-9f86-c91e9de7715c.png",
+                "played": 12,
+                "won": 6,
+                "lost": 6,
+                "win_pct": "50%",
+                "pts_for": 1055,
+                "pts_against": 1079,
+                "diff": -24,
+                "home_record": "2-4",
+                "away_record": "4-2",
+                "last5_form": [
+                    "L",
+                    "W",
+                    "L",
+                    "W",
+                    "W"
+                ],
+                "is_bayern": false
+            },
+            {
+                "rank": 13,
                 "team": "Paris Basketball",
                 "code": "PRS",
                 "crest": "https://media-cdn.incrowdsports.com/a033e5b3-0de7-48a3-98d9-d9a4b9df1f39.png",
@@ -275,29 +298,6 @@
                     "W",
                     "W",
                     "W",
-                    "W"
-                ],
-                "is_bayern": false
-            },
-            {
-                "rank": 13,
-                "team": "Besiktas Istanbul",
-                "code": "BES",
-                "crest": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/b05e3c54-e672-4b31-9f86-c91e9de7715c.png",
-                "played": 11,
-                "won": 5,
-                "lost": 6,
-                "win_pct": "45.5%",
-                "pts_for": 972,
-                "pts_against": 1000,
-                "diff": -28,
-                "home_record": "1-4",
-                "away_record": "4-2",
-                "last5_form": [
-                    "L",
-                    "L",
-                    "W",
-                    "L",
                     "W"
                 ],
                 "is_bayern": false
