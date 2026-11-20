@@ -1,6 +1,6 @@
 {
     "_description": "Verified registry of actual completed matches for FC Bayern Basketball 2026/2027 season.",
-    "last_sync": "2026-11-19T12:43:14.496361",
+    "last_sync": "2026-11-20T12:41:16.984923",
     "results": {
         "bbl_2627_md1": {
             "match_id": "bbl_2627_md1",
@@ -252,6 +252,18 @@
             "away_team": "Fc Bayern Munich",
             "home_score": 117,
             "away_score": 114,
+            "played": true,
+            "source": "euroleague_api"
+        },
+        "el_2627_rd13": {
+            "match_id": "el_2627_rd13",
+            "competition": "EuroLeague",
+            "round": "EuroLeague Round 13",
+            "date": "2026-11-19",
+            "home_team": "Fc Bayern Munich",
+            "away_team": "Kosner Baskonia Vitoria-Gasteiz",
+            "home_score": 100,
+            "away_score": 81,
             "played": true,
             "source": "euroleague_api"
         }
