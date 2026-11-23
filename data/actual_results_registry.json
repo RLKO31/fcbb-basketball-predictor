@@ -1,6 +1,6 @@
 {
     "_description": "Verified registry of actual completed matches for FC Bayern Basketball 2026/2027 season.",
-    "last_sync": "2026-11-22T12:24:43.856408",
+    "last_sync": "2026-11-23T14:16:41.186079",
     "results": {
         "bbl_2627_md1": {
             "match_id": "bbl_2627_md1",
@@ -266,6 +266,19 @@
             "away_score": 81,
             "played": true,
             "source": "euroleague_api"
+        },
+        "bbl_2627_md10": {
+            "match_id": "bbl_2627_md10",
+            "competition": "BBL",
+            "round": "BBL Matchday 10",
+            "date": "2026-11-22",
+            "home_team": "ALBA Berlin",
+            "away_team": "FC Bayern M\u00fcnchen",
+            "venue": "Uber Arena",
+            "home_score": 79,
+            "away_score": 90,
+            "played": true,
+            "source": "easycredit_bbl_web"
         }
     }
 }
