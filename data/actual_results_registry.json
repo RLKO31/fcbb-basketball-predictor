@@ -1,6 +1,6 @@
 {
     "_description": "Verified registry of actual completed matches for FC Bayern Basketball 2026/2027 season.",
-    "last_sync": "2026-11-23T14:16:41.186079",
+    "last_sync": "2026-11-25T14:04:29.520678",
     "results": {
         "bbl_2627_md1": {
             "match_id": "bbl_2627_md1",
@@ -279,6 +279,18 @@
             "away_score": 90,
             "played": true,
             "source": "easycredit_bbl_web"
+        },
+        "el_2627_rd14": {
+            "match_id": "el_2627_rd14",
+            "competition": "EuroLeague",
+            "round": "EuroLeague Round 14",
+            "date": "2026-11-24",
+            "home_team": "Fc Bayern Munich",
+            "away_team": "Maccabi Rapyd Tel Aviv",
+            "home_score": 79,
+            "away_score": 87,
+            "played": true,
+            "source": "euroleague_api"
         }
     }
 }
